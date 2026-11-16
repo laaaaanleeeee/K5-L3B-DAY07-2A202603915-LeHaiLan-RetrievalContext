@@ -1,0 +1,14 @@
+{
+  "strategy": "Cải thiện 2: Hybrid (top-5, budget 1600)",
+  "n": 15,
+  "hit1": 7,
+  "hit1_rate": 0.4667,
+  "hit3": 11,
+  "hit3_rate": 0.7333,
+  "context_hit": 11,
+  "context_evidence_rate": 0.7333,
+  "avg_context_chars": 1594.5,
+  "median_ms": 14.62,
+  "mean_ms": 13.98,
+  "service_cost_usd": 0.0
+}

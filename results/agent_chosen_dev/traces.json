@@ -1,0 +1,1820 @@
+[
+  {
+    "query_id": "q_01",
+    "question": "What are the two types of tasks typically involved in pre-training in NLP?",
+    "status": "answered",
+    "answer": "In NLP, pre-training typically involves two types of tasks: sequence modeling (or sequence encoding) and sequence generation [ba1f19a3ead0a91fe5e6e66bbedf54e4f31d4abe6200d06d6219cf4786b1cfb4].",
+    "citations": [
+      "ba1f19a3ead0a91fe5e6e66bbedf54e4f31d4abe6200d06d6219cf4786b1cfb4"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "two types of tasks in NLP pre-training",
+        "filter": null,
+        "results": [
+          {
+            "id": "ba1f19a3ead0a91fe5e6e66bbedf54e4f31d4abe6200d06d6219cf4786b1cfb4",
+            "text": "This is followed by a discussion of methods for adapting pre-trained sequence models to various NLP tasks. As this chapter focuses primarily on the pre-training paradigm, we will defer the detailed discussion of generative large language models to subsequent chapters. 1.1 Pre-training in NLP Pre-training in NLP typically involves two types of tasks: sequence modeling (or sequence encoding) and sequence generation. While these tasks take different forms, for simplicity, we describe",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 10,
+            "score": 0.03252247488101534,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 1,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "58bc097998132ae2781a33b45a470655641f48948b35a133131e890cdaa511f8",
+            "text": "There are two fundamental aspects to consider here: • Optimizingθfor a pre-training task. Unlike standard learning problems in NLP, pre-training does not assume specific downstream tasks to which the model will be applied. Instead, the goal is to train a model that can generalize across various tasks. • Applying the pre-trained modelg ˆθ(·)to downstream tasks. To adapt the model to these specific tasks, we need to fine-tune the parameters ˆθusing labeled data or prompt the model with task descriptions. In this section, we discuss the basic concepts for addressing these two aspects.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 11,
+            "score": 0.03131881575727918,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 2,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "ce6d6e4e499772dde9deee75eff6a85f168f9ffa1bef41e9c5f38a3b4a26cbd0",
+            "text": "This enables large-scale self-supervised learning for deep neural networks, leading to the success of pre-training in many understanding, generation, and reasoning tasks. Figure 1.1 shows a comparison of the above three pre-training approaches. Self-supervised pre-training is so successful that most current state-of-the-art NLP models are based on this paradigm. Therefore, throughout this chapter and the remainder of the book, we will focus on selfsupervised pre-training. We will show how sequence models are pre-trained via self-supervision and how the pre-trained models are applied. 1.1.2 Adapting Pre-trained Models As mentioned above, two major types of models are widely used in NLP pre-training. •Sequence Encoding Models.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 12,
+            "score": 0.030621785881252923,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 3,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "1072f54396f33b27707d6ede9f43b10a5085742cf1cae8a2d249dce81353237d",
+            "text": "1.5 Summary In this chapter we have introduced the general concept of pre-training in NLP. In particular, we have discussed self-supervised pre-training and its application to encoder-only, decoder-only, and encoder-decoder architectures. Moreover, we have presented and compared a variety of pretraining tasks for these architectures. As an example, we used BERT to illustrate how sequence models are pre-trained via masked language modeling and applied to different downstream tasks. Recent years have shown remarkable progress in NLP, led by the large-scale use of selfsupervised pre-training. Significant advances have been made across many tasks, not only in NLP but also in computer vision and other areas of AI.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 44,
+            "score": 0.03055037313432836,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 35,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "798a72573abcbb637af0f24c55b5a7d72b0df4c33ab52a32301fd408926e0d32",
+            "text": "The generality of the pre-training tasks leads to systems that exhibit strong performance in a large variety of NLP problems, even outperforming previously state-of-the-art supervised systems. More recently, pre-trained large language models have achieved greater success, showing the exciting prospects for more general artificial intelligence [Bubeck et al., 2023]. This chapter discusses the concept of pre-training in the context of NLP. It begins with a general introduction to pre-training methods and their applications. BERT is then used as an example to illustrate how a sequence model is trained via a self-supervised task, calledmasked language modeling. This is followed by a discussion of methods for adapting pre-trained sequence models to various NLP tasks.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 10,
+            "score": 0.03036576949620428,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 1,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[ba1f19a3ead0a91fe5e6e66bbedf54e4f31d4abe6200d06d6219cf4786b1cfb4 | 2501.09223v4.pdf | page 10]\nThis is followed by a discussion of methods for adapting pre-trained sequence models to various NLP tasks. As this chapter focuses primarily on the pre-training paradigm, we will defer the detailed discussion of generative large language models to subsequent chapters. 1.1 Pre-training in NLP Pre-training in NLP typically involves two types of tasks: sequence modeling (or sequence encoding) and sequence generation. While these tasks take different forms, for simplicity, we describe\n\n[58bc097998132ae2781a33b45a470655641f48948b35a133131e890cdaa511f8 | 2501.09223v4.pdf | page 11]\nThere are two fundamental aspects to consider here: • Optimizingθfor a pre-training task. Unlike standard learning problems in NLP, pre-training does not assume specific downstream tasks to which the model will be applied. Instead, the goal is to train a model that can generalize across various tasks. • Applying the pre-trained modelg ˆθ(·)to downstream tasks. To adapt the model to these specific tasks, we need to fine-tune the parameters ˆθusing labeled data or prompt the model with task descriptions. In this section, we discuss the basic concepts for addressing these two aspects.\n\n[ce6d6e4e499772dde9deee75eff6a85f168f9ffa1bef41e9c5f38a3b4a26cbd0 | 2501.09223v4.pdf | page 12]\nThis enables large-scale self-supervised learning for deep neural networks, leading to the success of pre-training in many understanding, generation, and reasoning tasks. Figure 1.1 shows a comparison of the above three pre-training approaches. Self-supervised pre-training is so successful that most current state-of-the-art NLP models are based on this paradigm. Therefore, throughout this chapter and the remainder of the book, we will focus on selfsupervised pre-training. We will show how sequence models are pre-trained via self-supervision and how the pre-trained models are applied. 1.1.2 Adapting Pre-trained Models As mentioned above, two major types of models are widely used in NLP pre-training. •Sequence Encoding Models.",
+        "context_ids": [
+          "ba1f19a3ead0a91fe5e6e66bbedf54e4f31d4abe6200d06d6219cf4786b1cfb4",
+          "58bc097998132ae2781a33b45a470655641f48948b35a133131e890cdaa511f8",
+          "ce6d6e4e499772dde9deee75eff6a85f168f9ffa1bef41e9c5f38a3b4a26cbd0"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q_02",
+    "question": "What is the core idea of masked language modeling as used in BERT?",
+    "status": "answered",
+    "answer": "The core idea of masked language modeling, which serves as the basis for the BERT model, is to create prediction challenges by masking out specific tokens within an input sequence and training the model to predict those masked tokens [0a20960f39fcb8e4d0734e9e65e2f251db33cbb78e74c88ded076de639af3855].",
+    "citations": [
+      "0a20960f39fcb8e4d0734e9e65e2f251db33cbb78e74c88ded076de639af3855"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "core idea of masked language modeling in BERT",
+        "filter": null,
+        "results": [
+          {
+            "id": "0a20960f39fcb8e4d0734e9e65e2f251db33cbb78e74c88ded076de639af3855",
+            "text": "In general, for better adaptation to these tasks, the system is fine-tuned using labeled data. 1.2.2.1 Masked Language Modeling One of the most popular methods of encoder pre-training ismasked language modeling, which forms the basis of the well-known BERT model [Devlin et al., 2019]. The idea of masked language modeling is to create prediction challenges by masking out some of the tokens in the input sequence and training a model to predict the masked tokens. In this sense, the conventional language modeling problem, which is sometimes calledcausal language modeling, is a special case of masked language modeling: at each position, we mask the tokens in the right context, and predict the token at this position using its left context.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 18,
+            "score": 0.03278688524590164,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 9,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "0921d991cd444fda5afb1a36ebc3ad359ee040056c238da564c160fb06748e7c",
+            "text": "By masking two tokens (say,frolickingandthe), we have the BERT-style input and output of the model, as follows [CLS]The puppies are[MASK]outside[MASK]house . → ⟨s⟩ frolicking the Here denotes the masked position at which we do not make token predictions. By varying the percentage of the tokens in the text, this approach can be generalized towards either BERT-style training or language modeling-style training [Song et al., 2019]. For example, if we mask out all",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 25,
+            "score": 0.02964254577157803,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 16,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "a0acec9dd0a2ddeee039d3b1b2c626d22db1c9c71b029e48704d13eaacb71681",
+            "text": "Note that masked language modeling provides a very general framework for training encoder-decoder models. Various settings can be adjusted to have different training versions, such as altering the percentage of tokens masked and the maximum length of the masked spans.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 26,
+            "score": 0.029571646010002173,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 17,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "fcc10d22549ecc3473c449df629c7ede4e8a1daae24ff6dfaf87361cccde5d42",
+            "text": "Then, we can further fine-tune the pre-trained encoderEncode ˆθ(·)or directly apply it to downstream tasks. 1.2.2.2 Permuted Language Modeling While masked language modeling is simple and widely applied, it introduces new issues. One drawback is the use of a special token,[MASK], which is employed only during training but not at test time. This leads to a discrepancy between training and inference. Moreover, the autoencoding process overlooks the dependencies between masked tokens. For example, in the previously discussed example, the prediction ofx 2 (i.e., the first masked token) is made independently ofx 6 (i.e., the second masked token), even thoughx 6 andx 2 are interdependent in the context of the sentence.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 19,
+            "score": 0.028850145288501453,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 10,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "64cb8910439872ea80582c68bb8ecf6d0558e7f141c0d724b6fc303912f81979",
+            "text": "•Language Modeling. Typically, this approach refers to an autoregressive process of sequence generation. At each step, the model predicts the next token based exclusively on its preceding context. •Masked Language Modeling. Masked language modeling follows a general mask-predict framework. It randomly masks tokens in a sequence and predicts these tokens using the entire masked sequence. •Permuted Language Modeling. Permuted language modeling shares similarities with masked language modeling but removes the fixed left-to-right restriction by permuting the factorization order. It keeps the input sequence fixed but reorders the factorization (prediction) order. Each prediction is based on some context tokens that are randomly selected. •Discriminative Training.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 29,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 20,
+              "document_type": "book"
+            },
+            "score": 0.016129032258064516
+          }
+        ],
+        "context": "[0a20960f39fcb8e4d0734e9e65e2f251db33cbb78e74c88ded076de639af3855 | 2501.09223v4.pdf | page 18]\nIn general, for better adaptation to these tasks, the system is fine-tuned using labeled data. 1.2.2.1 Masked Language Modeling One of the most popular methods of encoder pre-training ismasked language modeling, which forms the basis of the well-known BERT model [Devlin et al., 2019]. The idea of masked language modeling is to create prediction challenges by masking out some of the tokens in the input sequence and training a model to predict the masked tokens. In this sense, the conventional language modeling problem, which is sometimes calledcausal language modeling, is a special case of masked language modeling: at each position, we mask the tokens in the right context, and predict the token at this position using its left context.\n\n[0921d991cd444fda5afb1a36ebc3ad359ee040056c238da564c160fb06748e7c | 2501.09223v4.pdf | page 25]\nBy masking two tokens (say,frolickingandthe), we have the BERT-style input and output of the model, as follows [CLS]The puppies are[MASK]outside[MASK]house . → ⟨s⟩ frolicking the Here denotes the masked position at which we do not make token predictions. By varying the percentage of the tokens in the text, this approach can be generalized towards either BERT-style training or language modeling-style training [Song et al., 2019]. For example, if we mask out all\n\n[a0acec9dd0a2ddeee039d3b1b2c626d22db1c9c71b029e48704d13eaacb71681 | 2501.09223v4.pdf | page 26]\nNote that masked language modeling provides a very general framework for training encoder-decoder models. Various settings can be adjusted to have different training versions, such as altering the percentage of tokens masked and the maximum length of the masked spans.",
+        "context_ids": [
+          "0a20960f39fcb8e4d0734e9e65e2f251db33cbb78e74c88ded076de639af3855",
+          "0921d991cd444fda5afb1a36ebc3ad359ee040056c238da564c160fb06748e7c",
+          "a0acec9dd0a2ddeee039d3b1b2c626d22db1c9c71b029e48704d13eaacb71681"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q_03",
+    "question": "What was the purpose of the Next Sentence Prediction (NSP) task in the original BERT model?",
+    "status": "answered",
+    "answer": "The Next Sentence Prediction (NSP) task in the original BERT model was designed based on the assumption that an effective text encoder should be able to capture the relationship between two sentences [83bfc175f46d625f81dbd9ac0dfcff21b27325075d8174673d829560710e6136]. To model this, the task uses the encoder output of two consecutive sentences to determine whether the second sentence (Sent B) is the actual sentence that follows the first (Sent A) [83bfc175f46d625f81dbd9ac0dfcff21b27325075d8174673d829560710e6136].",
+    "citations": [
+      "83bfc175f46d625f81dbd9ac0dfcff21b27325075d8174673d829560710e6136"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "purpose of Next Sentence Prediction NSP task original BERT model",
+        "filter": null,
+        "results": [
+          {
+            "id": "aedbfeb84ca29223180448a0c9af53ff154ed9bd38438a7e9100c875819e8353",
+            "text": "•Classification(Single Text). One of the most widely used applications of BERT models is text classification. In this task, a BERT model receives a sequence of tokens and encodes it as a sequence of vectors. The first output vectorh cls (orh 0) is typically used as the representation of the entire text. The prediction network takesh cls as input to produce a distribution of labels. Let[CLS]x 1x2···x m be the input sequence. See Figure 1.8 for an illustration of BERT-based text classification. [CLS] x1 x2 ... xm [SEP] ecls e1 e2 ... em em+1 hcls h1 h2 ... hm hm+1 Class BERT Fig. 1.8:BERT-based classification for a single text.Here the gray box denotes the prediction network.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 40,
+            "score": 0.03131881575727918,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 31,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "83bfc175f46d625f81dbd9ac0dfcff21b27325075d8174673d829560710e6136",
+            "text": "tasks. A simple method, callednext sentence prediction(NSP), is presented in BERT’s original paper [Devlin et al., 2019]. NSP is based on the assumption that a good text encoder should capture the relationship between two sentences. To model this relationship, NSP uses the encoder output of two consecutive sentencesSent A andSent B to determine whetherSent B is the next sentence followingSent A. For example, supposeSent A =’It is raining . ’andSent B = ’I need an umbrella . ’. The input sequence of the encoder could be [CLS]It is raining .[SEP]I need an umbrella .[SEP] where[CLS]is the start symbol (i.e.,x 0) which is commonly used in encoder pre-training, and [SEP]is a separator that separates the two sentences.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 22,
+            "score": 0.03125,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 13,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "513c068bb96cdbfd95c1f6c7b70062eb450275ba5a46986fbe12a02f382e2bc1",
+            "text": "1.3 Example: BERT In this section, we introduce BERT, one of the most widely used pre-trained sequence encoding models in NLP. 1.3.1 The Standard Model The standard BERT model, introduced by Devlin et al. [2019], is a bidirectional Transformer encoder trained using two self-supervised tasks: masked language modeling and next sentence prediction. The overall training loss is simply the sum of the losses from these two tasks: LossBERT = Loss mlm + Lossnsp.(1.17) As is standard in deep learning, we optimize the model parameters by minimizing this loss. During training, we sample mini-batches from a text corpus, compute theLoss BERT over each batch, and iteratively update the model parameters using gradient descent or its variants.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 31,
+            "score": 0.029411764705882353,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 22,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "d7378480fa0bbb09d468f5b58df2c053ae98d1410011642025bf3f3ec4be0a2f",
+            "text": "1.4 Applying BERT Models Once a BERT model is pre-trained, it can then be used to solve NLP problems. But BERT models are not immediately ready for downstream tasks. In general, additional fine-tuning is required to adapt them. As a first step, we need a predictor to align the model output with the task of interest. LetBERT ˆθ(·)be a BERT model with pre-trained parameters ˆθ, andPredict ω(·)be a prediction network with parametersω. By integrating the prediction network with the output of the BERT model, we develop a model to tackle the downstream tasks. This model can be expressed as: y= Predict ω(BERTˆθ(x)),(1.21) wherexis the input andyis the output that fits the problem. For example, in classification problems, the model outputs a probability distribution over labels.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 39,
+            "score": 0.02904040404040404,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 30,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "63c102931f564af7ad5322c101bc1ca2df5cdcc895c8ce0a504c7c8065a087ad",
+            "text": "more compute can improve BERT models without the need to change the model architecture. Second, removing the NSP loss does not degrade performance on downstream tasks if the training is scaled up. These findings suggest exploring a general direction of pre-training: we can continue to improve pre-training by scaling it up on simple pre-training tasks. A second approach to improving BERT models is to increase the number of model parameters. For example, in He et al. [2021]’s work, a 1.5 billion-parameter BERT-like model is built by increasing both the model depth and hidden size. However, scaling up BERT and various other pre-trained models introduces new challenges in training, for example, training very large models often becomes unstable and difficult to converge.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 36,
+            "score": 0.027783137179239824,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 27,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[aedbfeb84ca29223180448a0c9af53ff154ed9bd38438a7e9100c875819e8353 | 2501.09223v4.pdf | page 40]\n•Classification(Single Text). One of the most widely used applications of BERT models is text classification. In this task, a BERT model receives a sequence of tokens and encodes it as a sequence of vectors. The first output vectorh cls (orh 0) is typically used as the representation of the entire text. The prediction network takesh cls as input to produce a distribution of labels. Let[CLS]x 1x2···x m be the input sequence. See Figure 1.8 for an illustration of BERT-based text classification. [CLS] x1 x2 ... xm [SEP] ecls e1 e2 ... em em+1 hcls h1 h2 ... hm hm+1 Class BERT Fig. 1.8:BERT-based classification for a single text.Here the gray box denotes the prediction network.\n\n[83bfc175f46d625f81dbd9ac0dfcff21b27325075d8174673d829560710e6136 | 2501.09223v4.pdf | page 22]\ntasks. A simple method, callednext sentence prediction(NSP), is presented in BERT’s original paper [Devlin et al., 2019]. NSP is based on the assumption that a good text encoder should capture the relationship between two sentences. To model this relationship, NSP uses the encoder output of two consecutive sentencesSent A andSent B to determine whetherSent B is the next sentence followingSent A. For example, supposeSent A =’It is raining . ’andSent B = ’I need an umbrella . ’. The input sequence of the encoder could be [CLS]It is raining .[SEP]I need an umbrella .[SEP] where[CLS]is the start symbol (i.e.,x 0) which is commonly used in encoder pre-training, and [SEP]is a separator that separates the two sentences.",
+        "context_ids": [
+          "aedbfeb84ca29223180448a0c9af53ff154ed9bd38438a7e9100c875819e8353",
+          "83bfc175f46d625f81dbd9ac0dfcff21b27325075d8174673d829560710e6136"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q_04",
+    "question": "How are individual training samples formatted in the T5 text-to-text framework?",
+    "status": "answered",
+    "answer": "In the T5 framework, individual training samples are formatted as \"Source Text → Target Text\" [cf334f9adacb859ff9f650e3ad064b5f8fbb975174df8cb1de012adb32a96327]. The source text includes a task description or instruction along with the input, while the target text represents the response [cf334f9adacb859ff9f650e3ad064b5f8fbb975174df8cb1de012adb32a96327]. These are typically delimited by start symbols, such as [CLS] for the source side and ⟨s⟩ for the target side [cf334f9adacb859ff9f650e3ad064b5f8fbb975174df8cb1de012adb32a96327].",
+    "citations": [
+      "cf334f9adacb859ff9f650e3ad064b5f8fbb975174df8cb1de012adb32a96327"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "T5 text-to-text framework input output format training samples",
+        "filter": {
+          "chapter": 1
+        },
+        "results": [
+          {
+            "id": "cf334f9adacb859ff9f650e3ad064b5f8fbb975174df8cb1de012adb32a96327",
+            "text": "1.2.3.1 Masked Encoder-Decoder Pre-training In Raffel et al. [2020]’sT5model, many different tasks are framed as the same text-to-text task. Each sample in T5 follows the format Source Text→Target Text Here→separates the source text, which consists of a task description or instruction and the input given to the system, from the target text, which is the response to the input task. As an example, consider a task of translating from Chinese to English. A training sample can be expressed as: [CLS]Translate from Chinese to English:你好！→ ⟨s⟩Hello! where[CLS]and⟨s⟩are the start symbols on the source and target sides, respectively 5. Likewise, we can express other tasks in the same way. For example [CLS] Answer: when was Albert Einstein born? → ⟨s⟩He was born on March 14, 1879.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 24,
+            "score": 0.03252247488101534,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 15,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "b6422b73e06166fc1bbefe0de2ac2b6c474e9bddb9a08a1fb689d56ae0ad5422",
+            "text": "For example, given an input text, we can instruct a model to generate text describing its sentiment (e.g.,positive,negative, orneutral). Such an idea allows us to develop a single text-to-text system to address any NLP problem. We can formulate different problems into the same text-to-text format. We first train an encoderdecoder model to gain general-purpose knowledge of language via self-supervision. This model is then fine-tuned for specific downstream tasks using targeted text-to-text data.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 23,
+            "score": 0.032266458495966696,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 14,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "23e62524327ba052d60583bb137e9e4690ffaed3ef3f0abf4b2a2d408ea8a66c",
+            "text": "Nevertheless, once training is complete, the generator is discarded, and the encoding part of the discriminator is applied as the pre-trained model for downstream tasks. 1.2.3 Encoder-Decoder Pre-training In NLP, encoder-decoder architectures are often used to model sequence-to-sequence problems, such as machine translation and question answering. In addition to these typical sequence-tosequence problems in NLP, encoder-decoder models can be extended to deal with many other problems. A simple idea is to treat text as both the input and output of a problem, and so we can directly apply encoder-decoder models. For example, given an input text, we can instruct a model to generate text describing its sentiment (e.g.,positive,negative, orneutral).",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 23,
+            "score": 0.030776515151515152,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 14,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "b7e4c712fa935bf5500688a78219a991d3822add108f8f04b709af09167229ed",
+            "text": "Our goal is to generate the text string representing the number0.81, rather than outputting a continuous numerical value. The approach described above provides a new framework of universal language understanding and generation. Both the task instructions and the problem inputs are provided to the system in text form. The system then follows the instructions to complete the task. This method puts different problems together, with the benefit of training a single model that can perform many tasks simultaneously. In general, fine-tuning is necessary for adapting the pre-trained model to a specific downstream task.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 24,
+            "score": 0.03021353930031804,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 15,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "8519b4e28a65f156fd302461df4dc0e267ffa71de70b1083920fd5198ff49b37",
+            "text": "This example also demonstrates the zero-shot learning capability of large language models, which can perform tasks that were not seen during training during. Another method for eliciting new capabilities from a neural network is few-shot learning. This is typically achieved through in-context learning(ICL). More specifically, we add some samples that demonstrate how an input corresponds to an output. These samples, known asdemonstrations, are used to teach large language models how to perform the task. Below is an example with demonstrations Assume that the polarity of a text is a label chosen from {positive, negative, neutral}. Identify the polarity of the input. Input: The traffic is terrible during rush hours, making it difficult to reach the airport on time.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 15,
+            "score": 0.030090497737556562,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 6,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[cf334f9adacb859ff9f650e3ad064b5f8fbb975174df8cb1de012adb32a96327 | 2501.09223v4.pdf | page 24]\n1.2.3.1 Masked Encoder-Decoder Pre-training In Raffel et al. [2020]’sT5model, many different tasks are framed as the same text-to-text task. Each sample in T5 follows the format Source Text→Target Text Here→separates the source text, which consists of a task description or instruction and the input given to the system, from the target text, which is the response to the input task. As an example, consider a task of translating from Chinese to English. A training sample can be expressed as: [CLS]Translate from Chinese to English:你好！→ ⟨s⟩Hello! where[CLS]and⟨s⟩are the start symbols on the source and target sides, respectively 5. Likewise, we can express other tasks in the same way. For example [CLS] Answer: when was Albert Einstein born? → ⟨s⟩He was born on March 14, 1879.\n\n[b6422b73e06166fc1bbefe0de2ac2b6c474e9bddb9a08a1fb689d56ae0ad5422 | 2501.09223v4.pdf | page 23]\nFor example, given an input text, we can instruct a model to generate text describing its sentiment (e.g.,positive,negative, orneutral). Such an idea allows us to develop a single text-to-text system to address any NLP problem. We can formulate different problems into the same text-to-text format. We first train an encoderdecoder model to gain general-purpose knowledge of language via self-supervision. This model is then fine-tuned for specific downstream tasks using targeted text-to-text data.\n\n[23e62524327ba052d60583bb137e9e4690ffaed3ef3f0abf4b2a2d408ea8a66c | 2501.09223v4.pdf | page 23]\nNevertheless, once training is complete, the generator is discarded, and the encoding part of the discriminator is applied as the pre-trained model for downstream tasks. 1.2.3 Encoder-Decoder Pre-training In NLP, encoder-decoder architectures are often used to model sequence-to-sequence problems, such as machine translation and question answering. In addition to these typical sequence-tosequence problems in NLP, encoder-decoder models can be extended to deal with many other problems. A simple idea is to treat text as both the input and output of a problem, and so we can directly apply encoder-decoder models. For example, given an input text, we can instruct a model to generate text describing its sentiment (e.g.,positive,negative, orneutral).",
+        "context_ids": [
+          "cf334f9adacb859ff9f650e3ad064b5f8fbb975174df8cb1de012adb32a96327",
+          "b6422b73e06166fc1bbefe0de2ac2b6c474e9bddb9a08a1fb689d56ae0ad5422",
+          "23e62524327ba052d60583bb137e9e4690ffaed3ef3f0abf4b2a2d408ea8a66c"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q_05",
+    "question": "What text corruption methods are proposed in the BART model for encoder-decoder pre-training?",
+    "status": "answered",
+    "answer": "In the BART model (and encoder-decoder pre-training in general), the proposed text corruption methods for denoising autoencoding include masking, deletion, and permutation of the input sequence [5dabc679fdc400b8de2ecaf13278689e3e97182d6837d6646589f3493da559b9]. Additionally, BERT-style masked language modeling, where tokens are replaced with [MASK] (or [M]), is also used as a corruption method for training these models [96b41fbdc48c7482ea6c614964e93514dc2c1504a814a585d4be94d1cc9b6da4].",
+    "citations": [
+      "96b41fbdc48c7482ea6c614964e93514dc2c1504a814a585d4be94d1cc9b6da4",
+      "5dabc679fdc400b8de2ecaf13278689e3e97182d6837d6646589f3493da559b9"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "BART model text corruption methods encoder-decoder pre-training",
+        "filter": null,
+        "results": [
+          {
+            "id": "bcba39163424e8929abd118fd818cc084e50f7c43c0f9ccacfda502773a651d2",
+            "text": "For pre-training, we can apply multiple corruption methods to learn robust models, for example, we randomly choose one of them for each training sample. In practice, the outcome of encoder-decoder pre-training depends heavily on the input corruption methods used, and so we typically need to choose appropriate training objectives through careful experimentation. 1.2.4 Comparison of Pre-training Tasks So far, we have discussed a variety of pre-training tasks. Because the same training objective can often be applied to different architectures (e.g., using masked language modeling for both encoder-only and encoder-decoder pre-training), categorizing these tasks solely based on model architecture is insufficient. Instead, we summarize them based on their training objectives. •Language Modeling.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 29,
+            "score": 0.03278688524590164,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 20,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "96b41fbdc48c7482ea6c614964e93514dc2c1504a814a585d4be94d1cc9b6da4",
+            "text": "[CLS] The puppies are [M] in [M] house . Encoder Decoder frolicking[M][M][M]⟨s⟩ [M] the [M] [M] [M] [M]frolicking[M] the [M] [M] Loss (a) Training an encoder-decoder model with BERT-style masked language modeling [CLS] The puppies are [M] in [M] house . Encoder Decoder frolickingarepuppiesThe⟨s⟩ in the house The puppies are frolicking in the house . (b) Training an encoder-decoder model with denoising autoencoding Loss over the sequence Fig. 1.4:Training an encoder-decoder model using BERT-style and denoising autoencoding methods. In both methods, the input to the encoder is a corrupted token sequence where some tokens are masked and replaced with[MASK](or [M]for short). The decoder predicts these masked tokens, but in different ways.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 27,
+            "score": 0.030621785881252923,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 18,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "5dabc679fdc400b8de2ecaf13278689e3e97182d6837d6646589f3493da559b9",
+            "text": "•Discriminative Training. In discriminative training, supervision signals are created from classification tasks. Pre-trained models are integrated into classifiers and trained together with the remaining parts of the classifiers to enhance their classification performance. •Denoising Autoencoding. This approach is applied to the pre-training of encoder-decoder models. The input is a corrupted sequence (with noise such as masking, deletion, or permutation), and the model is trained to reconstruct the original sequence.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 29,
+            "score": 0.02976190476190476,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 20,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "23e62524327ba052d60583bb137e9e4690ffaed3ef3f0abf4b2a2d408ea8a66c",
+            "text": "Nevertheless, once training is complete, the generator is discarded, and the encoding part of the discriminator is applied as the pre-trained model for downstream tasks. 1.2.3 Encoder-Decoder Pre-training In NLP, encoder-decoder architectures are often used to model sequence-to-sequence problems, such as machine translation and question answering. In addition to these typical sequence-tosequence problems in NLP, encoder-decoder models can be extended to deal with many other problems. A simple idea is to treat text as both the input and output of a problem, and so we can directly apply encoder-decoder models. For example, given an input text, we can instruct a model to generate text describing its sentiment (e.g.,positive,negative, orneutral).",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 23,
+            "score": 0.029709507042253523,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 14,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "a0acec9dd0a2ddeee039d3b1b2c626d22db1c9c71b029e48704d13eaacb71681",
+            "text": "Note that masked language modeling provides a very general framework for training encoder-decoder models. Various settings can be adjusted to have different training versions, such as altering the percentage of tokens masked and the maximum length of the masked spans.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 26,
+            "score": 0.029083245521601686,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 17,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[bcba39163424e8929abd118fd818cc084e50f7c43c0f9ccacfda502773a651d2 | 2501.09223v4.pdf | page 29]\nFor pre-training, we can apply multiple corruption methods to learn robust models, for example, we randomly choose one of them for each training sample. In practice, the outcome of encoder-decoder pre-training depends heavily on the input corruption methods used, and so we typically need to choose appropriate training objectives through careful experimentation. 1.2.4 Comparison of Pre-training Tasks So far, we have discussed a variety of pre-training tasks. Because the same training objective can often be applied to different architectures (e.g., using masked language modeling for both encoder-only and encoder-decoder pre-training), categorizing these tasks solely based on model architecture is insufficient. Instead, we summarize them based on their training objectives. •Language Modeling.\n\n[96b41fbdc48c7482ea6c614964e93514dc2c1504a814a585d4be94d1cc9b6da4 | 2501.09223v4.pdf | page 27]\n[CLS] The puppies are [M] in [M] house . Encoder Decoder frolicking[M][M][M]⟨s⟩ [M] the [M] [M] [M] [M]frolicking[M] the [M] [M] Loss (a) Training an encoder-decoder model with BERT-style masked language modeling [CLS] The puppies are [M] in [M] house . Encoder Decoder frolickingarepuppiesThe⟨s⟩ in the house The puppies are frolicking in the house . (b) Training an encoder-decoder model with denoising autoencoding Loss over the sequence Fig. 1.4:Training an encoder-decoder model using BERT-style and denoising autoencoding methods. In both methods, the input to the encoder is a corrupted token sequence where some tokens are masked and replaced with[MASK](or [M]for short). The decoder predicts these masked tokens, but in different ways.\n\n[5dabc679fdc400b8de2ecaf13278689e3e97182d6837d6646589f3493da559b9 | 2501.09223v4.pdf | page 29]\n•Discriminative Training. In discriminative training, supervision signals are created from classification tasks. Pre-trained models are integrated into classifiers and trained together with the remaining parts of the classifiers to enhance their classification performance. •Denoising Autoencoding. This approach is applied to the pre-training of encoder-decoder models. The input is a corrupted sequence (with noise such as masking, deletion, or permutation), and the model is trained to reconstruct the original sequence.",
+        "context_ids": [
+          "bcba39163424e8929abd118fd818cc084e50f7c43c0f9ccacfda502773a651d2",
+          "96b41fbdc48c7482ea6c614964e93514dc2c1504a814a585d4be94d1cc9b6da4",
+          "5dabc679fdc400b8de2ecaf13278689e3e97182d6837d6646589f3493da559b9"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q_06",
+    "question": "How is the probability of a token sequence factorized in a standard language model using the chain rule?",
+    "status": "answered",
+    "answer": "In a standard language model, the probability of a sequence is approximated by the product of n-gram probabilities, where the probability of a word is estimated given its preceding n-1 words [9cd81ccf1470ec6b80b817ef67a57e00cb8c6b544dfda6702c800bf22d6beff1].",
+    "citations": [
+      "9cd81ccf1470ec6b80b817ef67a57e00cb8c6b544dfda6702c800bf22d6beff1"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "chain rule probability factorization language model",
+        "filter": null,
+        "results": [
+          {
+            "id": "64cb8910439872ea80582c68bb8ecf6d0558e7f141c0d724b6fc303912f81979",
+            "text": "•Language Modeling. Typically, this approach refers to an autoregressive process of sequence generation. At each step, the model predicts the next token based exclusively on its preceding context. •Masked Language Modeling. Masked language modeling follows a general mask-predict framework. It randomly masks tokens in a sequence and predicts these tokens using the entire masked sequence. •Permuted Language Modeling. Permuted language modeling shares similarities with masked language modeling but removes the fixed left-to-right restriction by permuting the factorization order. It keeps the input sequence fixed but reorders the factorization (prediction) order. Each prediction is based on some context tokens that are randomly selected. •Discriminative Training.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 29,
+            "score": 0.030886196246139225,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 20,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "9cd81ccf1470ec6b80b817ef67a57e00cb8c6b544dfda6702c800bf22d6beff1",
+            "text": "The concept of language modeling dates back to early experiments conducted by Shannon [1951]. In his work, Shannon proposed a language model to estimate how predictable English text is —how well the next letter of a text can be predicted when the precedingNletters are known. Although Shannon’s experiments were preliminary, the fundamental goals and methods of language modeling have remained largely unchanged over the decades. For many years, particularly before 2010, the dominant approach to language modeling was then-gram approach [Jurafsky and Martin, 2008]. Inn-gram language modeling, we estimate the probability of a word given its precedingn−1words, and thus the probability of a sequence can be approximated by the product ofn-gram probabilities.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 45,
+            "score": 0.030776515151515152,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 36,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "1cb1de6fabe9944897f81faedb6461e3719de12146b7f427e3523c3a14592050",
+            "text": "Let {x0,x 1,···,x m}be a sequence of tokens, wherex 0 is the start symbol⟨s⟩(or⟨SOS⟩) 1. The probability of this sequence can be factorized using the chain rule Pr(x0,···,x m) = Pr(x 0)·Pr(x 1|x0)·Pr(x 2|x0,x 1)···Pr(x m|x0,···,x m−1) = m∏ i=0 Pr(xi|x0,···,x i−1),,(2.1) or alternatively in a logarithmic form log Pr(x0,···,x m) = m∑ i=0 log Pr(xi|x0,···,x i−1)..(2.2) Here,Pr(xi|x0,···,x i−1)is the probability of the tokenxi given all its preceding tokens{x0,···, xi−1} 2. In the era of deep learning, a typical approach to language modeling is to estimate these probabilities using deep neural networks. Neural networks trained for this task receive a context sequencex 0,···,x i−1 and output a probability distribution over the vocabularyV(denoted byPr(·|x 0,···,x i−1)).",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 46,
+            "score": 0.029726775956284153,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 37,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "a05186b3b2897a6c44157413acd56f04f4bb2534bcd687c3e75952af8ca3d1af",
+            "text": "modeling. For example, consider a sequence of 5 tokensx 0x1x2x3x4. Lete i represent the embedding ofx i (i.e., combination of the token embedding and positional embedding). In standard language modeling, we would generate this sequence in the order ofx 0→x 1→x 2→x 3→x 4. The probability of the sequence can be modeled via a generation process. Pr(x) = Pr(x 0)·Pr(x 1|x0)·Pr(x 2|x0,x 1)·Pr(x 3|x0,x 1,x 2)· Pr(x4|x0,x 1,x 2,x 3).(1.12) In practice, the model conditions on token embeddings rather than the tokens themselves. Therefore, we can rewrite the above expression as Pr(x) = Pr(x 0)·Pr(x 1|e0)·Pr(x 2|e0,e 1)·Pr(x 3|e0,e 1,e 2)· Pr(x4|e0,e 1,e 2,e 3).(1.13) Now, let us consider a different order for token prediction:x 0→x 4→x 2→x 1→x 3.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 20,
+            "score": 0.016129032258064516,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 11,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "ce5e71815db404b7f6270a315f35510a47a3aef11e6436a8ae24cd5b892d49c4",
+            "text": "For example, it refers to the preceding tokens in language modeling, and refers to the source-language sequence in machine translation2. 2More precisely, in autoregressive decoding of machine translation, each target-language token is generated based on both its preceding tokens and source-language sequence.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 12,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 3,
+              "document_type": "book"
+            },
+            "score": 0.016129032258064516
+          }
+        ],
+        "context": "[64cb8910439872ea80582c68bb8ecf6d0558e7f141c0d724b6fc303912f81979 | 2501.09223v4.pdf | page 29]\n•Language Modeling. Typically, this approach refers to an autoregressive process of sequence generation. At each step, the model predicts the next token based exclusively on its preceding context. •Masked Language Modeling. Masked language modeling follows a general mask-predict framework. It randomly masks tokens in a sequence and predicts these tokens using the entire masked sequence. •Permuted Language Modeling. Permuted language modeling shares similarities with masked language modeling but removes the fixed left-to-right restriction by permuting the factorization order. It keeps the input sequence fixed but reorders the factorization (prediction) order. Each prediction is based on some context tokens that are randomly selected. •Discriminative Training.\n\n[9cd81ccf1470ec6b80b817ef67a57e00cb8c6b544dfda6702c800bf22d6beff1 | 2501.09223v4.pdf | page 45]\nThe concept of language modeling dates back to early experiments conducted by Shannon [1951]. In his work, Shannon proposed a language model to estimate how predictable English text is —how well the next letter of a text can be predicted when the precedingNletters are known. Although Shannon’s experiments were preliminary, the fundamental goals and methods of language modeling have remained largely unchanged over the decades. For many years, particularly before 2010, the dominant approach to language modeling was then-gram approach [Jurafsky and Martin, 2008]. Inn-gram language modeling, we estimate the probability of a word given its precedingn−1words, and thus the probability of a sequence can be approximated by the product ofn-gram probabilities.\n\n[ce5e71815db404b7f6270a315f35510a47a3aef11e6436a8ae24cd5b892d49c4 | 2501.09223v4.pdf | page 12]\nFor example, it refers to the preceding tokens in language modeling, and refers to the source-language sequence in machine translation2. 2More precisely, in autoregressive decoding of machine translation, each target-language token is generated based on both its preceding tokens and source-language sequence.",
+        "context_ids": [
+          "64cb8910439872ea80582c68bb8ecf6d0558e7f141c0d724b6fc303912f81979",
+          "9cd81ccf1470ec6b80b817ef67a57e00cb8c6b544dfda6702c800bf22d6beff1",
+          "ce5e71815db404b7f6270a315f35510a47a3aef11e6436a8ae24cd5b892d49c4"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q_07",
+    "question": "According to Table 2.2, how many parameters does the GPT-3 model have?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "GPT-3 model parameters Table 2.2",
+        "filter": null,
+        "results": [
+          {
+            "id": "c6fea465b46ca8d3f6e2f39a8a5241c9219dc5494a4dd41d2baf1e69a5749972",
+            "text": "For example, both the GPT o1 and o3 models are designed with more advanced reasoning techniques (such as long internal CoT) to solve challenging problems like scientific and mathematical reasoning [OpenAI, 2024]. These tasks often rely on long and complex reasoning paths, and therefore, it seems essential to introduce detailed supervision signals in the reasoning process. Moreover, from a practical perspective, effective supervision on long reasoning paths not only improves reasoning performance, but also helps the model eliminate unnecessary reasoning steps, thereby reducing reasoning complexity and improving efficiency. 4.4.5 Inference-time Alignment So far in this section, we have explored a variety of methods to align models with human preferences and annotations.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 209,
+            "score": 0.01639344262295082,
+            "metadata": {
+              "chapter": 4,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 200,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "df0c4decaa962bc34b63bd711594b1c098226bfe406922e9f7e3475dd98cef5e",
+            "text": "1 1 2 3 3 3 1 1 2 3 3 3 3 2 1 1 1 2 3 3 3 3 3 2 2 1 1 1 2 3 3 3 3 3 3 2 2 1 Begin End Requests x1,x 2,x 3 arrived Request x4 arrived x4 is added to the next batch Iteration 1 (prefilling) Iteration 2 Iteration 3 Iteration 4 (a) Request-level Scheduling 1 1 2 3 3 3 1 1 2 3 3 3 3 2 1 1 1 2 3 3 3 4 4 4 3 3 2 2 1 1 1 2 3 3 3 4 4 4 3 3 3 2 2 1 4 Begin End Requests x1,x 2,x 3 arrived Request x4 arrived prefilling forx 4 one decoding step forx 1,x 2,x 3 Iteration 1 (prefilling) Iteration 2 Iteration 3 Iteration 4 More iterations (b) Iteration-level Scheduling Fig. 5.10:Illustrations of request-level scheduling and iteration-level scheduling. In request-level scheduling, once a batch is created and sent to the inference engine, we cannot adjust the batch.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 236,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 227,
+              "document_type": "book"
+            },
+            "score": 0.01639344262295082
+          },
+          {
+            "id": "099bbf2bbb87ea0af134963223c389b8aa6e46344b0358fab2d0c7805110b1bd",
+            "text": "In the A2C method,A(st,at)is typically expressed as the difference of the action-value functionQ(st,at)and the state-value functionV(s t): A(st,at) =Q(s t,at)−V(s t).(4.29) At first glance, this model may seem challenging to develop because it requires two separate submodels to calculateQ(s t,at)andV(s t), respectively. Fortunately, considering thatQ(st,at)can be defined as the returnrt +V(s t+1), we can rewrite Eq. (4.29) as A(st,at) =r t +V(s t+1)−V(s t),(4.30) or alternatively, introduce the discount factorγto obtain a more general form A(st,at) =r t +γV(s t+1)−V(s t).(4.31) A(st,at) =r t +γV(s t+1)−V(s t)is also called thetemporal difference(TD) error. What we need is to train a critic network for the value functionV(s t), and then use it to compute the advantage function3.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 188,
+            "score": 0.016129032258064516,
+            "metadata": {
+              "chapter": 4,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 179,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "d4e0cab6572a627f4a436cfa98e414d084d037bb90a741933389d3ad98b00451",
+            "text": "prefilling forx 1 andx 2. one decoding step for x1 andx 2. one decoding step for x1 andx 2. one decoding step for x1 andx 2, and prefilling forx 3. one decoding step for x1,x 2 andx 3. x2’s prediction completes. one decoding step for x1 andx 3, and prefilling forx 4. 1 1 1 2 2Scheduler x1,x 2 arrived (a) Iteration 1 input output batch 1 1 1 2 2 2 1 Scheduler (b) Iteration 2 input output batch 1 1 1 2 2 2 2 1 1 Scheduler (c) Iteration 3 input output batch 1 1 1 2 2 3 3 2 2 2 1 1 1 Scheduler x3 arrived (d) Iteration 4 input output batch 1 1 1 2 2 3 3 3 2 2 2 2 1 1 1 1 complete Scheduler y2 (e) Iteration 5 input output batch 1 1 1 4 4 4 3 3 3 3 1 1 1 1 1 continue the second sequence in the batch withx 4 Scheduler x4,x 5 arrived (f) Iteration 6 input output batch Fig.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 237,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 228,
+              "document_type": "book"
+            },
+            "score": 0.016129032258064516
+          },
+          {
+            "id": "905d8116701ee02ce8b786727ee6cb54d312365be184a2194ee6189ce0f859d8",
+            "text": "All these approaches essentially aim to provide more detailed supervision to LLMs by breaking their outputs into smaller, more manageable steps. However, process-based feedback focuses more on evaluating the correctness of a step based on its preceding steps, while the approaches in Section 4.4.1.3 emphasize evaluating each step independently. The idea of aligning LLMs step by step has great application potential, especially considering the recent shift towards more complex reasoning tasks in the use of LLMs. For example, both the GPT o1 and o3 models are designed with more advanced reasoning techniques (such as long internal CoT) to solve challenging problems like scientific and mathematical reasoning [OpenAI, 2024].",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 209,
+            "score": 0.015873015873015872,
+            "metadata": {
+              "chapter": 4,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 200,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[c6fea465b46ca8d3f6e2f39a8a5241c9219dc5494a4dd41d2baf1e69a5749972 | 2501.09223v4.pdf | page 209]\nFor example, both the GPT o1 and o3 models are designed with more advanced reasoning techniques (such as long internal CoT) to solve challenging problems like scientific and mathematical reasoning [OpenAI, 2024]. These tasks often rely on long and complex reasoning paths, and therefore, it seems essential to introduce detailed supervision signals in the reasoning process. Moreover, from a practical perspective, effective supervision on long reasoning paths not only improves reasoning performance, but also helps the model eliminate unnecessary reasoning steps, thereby reducing reasoning complexity and improving efficiency. 4.4.5 Inference-time Alignment So far in this section, we have explored a variety of methods to align models with human preferences and annotations.\n\n[df0c4decaa962bc34b63bd711594b1c098226bfe406922e9f7e3475dd98cef5e | 2501.09223v4.pdf | page 236]\n1 1 2 3 3 3 1 1 2 3 3 3 3 2 1 1 1 2 3 3 3 3 3 2 2 1 1 1 2 3 3 3 3 3 3 2 2 1 Begin End Requests x1,x 2,x 3 arrived Request x4 arrived x4 is added to the next batch Iteration 1 (prefilling) Iteration 2 Iteration 3 Iteration 4 (a) Request-level Scheduling 1 1 2 3 3 3 1 1 2 3 3 3 3 2 1 1 1 2 3 3 3 4 4 4 3 3 2 2 1 1 1 2 3 3 3 4 4 4 3 3 3 2 2 1 4 Begin End Requests x1,x 2,x 3 arrived Request x4 arrived prefilling forx 4 one decoding step forx 1,x 2,x 3 Iteration 1 (prefilling) Iteration 2 Iteration 3 Iteration 4 More iterations (b) Iteration-level Scheduling Fig. 5.10:Illustrations of request-level scheduling and iteration-level scheduling. In request-level scheduling, once a batch is created and sent to the inference engine, we cannot adjust the batch.",
+        "context_ids": [
+          "c6fea465b46ca8d3f6e2f39a8a5241c9219dc5494a4dd41d2baf1e69a5749972",
+          "df0c4decaa962bc34b63bd711594b1c098226bfe406922e9f7e3475dd98cef5e"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "q_08",
+    "question": "What does RLHF stand for when aligning LLMs with human expectations?",
+    "status": "answered",
+    "answer": "In the context of aligning LLMs with human expectations, RLHF stands for reinforcement learning from human feedback [95a2a3499c70bc06e4f26f358269e29d3462dc7d42d03467341ff060c1f93059].",
+    "citations": [
+      "95a2a3499c70bc06e4f26f358269e29d3462dc7d42d03467341ff060c1f93059"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "what does RLHF stand for in LLM alignment",
+        "filter": {
+          "chapter": 2
+        },
+        "results": [
+          {
+            "id": "6f41afd0b5efa1606ee2cf6ec82a8de5e7b8a7bbeecc143dee0187c68b8c88cf",
+            "text": "Every time the agent produces an output sequence, the reward model evaluates it and assigns a numerical score (i.e., the reward). This score explicitly informs the agent about the quality and alignment of its output. In RLHF, two distinct learning phases are executed: 1) reward model learning, which involves",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 57,
+            "score": 0.03177805800756621,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 48,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "1832deb4068ae4c54590c6b80aebc22b5765905fa8647c181e598102e452feba",
+            "text": "Here, alignment refers to the process of guiding LLMs to behave in ways that accord with human values and goals. The guidance can come from labeled data, human feedback, or any other form of human preferences. For example,",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 55,
+            "score": 0.0315136476426799,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 46,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "95a2a3499c70bc06e4f26f358269e29d3462dc7d42d03467341ff060c1f93059",
+            "text": "To better align the LLM with human values, an effective approach is to learn directly from human feedback. For example, given an instruction and the model’s generated response, human experts are asked to evaluate how well the response aligns with their preferences and safety guidelines. This feedback is then used to further train the LLM for superior alignment. A typical method for learning from human feedback is to consider it as a reinforcement learning (RL) problem, known asreinforcement learning from human feedback(RLHF) [Ouyang et al., 2022]. The RLHF method was initially proposed to address general sequential decisionmaking problems [Christiano et al., 2017], and was later successfully employed in the development of the GPT series models [Stiennon et al., 2020].",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 56,
+            "score": 0.03128054740957967,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 47,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "1f663ad6aa20a944cf1852b72c469ac64dc7b52ac0441202860a60b4930e3ca5",
+            "text": "Given that this section serves only as a brief introduction to concepts of LLMs, a detailed discussion of RLHF techniques will not be included. We instead illustrate the basic ideas behind RLHF using a simple example. Suppose we have trained an LLM via pre-training and instruction fine-tuning. This LLM is deployed to respond to requests from users. For example, a user may input How can I live a more environmentally friendly life? We use the LLM to generate 4 different outputs (denoted by{y1,···,y 4}) by sampling from the output distribution Output 1 (y1): Consider switching to an electric vehicle or bicycle instead of traditional cars to reduce carbon emissions and protect our planet. Output 2 (y2): Adopt a minimalist lifestyle.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 58,
+            "score": 0.030158730158730156,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 49,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "c4fbf8f1e4bf33a4392804347446dd6654e3a46dc989bcd091e133b24256d486",
+            "text": "The RLHF method was initially proposed to address general sequential decisionmaking problems [Christiano et al., 2017], and was later successfully employed in the development of the GPT series models [Stiennon et al., 2020]. As a reinforcement learning approach, the goal of RLHF is to learn a policy by maximizing some reward from the environment. Specifically, RLHF consists of two main components: •Agent. The agent, also referred to as an LM agent, is the LLM we intend to optimize. This agent operates by interacting with its environment: it receives text from the environment and",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 56,
+            "score": 0.029910714285714284,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 47,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[6f41afd0b5efa1606ee2cf6ec82a8de5e7b8a7bbeecc143dee0187c68b8c88cf | 2501.09223v4.pdf | page 57]\nEvery time the agent produces an output sequence, the reward model evaluates it and assigns a numerical score (i.e., the reward). This score explicitly informs the agent about the quality and alignment of its output. In RLHF, two distinct learning phases are executed: 1) reward model learning, which involves\n\n[1832deb4068ae4c54590c6b80aebc22b5765905fa8647c181e598102e452feba | 2501.09223v4.pdf | page 55]\nHere, alignment refers to the process of guiding LLMs to behave in ways that accord with human values and goals. The guidance can come from labeled data, human feedback, or any other form of human preferences. For example,\n\n[95a2a3499c70bc06e4f26f358269e29d3462dc7d42d03467341ff060c1f93059 | 2501.09223v4.pdf | page 56]\nTo better align the LLM with human values, an effective approach is to learn directly from human feedback. For example, given an instruction and the model’s generated response, human experts are asked to evaluate how well the response aligns with their preferences and safety guidelines. This feedback is then used to further train the LLM for superior alignment. A typical method for learning from human feedback is to consider it as a reinforcement learning (RL) problem, known asreinforcement learning from human feedback(RLHF) [Ouyang et al., 2022]. The RLHF method was initially proposed to address general sequential decisionmaking problems [Christiano et al., 2017], and was later successfully employed in the development of the GPT series models [Stiennon et al., 2020].\n\n[c4fbf8f1e4bf33a4392804347446dd6654e3a46dc989bcd091e133b24256d486 | 2501.09223v4.pdf | page 56]\nThe RLHF method was initially proposed to address general sequential decisionmaking problems [Christiano et al., 2017], and was later successfully employed in the development of the GPT series models [Stiennon et al., 2020]. As a reinforcement learning approach, the goal of RLHF is to learn a policy by maximizing some reward from the environment. Specifically, RLHF consists of two main components: •Agent. The agent, also referred to as an LM agent, is the LLM we intend to optimize. This agent operates by interacting with its environment: it receives text from the environment and",
+        "context_ids": [
+          "6f41afd0b5efa1606ee2cf6ec82a8de5e7b8a7bbeecc143dee0187c68b8c88cf",
+          "1832deb4068ae4c54590c6b80aebc22b5765905fa8647c181e598102e452feba",
+          "95a2a3499c70bc06e4f26f358269e29d3462dc7d42d03467341ff060c1f93059",
+          "c4fbf8f1e4bf33a4392804347446dd6654e3a46dc989bcd091e133b24256d486"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q_09",
+    "question": "Which family of challenging tasks often causes standard LLMs to fail unless intermediate reasoning steps are provided?",
+    "status": "answered",
+    "answer": "Complex reasoning problems, such as solving math problems, are the family of challenging tasks that often cause standard LLMs to fail unless intermediate reasoning steps are provided [4ca9f4c07ca8e78ca7cc7af7c4d42e87ed0cf0d4ecafff2cd232e68a37da019f]. These tasks require a dynamic thinking process involving trial and error, backtracking, and self-correction, as a single incorrect intermediate step can render the entire reasoning chain invalid [181d4abea72bdc892b18b862831f406e0b698578034189ba6730b458352ad0bc].",
+    "citations": [
+      "4ca9f4c07ca8e78ca7cc7af7c4d42e87ed0cf0d4ecafff2cd232e68a37da019f",
+      "181d4abea72bdc892b18b862831f406e0b698578034189ba6730b458352ad0bc"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "LLM failure modes intermediate reasoning steps challenging tasks",
+        "filter": null,
+        "results": [
+          {
+            "id": "4ca9f4c07ca8e78ca7cc7af7c4d42e87ed0cf0d4ecafff2cd232e68a37da019f",
+            "text": "LLMs by encouraging the generation of intermediate reasoning steps before arriving at a final answer. However, reasoning problems are often so complicated that we cannot obtain high-quality solutions by providing simple chain-of-thought prompts. For example, when solving a math problem, we typically need to reason through a sequence of steps. At each step, we need to work out some intermediate result, verify it, and then determine what to do next. The reasoning path is not a fixed pattern but a dynamically generated thinking process that often involves trial and error, backtracking, and self-correction. This requires more sophisticated prompting strategies or search algorithms to navigate such complex reasoning.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 247,
+            "score": 0.030886196246139225,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 238,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "181d4abea72bdc892b18b862831f406e0b698578034189ba6730b458352ad0bc",
+            "text": "This leads to approaches that perform step-level search with verifiers, where guidance or pruning occurs at intermediate reasoning steps{a 1,···,a i}rather than only after a full solutionyis formed. Such fine-grained control is particularly beneficial for complex reasoning problems where a single incorrect intermediate step can render the entire subsequent reasoning chain invalid. By evaluating or guiding the generation at each intermediate step, the LLM can explore the reasoning space more effectively, potentially pruning unpromising paths early or allocating more resources to explore more plausible ones. Step-level search with verifiers can also be modeled as a tree search problem.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 250,
+            "score": 0.030776515151515152,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 241,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "dd01014a091db52ff23d64c05d9459d7ba98430b02138d5360847b10e577aff7",
+            "text": "•System 2 (Deliberative Thinking):This mode is slow and conscious, requiring step-bystep logical derivation. For LLMs, System 2 thinking is engaged when the model is directed to allocate additional computational resources at inference time to explicitly generate intermediate reasoning steps. By representing the thought process as text, the LLM breaks down complex tasks, verifies intermediate conclusions, and maintains a coherent logical chain before arriving at the final answer. For LLM reasoning, the core objective is to activate the System 2 capability. To understand this, we must look beyond traditional symbolic logic. In classic AI, reasoning is often defined as the application of hard-coded logical rules over structured knowledge bases.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 257,
+            "score": 0.029631255487269532,
+            "metadata": {
+              "chapter": 6,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 248,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "f704ec25d63b82aabfafd9a7d2888150df656b8aee9f5c14073c4d1255878ba4",
+            "text": "By providing detailed reasoning demonstrations, the LLM is encouraged to generate intermediate steps that lead to the correct answer. There are several benefits to using CoT prompting. First, CoT allows LLMs to decompose complex problems into smaller, sequential reasoning steps. This resembles how humans solve complex problems step by step, making it particularly effective for tasks requiring detailed, multistep reasoning. Second, CoT makes the reasoning process more transparent and interpretable. Since the intermediate reasoning steps are visible, we can better understand how a conclusion was reached. Third, if users can follow the logic behind the reasoning process, they will be more likely to trust the predictions of an LLM.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 124,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 115,
+              "document_type": "book"
+            },
+            "score": 0.01639344262295082
+          },
+          {
+            "id": "1f28f0d1c8ecd129acd415bec90898aa2f968dc4e2b7552fb69a5ef1d22c1bc3",
+            "text": "The issue is that LLMs can easily get lost or stuck in the loop. They might repeat the same mistakes, make bad plans, or not know how to recover from failures when an action fails [Shinn et al., 2023]. Keeping the model on track over a long time is still very hard. Third, reasoning directly enables tool-augmented reasoning, which solves the limitations of LLMs, such as their inability to perform precise math or access real-time facts. Instead of forcing",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 287,
+            "score": 0.016129032258064516,
+            "metadata": {
+              "chapter": 6,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 278,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[4ca9f4c07ca8e78ca7cc7af7c4d42e87ed0cf0d4ecafff2cd232e68a37da019f | 2501.09223v4.pdf | page 247]\nLLMs by encouraging the generation of intermediate reasoning steps before arriving at a final answer. However, reasoning problems are often so complicated that we cannot obtain high-quality solutions by providing simple chain-of-thought prompts. For example, when solving a math problem, we typically need to reason through a sequence of steps. At each step, we need to work out some intermediate result, verify it, and then determine what to do next. The reasoning path is not a fixed pattern but a dynamically generated thinking process that often involves trial and error, backtracking, and self-correction. This requires more sophisticated prompting strategies or search algorithms to navigate such complex reasoning.\n\n[181d4abea72bdc892b18b862831f406e0b698578034189ba6730b458352ad0bc | 2501.09223v4.pdf | page 250]\nThis leads to approaches that perform step-level search with verifiers, where guidance or pruning occurs at intermediate reasoning steps{a 1,···,a i}rather than only after a full solutionyis formed. Such fine-grained control is particularly beneficial for complex reasoning problems where a single incorrect intermediate step can render the entire subsequent reasoning chain invalid. By evaluating or guiding the generation at each intermediate step, the LLM can explore the reasoning space more effectively, potentially pruning unpromising paths early or allocating more resources to explore more plausible ones. Step-level search with verifiers can also be modeled as a tree search problem.\n\n[1f28f0d1c8ecd129acd415bec90898aa2f968dc4e2b7552fb69a5ef1d22c1bc3 | 2501.09223v4.pdf | page 287]\nThe issue is that LLMs can easily get lost or stuck in the loop. They might repeat the same mistakes, make bad plans, or not know how to recover from failures when an action fails [Shinn et al., 2023]. Keeping the model on track over a long time is still very hard. Third, reasoning directly enables tool-augmented reasoning, which solves the limitations of LLMs, such as their inability to perform precise math or access real-time facts. Instead of forcing",
+        "context_ids": [
+          "4ca9f4c07ca8e78ca7cc7af7c4d42e87ed0cf0d4ecafff2cd232e68a37da019f",
+          "181d4abea72bdc892b18b862831f406e0b698578034189ba6730b458352ad0bc",
+          "1f28f0d1c8ecd129acd415bec90898aa2f968dc4e2b7552fb69a5ef1d22c1bc3"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q_10",
+    "question": "How does Root Mean Square (RMS) layer normalization differ from standard layer normalization?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "difference between Root Mean Square (RMS) layer normalization and standard layer normalization",
+        "filter": null,
+        "results": [
+          {
+            "id": "ea80e3e966f0522a2a79a4dbabd2a2de01487980af7d6ca962b993f888a72b2b",
+            "text": "Given this, most LLMs are based on the prenorm architecture, expressed asoutput =F(LNorm(input)) + input. A widely-used form of the layer normalization function is given by LNorm(h) =α⊙ h−µσ+ϵ +β,(2.23) wherehis ad-dimensional real-valued vector,µis the mean of all the entries ofh, andσis the corresponding standard deviation.ϵis introduced for the sake of numerical stability.α∈R d and β∈R d are the gain and bias terms. A variant of layer normalization, called root mean square (RMS) layer normalization, only rescales the input vector but does not re-center it [Zhang and Sennrich, 2019]. The RMS layer normalization function is given by RMSNorm(h) =α⊙ hσrms +ϵ ,(2.24) whereσ rms is the root mean square ofh, i.e.,σ rms = ( 1d∑dk=1h2k) 12 .",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 67,
+            "score": 0.03252247488101534,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 58,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "3c086a1427ad16ff2d9901fc0b3aae620d57d67963fa20b24753ef37a93ec5d4",
+            "text": "The RMS layer normalization function is given by RMSNorm(h) =α⊙ hσrms +ϵ ,(2.24) whereσ rms is the root mean square ofh, i.e.,σ rms = ( 1d∑dk=1h2k) 12 . This layer normalization function is used in LLMs like the Llama series.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 67,
+            "score": 0.03252247488101534,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 58,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "68ed2e81af746536b06bd25046c1f263b816c7293a1af3a94b8878e415eea5b1",
+            "text": "Here, we focus on common modifications and improvements to the standard Transformer architecture, which are important for stable LLM training. 2.2.2.1 Layer Normalization with Residual Connections Layer normalization is used to stabilize training for deep neural networks. It is a process of subtracting the mean and dividing by the standard deviation. By normalizing the layer output in this manner, we can effectively mitigate internal covariate shift and enhance training stability. In Transformers, layer normalization is typically employed alongside residual connections.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 67,
+            "score": 0.03149801587301587,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 58,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "e20e37c61066af382f36984921e1a4c75d45a554886976655effdafee4addf27",
+            "text": "In Transformers, layer normalization is typically employed alongside residual connections. As described in Section 2.1.1, a sub-layer can be based on either the post-norm architecture, in which layer normalization is performed right after a residual block, or the pre-norm architecture, in which layer normalization is performed inside a residual block. While both architectures are widely used in Transformer-based systems [Wang et al., 2019], the pre-norm architecture has proven to be especially useful in training deep Transformers. Given this, most LLMs are based on the prenorm architecture, expressed asoutput =F(LNorm(input)) + input.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 67,
+            "score": 0.03125763125763126,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 58,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "28fcdfa3696238c8ce43aef8bd3d54c74d26387af96960f037470eb2914e8078",
+            "text": "Both sub-layers follow the post-norm architecture:output = LNorm(F(input) + input), whereF(·)is the core function of the sublayer (either a self-attention model or an FFN), andLNorm(·)is the layer normalization unit. Typically, a number of Transformer layers are stacked to form a deep network. For each position in the sequence, the final output representation is the real-valued vector produced by the uppermost layer. There are several aspects one may consider in developing BERT models.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 34,
+            "score": 0.030090497737556562,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 25,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[ea80e3e966f0522a2a79a4dbabd2a2de01487980af7d6ca962b993f888a72b2b | 2501.09223v4.pdf | page 67]\nGiven this, most LLMs are based on the prenorm architecture, expressed asoutput =F(LNorm(input)) + input. A widely-used form of the layer normalization function is given by LNorm(h) =α⊙ h−µσ+ϵ +β,(2.23) wherehis ad-dimensional real-valued vector,µis the mean of all the entries ofh, andσis the corresponding standard deviation.ϵis introduced for the sake of numerical stability.α∈R d and β∈R d are the gain and bias terms. A variant of layer normalization, called root mean square (RMS) layer normalization, only rescales the input vector but does not re-center it [Zhang and Sennrich, 2019]. The RMS layer normalization function is given by RMSNorm(h) =α⊙ hσrms +ϵ ,(2.24) whereσ rms is the root mean square ofh, i.e.,σ rms = ( 1d∑dk=1h2k) 12 .\n\n[3c086a1427ad16ff2d9901fc0b3aae620d57d67963fa20b24753ef37a93ec5d4 | 2501.09223v4.pdf | page 67]\nThe RMS layer normalization function is given by RMSNorm(h) =α⊙ hσrms +ϵ ,(2.24) whereσ rms is the root mean square ofh, i.e.,σ rms = ( 1d∑dk=1h2k) 12 . This layer normalization function is used in LLMs like the Llama series.\n\n[68ed2e81af746536b06bd25046c1f263b816c7293a1af3a94b8878e415eea5b1 | 2501.09223v4.pdf | page 67]\nHere, we focus on common modifications and improvements to the standard Transformer architecture, which are important for stable LLM training. 2.2.2.1 Layer Normalization with Residual Connections Layer normalization is used to stabilize training for deep neural networks. It is a process of subtracting the mean and dividing by the standard deviation. By normalizing the layer output in this manner, we can effectively mitigate internal covariate shift and enhance training stability. In Transformers, layer normalization is typically employed alongside residual connections.",
+        "context_ids": [
+          "ea80e3e966f0522a2a79a4dbabd2a2de01487980af7d6ca962b993f888a72b2b",
+          "3c086a1427ad16ff2d9901fc0b3aae620d57d67963fa20b24753ef37a93ec5d4",
+          "68ed2e81af746536b06bd25046c1f263b816c7293a1af3a94b8878e415eea5b1"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "q_11",
+    "question": "Which activation function is used in the FFN layers of the PaLM and Llama model series?",
+    "status": "answered",
+    "answer": "Both the PaLM and Llama model series utilize the SwiGLU activation function for their FFN layers [02ae2cb5c49585c0bc5891c9b4444d161ee76442c37d9b50b04014d62792236d].",
+    "citations": [
+      "02ae2cb5c49585c0bc5891c9b4444d161ee76442c37d9b50b04014d62792236d"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "activation function FFN layers PaLM Llama model",
+        "filter": null,
+        "results": [
+          {
+            "id": "02ae2cb5c49585c0bc5891c9b4444d161ee76442c37d9b50b04014d62792236d",
+            "text": "60Generative Models Alternatively, if we defineσ(·)to be the Swish function,σ swish(h) =h⊙Sigmoid(ch)[Ramachandran et al., 2017], we arrive at the SwiGLU function σswiglu(h) =σ swish(h W1 +b 1)⊙(h W 2 +b 2).(2.30) Both the PaLM and Llama model series rely on the SwiGLU function for their FFN layers. For a more comprehensive discussion on GLU variants and their impacts, readers are referred to the work of Shazeer [2020]. 2.2.2.3 Removing Bias Terms Another popular model design is to remove the bias terms from the affine transformations used in LLMs. This simplification can be applied to layer normalization, input projections for QKV attention, and the FFN sub-layers. For example, we can modify Eq. (2.25) to obtain an FFN with no bias terms FFN(h) =σ(h W h)Wf.(2.31) Chowdhery et al.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 69,
+            "score": 0.03278688524590164,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 60,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "36de342e34a25fe66bf9dea8d007aa13a3472f7715b8f41ecc5e0547201d852f",
+            "text": "2.2.2.2 Activation Functions in FFNs In Transformers, FFN sub-layers are designed to introduce non-linearity into representation learning, and have been found to be useful for preventing the representations learned by self-attention from degeneration8 [Dong et al., 2021]. A standard form of the FFN used in these sub-layers can be expressed as FFN(h) =σ(h W h +bh)Wf +bf,(2.25) whereW h∈R d×dh,b h∈R dh,W f∈R dh×d, andb f∈R d are the parameters, andd h is the hidden size. The functionσ(·)is the activation function of the hidden layer. A common choice forσ(·)is therectified linear unit(ReLU), given by σrelu(h) = max(0,h).(2.26) In practical implementations, increasingd h is beneficial, and thus it is typically set to a much larger number thandin LLMs.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 68,
+            "score": 0.03200204813108039,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 59,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "3c086a1427ad16ff2d9901fc0b3aae620d57d67963fa20b24753ef37a93ec5d4",
+            "text": "The RMS layer normalization function is given by RMSNorm(h) =α⊙ hσrms +ϵ ,(2.24) whereσ rms is the root mean square ofh, i.e.,σ rms = ( 1d∑dk=1h2k) 12 . This layer normalization function is used in LLMs like the Llama series.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 67,
+            "score": 0.031754032258064516,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 58,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "89ab1f07ffdc55463bd6f47ad9f28437b6998bcbb04a266c4b4a975da5bfea3e",
+            "text": "Self-attention PositionToken Segment x0x1...xm Layer Normalization FFN Layer Normalization Output Layer ... h0h1...hm layers Input xi is thei-th token in the input and corresponds to an entry inV Embedding e=x+e pos +e seg∈R de Self-attention Sub-layer hidden size:d number of heads:n head FFN Sub-layer hidden size:d FFN hidden size:d ffn Encoder Output hi∈R d is the contextual representation ofxi Fig. 1.6:The model architecture of BERT (Transformer encoder). The input tokens are first represented as embeddings, each of which is the sum of the corresponding token embedding, positional embedding, and segment embedding. Then, the embedding sequence is processed by a stack of Transformer layers. Each layer in this stack includes a selfattention sub-layer and an FFN sub-layer.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 34,
+            "score": 0.030776515151515152,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 25,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "4af89d630e60002a4802465975524a4bc6316bd6447e1f99cf7986d2c9f894d1",
+            "text": "Each layer in this stack includes a selfattention sub-layer and an FFN sub-layer. The output of the BERT model is a sequence of vectors produced by the final Transformer layer. Token [CLS]It is raining .[SEP]I need an umbrella .[SEP] x x0 x1 x2 x3 x4 x5 x6 x7 x8 x9 x10 x11 epos PE(0) PE(1) PE(2) PE(3) PE(4) PE(5) PE(6) PE(7) PE(8) PE(9) PE(10) PE(11) eseg eA eA eA eA eA eA eB eB eB eB eB eB The main part of BERT models is a multi-layer Transformer network. A Transformer layer consists of a self-attention sub-layer and an FFN sub-layer. Both sub-layers follow the post-norm architecture:output = LNorm(F(input) + input), whereF(·)is the core function of the sublayer (either a self-attention model or an FFN), andLNorm(·)is the layer normalization unit.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 34,
+            "score": 0.029206349206349208,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 25,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[02ae2cb5c49585c0bc5891c9b4444d161ee76442c37d9b50b04014d62792236d | 2501.09223v4.pdf | page 69]\n60Generative Models Alternatively, if we defineσ(·)to be the Swish function,σ swish(h) =h⊙Sigmoid(ch)[Ramachandran et al., 2017], we arrive at the SwiGLU function σswiglu(h) =σ swish(h W1 +b 1)⊙(h W 2 +b 2).(2.30) Both the PaLM and Llama model series rely on the SwiGLU function for their FFN layers. For a more comprehensive discussion on GLU variants and their impacts, readers are referred to the work of Shazeer [2020]. 2.2.2.3 Removing Bias Terms Another popular model design is to remove the bias terms from the affine transformations used in LLMs. This simplification can be applied to layer normalization, input projections for QKV attention, and the FFN sub-layers. For example, we can modify Eq. (2.25) to obtain an FFN with no bias terms FFN(h) =σ(h W h)Wf.(2.31) Chowdhery et al.\n\n[36de342e34a25fe66bf9dea8d007aa13a3472f7715b8f41ecc5e0547201d852f | 2501.09223v4.pdf | page 68]\n2.2.2.2 Activation Functions in FFNs In Transformers, FFN sub-layers are designed to introduce non-linearity into representation learning, and have been found to be useful for preventing the representations learned by self-attention from degeneration8 [Dong et al., 2021]. A standard form of the FFN used in these sub-layers can be expressed as FFN(h) =σ(h W h +bh)Wf +bf,(2.25) whereW h∈R d×dh,b h∈R dh,W f∈R dh×d, andb f∈R d are the parameters, andd h is the hidden size. The functionσ(·)is the activation function of the hidden layer. A common choice forσ(·)is therectified linear unit(ReLU), given by σrelu(h) = max(0,h).(2.26) In practical implementations, increasingd h is beneficial, and thus it is typically set to a much larger number thandin LLMs.\n\n[3c086a1427ad16ff2d9901fc0b3aae620d57d67963fa20b24753ef37a93ec5d4 | 2501.09223v4.pdf | page 67]\nThe RMS layer normalization function is given by RMSNorm(h) =α⊙ hσrms +ϵ ,(2.24) whereσ rms is the root mean square ofh, i.e.,σ rms = ( 1d∑dk=1h2k) 12 . This layer normalization function is used in LLMs like the Llama series.",
+        "context_ids": [
+          "02ae2cb5c49585c0bc5891c9b4444d161ee76442c37d9b50b04014d62792236d",
+          "36de342e34a25fe66bf9dea8d007aa13a3472f7715b8f41ecc5e0547201d852f",
+          "3c086a1427ad16ff2d9901fc0b3aae620d57d67963fa20b24753ef37a93ec5d4"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q_12",
+    "question": "What are the primary forms of parallelism utilized in distributed training of LLMs?",
+    "status": "answered",
+    "answer": "The primary forms of parallelism utilized in the distributed training of LLMs include data parallelism, model parallelism, tensor parallelism, and pipeline parallelism [c916bbc6f40c64918d3cec3f4529ced9a911a53f4e1c2b49d19d75a503becc0e].",
+    "citations": [
+      "c916bbc6f40c64918d3cec3f4529ced9a911a53f4e1c2b49d19d75a503becc0e"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "primary forms of parallelism in distributed training of LLMs",
+        "filter": null,
+        "results": [
+          {
+            "id": "26dfa92b5aa2bc5e29241efd8fafe19d7fa323113bb81a1821af3c5ac0728afd",
+            "text": "For example, increasing the batch size as the training process proceeds has been found to be useful for some LLMs. In general, achieving stable and efficient large-scale LLM training requires carefully designed setups, such as learning rate scheduling, optimizer choices, parallel training strategies, and mixed-precision training methods. Some of these aspects are highly engineering-intensive, and therefore, we typically need a number of training runs to obtain satisfactory LLMs. 2.2.3 Distributed Training Training LLMs requires significant computational resources. A common approach to improving training efficiency is to use large-scale distributed systems.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 69,
+            "score": 0.032266458495966696,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 60,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "c916bbc6f40c64918d3cec3f4529ced9a911a53f4e1c2b49d19d75a503becc0e",
+            "text": "A common approach to improving training efficiency is to use large-scale distributed systems. Fortunately, alongside the rise of neural networks in AI, deep learning software and hardware have been developed, making it easier to implement LLMs and perform computations. For example, one can now easily fine-tune an LLM using deep learning software frameworks and a machine with multiple GPUs. However, scaling up the training of LLMs is still challenging, and requires significant effort to develop hardware and software systems for stable and efficient distributed training. An important consideration in distributed training is parallelism. There are several forms of parallelism: data parallelism, model parallelism, tensor parallelism, and pipeline parallelism.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 69,
+            "score": 0.032266458495966696,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 60,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "49f5cdd822e42da89b659208d1e59871a1c065278257943b11461abbdbd384a1",
+            "text": "Despite the different ways to distribute computations across devices, these parallelism methods are based on a similar idea: the training problem can be divided into smaller tasks that can be executed simultaneously. The issue of parallelism in training LLMs has been extensively studied [Narayanan et al., 2021; Fedus et al., 2022]. Here we sketch the basic concepts. •Data Parallelism. This method is one of the most widely used parallelism methods for training neural networks.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 70,
+            "score": 0.03225806451612903,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 61,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "8654684f9b964bdfdfd72564ca470fd1670d4a327e551219b50b52b1ea30bb01",
+            "text": "In Chapter 1, we have discussed several common strategies for parallelizing LLM pre-training, such as model parallelism, tensor parallelism, and pipeline parallelism. We have also discussed efficient architectures that are easy to deploy in distributed computing systems. For example, in MoE models, we assign different experts to different devices 3. Only the active experts for a given input are executed, which significantly improves computational efficiency while maintaining model quality. Many of these methods can be directly applied to LLM inference with minimal modifications. However, applying these parallelization techniques to inference poses new challenges compared to pre-training.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 241,
+            "score": 0.03055037313432836,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 232,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "f95e17cde086f66406bf3312d2198c971fe69f513f8b3a92e289968614ab076a",
+            "text": "HereB l,k represents the processing of thek-th micro-batch by thel-th worker. Ideally we would like to maximize the number of micro-batches, and thus minimize the idle time of the workers. However, in practice, using small micro-batches often reduces GPU utilization and increases task-switching costs. This may, in turn, decrease the overall system throughput. The ultimate goal of parallel processing is to achieve linear growth in efficiency, that is, the number of samples that can be processed per unit of time increases linearly with the number of devices. However, distributed training is complicated, and influenced by many factors in addition to the parallelism method we choose. One problem, which is often associated with distributed systems, is the cost of communication.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 72,
+            "score": 0.030536130536130537,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 63,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[26dfa92b5aa2bc5e29241efd8fafe19d7fa323113bb81a1821af3c5ac0728afd | 2501.09223v4.pdf | page 69]\nFor example, increasing the batch size as the training process proceeds has been found to be useful for some LLMs. In general, achieving stable and efficient large-scale LLM training requires carefully designed setups, such as learning rate scheduling, optimizer choices, parallel training strategies, and mixed-precision training methods. Some of these aspects are highly engineering-intensive, and therefore, we typically need a number of training runs to obtain satisfactory LLMs. 2.2.3 Distributed Training Training LLMs requires significant computational resources. A common approach to improving training efficiency is to use large-scale distributed systems.\n\n[c916bbc6f40c64918d3cec3f4529ced9a911a53f4e1c2b49d19d75a503becc0e | 2501.09223v4.pdf | page 69]\nA common approach to improving training efficiency is to use large-scale distributed systems. Fortunately, alongside the rise of neural networks in AI, deep learning software and hardware have been developed, making it easier to implement LLMs and perform computations. For example, one can now easily fine-tune an LLM using deep learning software frameworks and a machine with multiple GPUs. However, scaling up the training of LLMs is still challenging, and requires significant effort to develop hardware and software systems for stable and efficient distributed training. An important consideration in distributed training is parallelism. There are several forms of parallelism: data parallelism, model parallelism, tensor parallelism, and pipeline parallelism.\n\n[49f5cdd822e42da89b659208d1e59871a1c065278257943b11461abbdbd384a1 | 2501.09223v4.pdf | page 70]\nDespite the different ways to distribute computations across devices, these parallelism methods are based on a similar idea: the training problem can be divided into smaller tasks that can be executed simultaneously. The issue of parallelism in training LLMs has been extensively studied [Narayanan et al., 2021; Fedus et al., 2022]. Here we sketch the basic concepts. •Data Parallelism. This method is one of the most widely used parallelism methods for training neural networks.",
+        "context_ids": [
+          "26dfa92b5aa2bc5e29241efd8fafe19d7fa323113bb81a1821af3c5ac0728afd",
+          "c916bbc6f40c64918d3cec3f4529ced9a911a53f4e1c2b49d19d75a503becc0e",
+          "49f5cdd822e42da89b659208d1e59871a1c065278257943b11461abbdbd384a1"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q_13",
+    "question": "What does the Chinchilla scaling law state regarding test loss?",
+    "status": "answered",
+    "answer": "The Chinchilla scaling law states that the test loss per token is the sum of the inverse power-law functions of the number of parameters (N) and the dataset size (D), plus an additional irreducible error term [607dea1026da462370bab184575b163e6eee878faa94272289edb4098d804037].",
+    "citations": [
+      "607dea1026da462370bab184575b163e6eee878faa94272289edb4098d804037"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Chinchilla scaling law test loss definition",
+        "filter": null,
+        "results": [
+          {
+            "id": "607dea1026da462370bab184575b163e6eee878faa94272289edb4098d804037",
+            "text": "An improvement to this scaling law is to add anirreducible errorterm to the power law. The form ofL(x)is then given by L(x) =ax b +ϵ∞,(2.37) whereϵ∞ is the irreducible error that accounts for the error due to unknown variables, which is present even asx→∞. Eq. (2.37) is one of the most widely used forms for modeling scaling laws of LLMs. For example, Rosenfeld et al. [2020] developed a scaling law that involves both model scaling and dataset scaling, as follows L(N,D) =aN b +cDd +ϵ∞.(2.38) An example of such a formulation is the Chinchilla scaling law. It states that the test loss per token is the sum of the inverse power-law functions ofNandD, with an additional irreducible",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 74,
+            "score": 0.03278688524590164,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 65,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "d89572c525c3aece983779d305e1c256c7b5f0f6eced8fd6b10c146e6f647e15",
+            "text": "105 107 109 2.4 3.2 4.0 4.8 5.6 Number of Parameters Test Loss L(N) = ( N8.8·1013 )−0.076 108 109 2.7 3 3.3 3.6 3.9 4.2 Dataset Size Test Loss L(D) = ( D5.4·1013 )−0.095 Fig. 2.4:Test loss against model size (N) and training dataset size (D) (data points are plotted for illustrative purposes). We plot test loss as a function ofN, which is defined asL(N) = ( N 8.8×1013 )−0.076 , and a function ofD, which is defined asL(D) = ( D 5.4×1013 )−0.095 [Kaplan et al., 2020]. loss of the model givenx(such as the cross-entropy loss on test data). The simplest form ofL(x) is a power law L(x) =ax b,(2.36) whereaandbare parameters that are estimated empirically.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 74,
+            "score": 0.031754032258064516,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 65,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "3f16b9b8d3b221e852c7127390e94aeb72e7f382446ee1bc4b05c8e51d47ca35",
+            "text": "64Generative Models Slow Reduction Phase Power-law Reduction Phase Convergence Phase (Irreducible Error) Training Dataset Size (Log-scale) Number of Test Errors (Log-scale) Fig. 2.3:A scaling law of test error against a variable of interest (e.g., training dataset size) [Hestness et al., 2017]. The curve of the scaling law can be divided into three phases. Initially, the test error decreases slowly when more training data is used, but this only lasts for a short period. In the second phase, the test error decreases drastically, and the curve becomes a power-law curve. After that, the error reduction slows down again in the third phase. Note that there are irreducible errors that cannot be eliminated, regardless of the amount of training data. improves slowly.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 73,
+            "score": 0.031746031746031744,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 64,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "222654e436c781cbbb0b57149b65323c0fd4e9e047083e524731a66cfb91b2ca",
+            "text": "66Generative Models error term. Hoffmann et al. [2022] express this scaling law as L(N,D) = 406.4N 0.34/bracehtipupleft /bracehtipdownright/bracehtipdownleft /bracehtipupright model scaling + 410.7D0.28/bracehtipupleft /bracehtipdownright/bracehtipdownleft /bracehtipupright dataset scaling + 1.69/bracehtipupleft/bracehtipdownright/bracehtipdownleft/bracehtipupright irreducible error .(2.39) All the scaling laws mentioned above are based on monotonic functions. So they cannot cover functions with inflection points, such as double descent curves. In response, researchers have explored more sophisticated functions to fit the learning curves. Examples of such functions can be found in Alabdulmohsin et al. [2022] and Caballero et al. [2023]’s work.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 75,
+            "score": 0.030309988518943745,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 66,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "76e3cadf5eb42172e6581d79ac721172457ae5b41ab95c1ae714ef0a0fbca2a8",
+            "text": "The simplest form ofL(x) is a power law L(x) =ax b,(2.36) whereaandbare parameters that are estimated empirically. Despite its simplicity, this function has successfully interpreted the scaling behavior of language models and machine translation systems in terms of model size (denoted byN) and training dataset size (denoted byD) [Gordon et al., 2021; Hestness et al., 2017]. For example, Kaplan et al. [2020] found that the performance of their language model improves as a power law of eitherNorDafter an initial transient period, and expressed these relationships usingL(N) = ( N 8.8×1013 )−0.076 andL(D) = ( D5.4×1013)−0.095 (see Figure 2.4). An improvement to this scaling law is to add anirreducible errorterm to the power law.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 74,
+            "score": 0.029273504273504274,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 65,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[607dea1026da462370bab184575b163e6eee878faa94272289edb4098d804037 | 2501.09223v4.pdf | page 74]\nAn improvement to this scaling law is to add anirreducible errorterm to the power law. The form ofL(x)is then given by L(x) =ax b +ϵ∞,(2.37) whereϵ∞ is the irreducible error that accounts for the error due to unknown variables, which is present even asx→∞. Eq. (2.37) is one of the most widely used forms for modeling scaling laws of LLMs. For example, Rosenfeld et al. [2020] developed a scaling law that involves both model scaling and dataset scaling, as follows L(N,D) =aN b +cDd +ϵ∞.(2.38) An example of such a formulation is the Chinchilla scaling law. It states that the test loss per token is the sum of the inverse power-law functions ofNandD, with an additional irreducible\n\n[d89572c525c3aece983779d305e1c256c7b5f0f6eced8fd6b10c146e6f647e15 | 2501.09223v4.pdf | page 74]\n105 107 109 2.4 3.2 4.0 4.8 5.6 Number of Parameters Test Loss L(N) = ( N8.8·1013 )−0.076 108 109 2.7 3 3.3 3.6 3.9 4.2 Dataset Size Test Loss L(D) = ( D5.4·1013 )−0.095 Fig. 2.4:Test loss against model size (N) and training dataset size (D) (data points are plotted for illustrative purposes). We plot test loss as a function ofN, which is defined asL(N) = ( N 8.8×1013 )−0.076 , and a function ofD, which is defined asL(D) = ( D 5.4×1013 )−0.095 [Kaplan et al., 2020]. loss of the model givenx(such as the cross-entropy loss on test data). The simplest form ofL(x) is a power law L(x) =ax b,(2.36) whereaandbare parameters that are estimated empirically.\n\n[3f16b9b8d3b221e852c7127390e94aeb72e7f382446ee1bc4b05c8e51d47ca35 | 2501.09223v4.pdf | page 73]\n64Generative Models Slow Reduction Phase Power-law Reduction Phase Convergence Phase (Irreducible Error) Training Dataset Size (Log-scale) Number of Test Errors (Log-scale) Fig. 2.3:A scaling law of test error against a variable of interest (e.g., training dataset size) [Hestness et al., 2017]. The curve of the scaling law can be divided into three phases. Initially, the test error decreases slowly when more training data is used, but this only lasts for a short period. In the second phase, the test error decreases drastically, and the curve becomes a power-law curve. After that, the error reduction slows down again in the third phase. Note that there are irreducible errors that cannot be eliminated, regardless of the amount of training data. improves slowly.",
+        "context_ids": [
+          "607dea1026da462370bab184575b163e6eee878faa94272289edb4098d804037",
+          "d89572c525c3aece983779d305e1c256c7b5f0f6eced8fd6b10c146e6f647e15",
+          "3f16b9b8d3b221e852c7127390e94aeb72e7f382446ee1bc4b05c8e51d47ca35"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q_14",
+    "question": "What is the primary advantage of linear attention over standard self-attention regarding memory?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "linear attention vs standard self-attention memory complexity advantage",
+        "filter": null,
+        "results": [
+          {
+            "id": "f4b9b69bde76b91dd9cc8b60638a8c424952a4571e0427292739fe185d1de42d",
+            "text": "For instance, chunked or windowed attention limits the attention span to a recent subset of tokens, and thus reduces the KV cache size. However, this often requires additional compute if past information must be reprocessed. Note that considering the memory-compute trade-off is a very general principle. It can be extended beyond attention mechanisms and Transformers to other components in system design. An example is the choice of data precision. Using lower-precision formats such as FP16 or INT8 can reduce both memory usage and memory bandwidth requirements, effectively alleviating pressure on the memory subsystem.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 242,
+            "score": 0.030834914611005692,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 233,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "c9b21b60b64ce27cb0a177aadfec803efb1aa1ef4ad0f301dbeda6a1b797874d",
+            "text": "Moreover, autoregressive generation requires maintaining akey-value cache(orKV cache), whose size increases as more tokens are processed. Although the KV cache footprint grows linearly with sequence length, for extremely long contexts, this memory requirement becomes prohibitive, making standard LLM deployment impractical. As a result, the model architecture of long-context LLMs generally moves away from the standard Transformer, turning instead to the development of more efficient variants and alternatives. One approach is to replace standard self-attention with sparse attention. This family of models is motivated by the observation that attention distributions in long sequences are often highly skewed.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 78,
+            "score": 0.030798389007344232,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 69,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "286ba906dcd3abc51a30fa314f2707fb7e0afcc822d9bb05a362fd6074e018a6",
+            "text": "The output of theL-th layer in this stack is the final representation. Each time, the model attends positioni ′ to all previous positions, which results in2i ′ vector products (i′ times forq i′K⊤ andi′ times for the product ofSoftmax( qi′ K⊤√d )andV). Hence, generating a sequence of lengthlenhas a time complexity ofO(L×d×len 2)for the self-attention network. Clearly, the inference of this model is slow for long sequences due to its quadratic time complexity with respect to sequence length. Therefore, many improvements to Transformers and alternative models have focused on efficient methods that are faster than this quadratic time complexity, such as sparse attention mechanisms and linear-time models.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 215,
+            "score": 0.029906956136464335,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 206,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "55abc5127a089ab4402b202ecfc681d7df661209f672589551f99195cb2e5018",
+            "text": "querykeyvalue (a) Single-head Attention querykeyvalue (b) Multi-head Attention querykeyvalue (c) Multi-query Attention querykeyvalue (d) Grouped Query Attention querykeyvalue Layerl Layerl−1 Sharing (e) Cross-layer Multi-head Attention Fig. 2.8:Illustration of QKV attention based on different multi-head and sharing mechanisms. (a) = single-head attention, and (b-e) = attention with multiple heads. queries{q [1]i ,···,q [τ]i }, each corresponding to a different head. For each head, we have headj = Attqkv(q[j]i ,K≤i,V≤i).(2.72) Figure 2.8 (c) illustrates this model. By sharing keys and values, the size of the KV cache would beO(L·d h·m). Grouped query attention(GQA) is a natural extension to multi-head attention and MQA [Ainslie et al., 2023].",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 90,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 81,
+              "document_type": "book"
+            },
+            "score": 0.01639344262295082
+          },
+          {
+            "id": "8cf797c6c00930c953c4d3d29dfcd7b082007d976a129c55241b7a8f08aae9ef",
+            "text": "(1.14). Instead, permutation can be done by setting appropriate masks for self-attention. For example, consider the step of computingPr(x 1|e0,e 4,e 2). We can keepx 0,x 1,x 2,x 3,x 4 in their original positions and simply preventx 1 from attending tox 3 during the self-attention computation, as illustrated below x0 x1 x2 x3 x4 Masks for Self-attention: Blue box = valid attention Gray box = blocked attention For a clearer illustration, we compare the self-attention masking results of causal language modeling, masked language modeling and permuted language modeling in Figure 1.3.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 20,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 11,
+              "document_type": "book"
+            },
+            "score": 0.016129032258064516
+          }
+        ],
+        "context": "[f4b9b69bde76b91dd9cc8b60638a8c424952a4571e0427292739fe185d1de42d | 2501.09223v4.pdf | page 242]\nFor instance, chunked or windowed attention limits the attention span to a recent subset of tokens, and thus reduces the KV cache size. However, this often requires additional compute if past information must be reprocessed. Note that considering the memory-compute trade-off is a very general principle. It can be extended beyond attention mechanisms and Transformers to other components in system design. An example is the choice of data precision. Using lower-precision formats such as FP16 or INT8 can reduce both memory usage and memory bandwidth requirements, effectively alleviating pressure on the memory subsystem.\n\n[c9b21b60b64ce27cb0a177aadfec803efb1aa1ef4ad0f301dbeda6a1b797874d | 2501.09223v4.pdf | page 78]\nMoreover, autoregressive generation requires maintaining akey-value cache(orKV cache), whose size increases as more tokens are processed. Although the KV cache footprint grows linearly with sequence length, for extremely long contexts, this memory requirement becomes prohibitive, making standard LLM deployment impractical. As a result, the model architecture of long-context LLMs generally moves away from the standard Transformer, turning instead to the development of more efficient variants and alternatives. One approach is to replace standard self-attention with sparse attention. This family of models is motivated by the observation that attention distributions in long sequences are often highly skewed.\n\n[286ba906dcd3abc51a30fa314f2707fb7e0afcc822d9bb05a362fd6074e018a6 | 2501.09223v4.pdf | page 215]\nThe output of theL-th layer in this stack is the final representation. Each time, the model attends positioni ′ to all previous positions, which results in2i ′ vector products (i′ times forq i′K⊤ andi′ times for the product ofSoftmax( qi′ K⊤√d )andV). Hence, generating a sequence of lengthlenhas a time complexity ofO(L×d×len 2)for the self-attention network. Clearly, the inference of this model is slow for long sequences due to its quadratic time complexity with respect to sequence length. Therefore, many improvements to Transformers and alternative models have focused on efficient methods that are faster than this quadratic time complexity, such as sparse attention mechanisms and linear-time models.",
+        "context_ids": [
+          "f4b9b69bde76b91dd9cc8b60638a8c424952a4571e0427292739fe185d1de42d",
+          "c9b21b60b64ce27cb0a177aadfec803efb1aa1ef4ad0f301dbeda6a1b797874d",
+          "286ba906dcd3abc51a30fa314f2707fb7e0afcc822d9bb05a362fd6074e018a6"
+        ]
+      },
+      {
+        "event": "search",
+        "query": "linear attention memory complexity vs standard self-attention",
+        "filter": null,
+        "results": [
+          {
+            "id": "c9b21b60b64ce27cb0a177aadfec803efb1aa1ef4ad0f301dbeda6a1b797874d",
+            "text": "Moreover, autoregressive generation requires maintaining akey-value cache(orKV cache), whose size increases as more tokens are processed. Although the KV cache footprint grows linearly with sequence length, for extremely long contexts, this memory requirement becomes prohibitive, making standard LLM deployment impractical. As a result, the model architecture of long-context LLMs generally moves away from the standard Transformer, turning instead to the development of more efficient variants and alternatives. One approach is to replace standard self-attention with sparse attention. This family of models is motivated by the observation that attention distributions in long sequences are often highly skewed.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 78,
+            "score": 0.031054405392392875,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 69,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "286ba906dcd3abc51a30fa314f2707fb7e0afcc822d9bb05a362fd6074e018a6",
+            "text": "The output of theL-th layer in this stack is the final representation. Each time, the model attends positioni ′ to all previous positions, which results in2i ′ vector products (i′ times forq i′K⊤ andi′ times for the product ofSoftmax( qi′ K⊤√d )andV). Hence, generating a sequence of lengthlenhas a time complexity ofO(L×d×len 2)for the self-attention network. Clearly, the inference of this model is slow for long sequences due to its quadratic time complexity with respect to sequence length. Therefore, many improvements to Transformers and alternative models have focused on efficient methods that are faster than this quadratic time complexity, such as sparse attention mechanisms and linear-time models.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 215,
+            "score": 0.03009207275993712,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 206,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "f4b9b69bde76b91dd9cc8b60638a8c424952a4571e0427292739fe185d1de42d",
+            "text": "For instance, chunked or windowed attention limits the attention span to a recent subset of tokens, and thus reduces the KV cache size. However, this often requires additional compute if past information must be reprocessed. Note that considering the memory-compute trade-off is a very general principle. It can be extended beyond attention mechanisms and Transformers to other components in system design. An example is the choice of data precision. Using lower-precision formats such as FP16 or INT8 can reduce both memory usage and memory bandwidth requirements, effectively alleviating pressure on the memory subsystem.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 242,
+            "score": 0.030090497737556562,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 233,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "55abc5127a089ab4402b202ecfc681d7df661209f672589551f99195cb2e5018",
+            "text": "querykeyvalue (a) Single-head Attention querykeyvalue (b) Multi-head Attention querykeyvalue (c) Multi-query Attention querykeyvalue (d) Grouped Query Attention querykeyvalue Layerl Layerl−1 Sharing (e) Cross-layer Multi-head Attention Fig. 2.8:Illustration of QKV attention based on different multi-head and sharing mechanisms. (a) = single-head attention, and (b-e) = attention with multiple heads. queries{q [1]i ,···,q [τ]i }, each corresponding to a different head. For each head, we have headj = Attqkv(q[j]i ,K≤i,V≤i).(2.72) Figure 2.8 (c) illustrates this model. By sharing keys and values, the size of the KV cache would beO(L·d h·m). Grouped query attention(GQA) is a natural extension to multi-head attention and MQA [Ainslie et al., 2023].",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 90,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 81,
+              "document_type": "book"
+            },
+            "score": 0.01639344262295082
+          },
+          {
+            "id": "8cf797c6c00930c953c4d3d29dfcd7b082007d976a129c55241b7a8f08aae9ef",
+            "text": "(1.14). Instead, permutation can be done by setting appropriate masks for self-attention. For example, consider the step of computingPr(x 1|e0,e 4,e 2). We can keepx 0,x 1,x 2,x 3,x 4 in their original positions and simply preventx 1 from attending tox 3 during the self-attention computation, as illustrated below x0 x1 x2 x3 x4 Masks for Self-attention: Blue box = valid attention Gray box = blocked attention For a clearer illustration, we compare the self-attention masking results of causal language modeling, masked language modeling and permuted language modeling in Figure 1.3.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 20,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 11,
+              "document_type": "book"
+            },
+            "score": 0.016129032258064516
+          }
+        ],
+        "context": "[f4b9b69bde76b91dd9cc8b60638a8c424952a4571e0427292739fe185d1de42d | 2501.09223v4.pdf | page 242]\nFor instance, chunked or windowed attention limits the attention span to a recent subset of tokens, and thus reduces the KV cache size. However, this often requires additional compute if past information must be reprocessed. Note that considering the memory-compute trade-off is a very general principle. It can be extended beyond attention mechanisms and Transformers to other components in system design. An example is the choice of data precision. Using lower-precision formats such as FP16 or INT8 can reduce both memory usage and memory bandwidth requirements, effectively alleviating pressure on the memory subsystem.\n\n[c9b21b60b64ce27cb0a177aadfec803efb1aa1ef4ad0f301dbeda6a1b797874d | 2501.09223v4.pdf | page 78]\nMoreover, autoregressive generation requires maintaining akey-value cache(orKV cache), whose size increases as more tokens are processed. Although the KV cache footprint grows linearly with sequence length, for extremely long contexts, this memory requirement becomes prohibitive, making standard LLM deployment impractical. As a result, the model architecture of long-context LLMs generally moves away from the standard Transformer, turning instead to the development of more efficient variants and alternatives. One approach is to replace standard self-attention with sparse attention. This family of models is motivated by the observation that attention distributions in long sequences are often highly skewed.\n\n[286ba906dcd3abc51a30fa314f2707fb7e0afcc822d9bb05a362fd6074e018a6 | 2501.09223v4.pdf | page 215]\nThe output of theL-th layer in this stack is the final representation. Each time, the model attends positioni ′ to all previous positions, which results in2i ′ vector products (i′ times forq i′K⊤ andi′ times for the product ofSoftmax( qi′ K⊤√d )andV). Hence, generating a sequence of lengthlenhas a time complexity ofO(L×d×len 2)for the self-attention network. Clearly, the inference of this model is slow for long sequences due to its quadratic time complexity with respect to sequence length. Therefore, many improvements to Transformers and alternative models have focused on efficient methods that are faster than this quadratic time complexity, such as sparse attention mechanisms and linear-time models.",
+        "context_ids": [
+          "f4b9b69bde76b91dd9cc8b60638a8c424952a4571e0427292739fe185d1de42d",
+          "c9b21b60b64ce27cb0a177aadfec803efb1aa1ef4ad0f301dbeda6a1b797874d",
+          "286ba906dcd3abc51a30fa314f2707fb7e0afcc822d9bb05a362fd6074e018a6"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "q_15",
+    "question": "What is Grouped Query Attention (GQA)?",
+    "status": "answered",
+    "answer": "Grouped Query Attention (GQA) is an extension of multi-head attention and multi-query attention (MQA) [0554b75681b98972b4b2ab2810703f6ace3a3434cb6255d5c53aa3e2d211d93b]. In GQA, attention heads are divided into $n_g$ groups, where each group shares a specific set of keys and values [0554b75681b98972b4b2ab2810703f6ace3a3434cb6255d5c53aa3e2d211d93b]. The model can be expressed as $\\text{head}_j = \\text{Att}_{qkv}(q^{[j]}_i, K^{[g(j)]}_{\\le i}, V^{[g(j)]}_{\\le i})$, where $g(j)$ represents the group ID for the $j$-th head [0554b75681b98972b4b2ab2810703f6ace3a3434cb6255d5c53aa3e2d211d93b].",
+    "citations": [
+      "0554b75681b98972b4b2ab2810703f6ace3a3434cb6255d5c53aa3e2d211d93b"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "what is Grouped Query Attention GQA definition",
+        "filter": null,
+        "results": [
+          {
+            "id": "0554b75681b98972b4b2ab2810703f6ace3a3434cb6255d5c53aa3e2d211d93b",
+            "text": "Grouped query attention(GQA) is a natural extension to multi-head attention and MQA [Ainslie et al., 2023]. In GQA, heads are divided inton g groups, each corresponding to a shared set of keys and values. Hence we haven g sets of keys and values{(K [1]≤i,V [1]≤i),···,(K [ng]≤i ,V [ng]≤i )}. See Figure 2.8 (d) for an illustration. Letg(j)be the group id for thej-th head. The GQA model can be expressed as headj = Attqkv(q[j]i ,K [g(j)]≤i ,V [g(j)]≤i ).(2.73)",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 90,
+            "score": 0.03252247488101534,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 81,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "55abc5127a089ab4402b202ecfc681d7df661209f672589551f99195cb2e5018",
+            "text": "querykeyvalue (a) Single-head Attention querykeyvalue (b) Multi-head Attention querykeyvalue (c) Multi-query Attention querykeyvalue (d) Grouped Query Attention querykeyvalue Layerl Layerl−1 Sharing (e) Cross-layer Multi-head Attention Fig. 2.8:Illustration of QKV attention based on different multi-head and sharing mechanisms. (a) = single-head attention, and (b-e) = attention with multiple heads. queries{q [1]i ,···,q [τ]i }, each corresponding to a different head. For each head, we have headj = Attqkv(q[j]i ,K≤i,V≤i).(2.72) Figure 2.8 (c) illustrates this model. By sharing keys and values, the size of the KV cache would beO(L·d h·m). Grouped query attention(GQA) is a natural extension to multi-head attention and MQA [Ainslie et al., 2023].",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 90,
+            "score": 0.03252247488101534,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 81,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "cd066806b0d0a3392a684fc5b431f42ce014eafbfcd708a6e70a27177f8d3582",
+            "text": "It should be emphasized that this model can generalize to long sequences. This is becausePE(i,j)s with similar query-key offsets share the same parameter, and this sharing strategy is particularly 15Note that, in Raffel et al. [2020]’s T5 model, the rescaling operation for the query-key product is removed. The attention weightα(i,j)is then given by α(i,j) = Softmax(q ik⊤j +ub(i−j) + Mask(i,j)).(2.80)",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 94,
+            "score": 0.031024531024531024,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 85,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "f8d98272bd20e71cb98fb55463a44595883ea8308ea41f028ae33a4110c7f614",
+            "text": "The KV cache needs to retain the keys and values for all these heads, that is,{(K [1]≤i,V [1]≤i),···,(K [τ]≤i,V [τ]≤i)}. One refinement of the multi-head attention model, calledmulti-query attention(MQA), is to share keys and values across heads, while maintaining distinct queries for each head [Shazeer, 2019]. In MQA, there is a single set of keys and values(K ≤i,V≤i). In addition, there areτ",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 89,
+            "score": 0.03055037313432836,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 80,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "16d2abee9339f8f35f49c41051ca230525e3ffacca167773241f63c4dc5a685f",
+            "text": "As before, we denoteMemas the local memory for the query, such as the KV cache of neighboring tokens. Our goal is to allow the queryq i to attend to both the local memoryMemand the long-term memory Memknn. There are, of course, several ways to incorporateMemandMem knn into the attention model. For example, we might simply combine them to form a single KV cache[Mem,Memknn], and attendqi to[Mem,Mem knn]via standard QKV attention. Or we might useMemandMem knn in separate attention steps. An example of such an approach is the model developed by Wu et al. 11A vector database, or vector store, is a database that provides highly optimized retrieval interfaces for finding stored vectors that closely match a query vector.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 84,
+            "score": 0.02877846790890269,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 75,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[0554b75681b98972b4b2ab2810703f6ace3a3434cb6255d5c53aa3e2d211d93b | 2501.09223v4.pdf | page 90]\nGrouped query attention(GQA) is a natural extension to multi-head attention and MQA [Ainslie et al., 2023]. In GQA, heads are divided inton g groups, each corresponding to a shared set of keys and values. Hence we haven g sets of keys and values{(K [1]≤i,V [1]≤i),···,(K [ng]≤i ,V [ng]≤i )}. See Figure 2.8 (d) for an illustration. Letg(j)be the group id for thej-th head. The GQA model can be expressed as headj = Attqkv(q[j]i ,K [g(j)]≤i ,V [g(j)]≤i ).(2.73)\n\n[55abc5127a089ab4402b202ecfc681d7df661209f672589551f99195cb2e5018 | 2501.09223v4.pdf | page 90]\nquerykeyvalue (a) Single-head Attention querykeyvalue (b) Multi-head Attention querykeyvalue (c) Multi-query Attention querykeyvalue (d) Grouped Query Attention querykeyvalue Layerl Layerl−1 Sharing (e) Cross-layer Multi-head Attention Fig. 2.8:Illustration of QKV attention based on different multi-head and sharing mechanisms. (a) = single-head attention, and (b-e) = attention with multiple heads. queries{q [1]i ,···,q [τ]i }, each corresponding to a different head. For each head, we have headj = Attqkv(q[j]i ,K≤i,V≤i).(2.72) Figure 2.8 (c) illustrates this model. By sharing keys and values, the size of the KV cache would beO(L·d h·m). Grouped query attention(GQA) is a natural extension to multi-head attention and MQA [Ainslie et al., 2023].\n\n[cd066806b0d0a3392a684fc5b431f42ce014eafbfcd708a6e70a27177f8d3582 | 2501.09223v4.pdf | page 94]\nIt should be emphasized that this model can generalize to long sequences. This is becausePE(i,j)s with similar query-key offsets share the same parameter, and this sharing strategy is particularly 15Note that, in Raffel et al. [2020]’s T5 model, the rescaling operation for the query-key product is removed. The attention weightα(i,j)is then given by α(i,j) = Softmax(q ik⊤j +ub(i−j) + Mask(i,j)).(2.80)\n\n[f8d98272bd20e71cb98fb55463a44595883ea8308ea41f028ae33a4110c7f614 | 2501.09223v4.pdf | page 89]\nThe KV cache needs to retain the keys and values for all these heads, that is,{(K [1]≤i,V [1]≤i),···,(K [τ]≤i,V [τ]≤i)}. One refinement of the multi-head attention model, calledmulti-query attention(MQA), is to share keys and values across heads, while maintaining distinct queries for each head [Shazeer, 2019]. In MQA, there is a single set of keys and values(K ≤i,V≤i). In addition, there areτ",
+        "context_ids": [
+          "0554b75681b98972b4b2ab2810703f6ace3a3434cb6255d5c53aa3e2d211d93b",
+          "55abc5127a089ab4402b202ecfc681d7df661209f672589551f99195cb2e5018",
+          "cd066806b0d0a3392a684fc5b431f42ce014eafbfcd708a6e70a27177f8d3582",
+          "f8d98272bd20e71cb98fb55463a44595883ea8308ea41f028ae33a4110c7f614"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "unans_dev_01",
+    "question": "What is the detailed hardware architecture and FLOPs requirement of the GPT-5 cluster mentioned in this textbook?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "GPT-5 cluster hardware architecture FLOPs requirement",
+        "filter": null,
+        "results": [
+          {
+            "id": "254b14947831c425b22345c261257a2002738d31174e5cc06fa43c7c1104a645",
+            "text": "First, at a higher level, we decompose a matrix multiplication into sub-matrix multiplications that can directly fit into the memory of GPUs. Then, at a lower level, we execute these sub-matrix multiplications on GPUs using tile-based parallel algorithms that are specifically optimized for GPUs. •Pipeline Parallelism. Above, in model parallelism, we have described a simple approach to distributing groups of model components across multiple devices. But this method is inefficient because only one device is activated at a time during processing. Pipeline parallelism addresses this issue by introducing overlaps between computations on different devices [Harlap et al., 2018; Huang et al., 2019].",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 71,
+            "score": 0.01639344262295082,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 62,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "e20e37c61066af382f36984921e1a4c75d45a554886976655effdafee4addf27",
+            "text": "In Transformers, layer normalization is typically employed alongside residual connections. As described in Section 2.1.1, a sub-layer can be based on either the post-norm architecture, in which layer normalization is performed right after a residual block, or the pre-norm architecture, in which layer normalization is performed inside a residual block. While both architectures are widely used in Transformer-based systems [Wang et al., 2019], the pre-norm architecture has proven to be especially useful in training deep Transformers. Given this, most LLMs are based on the prenorm architecture, expressed asoutput =F(LNorm(input)) + input.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 67,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 58,
+              "document_type": "book"
+            },
+            "score": 0.01639344262295082
+          },
+          {
+            "id": "76913469965f82d67cbe9dd45bea86bdefcf86c53d47626e10c2dad12ff8802d",
+            "text": "(2.25)). We can slice the matrixWh∈R d×dh vertically intoMsub-matrices Wh = [ W1h W2h ···W Mh ] ,(2.34) where each sub-matrixW kh is of shaped× dhM . The multiplication ofhwithW h can be expressed as h Wh =h [ W1h W2h ···W Mh ] = [ h W1h h W2h ···h W Mh ] .(2.35) We can perform matrix multiplications{h W 1h,h W2h,···,h W Mh}onMdevices separately. As a result, we distribute a large matrix multiplication across multiple devices, each of which may have relatively small memory. From the perspective of modern GPU design, tensor parallelism over GPUs provides a two-level, tile-based approach to parallel computing. First, at a higher level, we decompose a matrix multiplication into sub-matrix multiplications that can directly fit into the memory of GPUs.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 71,
+            "score": 0.016129032258064516,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 62,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "823c391e1e587148e4c46b3b391911c5da4b75ccd43ff2ea745a7f6a8f8335ad",
+            "text": "Using a binomial probability formula, where p (success or heads) is 0.5, and each of the 3 trials (flips) is independent, we look for exactly one success (head). The formula for exactly k successes in n trials is given by the binomial coefficient formula (n k ) pk(1−p) n−k. Plugging in the values, we get(3 1 ) (0.5)1(0.5)3−1 = 3·0.5·0.25 = 0.375. Prediction 3 (Wrong):",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 140,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 131,
+              "document_type": "book"
+            },
+            "score": 0.016129032258064516
+          },
+          {
+            "id": "9c41260a4b02a0e95587851d401e1adb3e9eac1b30524099c67984a85c5e7bba",
+            "text": "This allows us to maximize the number of tokens processed in a batch while minimizing the number of padding tokens. However, as a trade-off, we need to copy the KV cache to the decoding engine and reorganize it after the prefilling phase, which introduces additional data transfer overhead. improving computational efficiency and maximizing hardware utilization2. To illustrate the idea of batching, Figure 5.8 (a-b) shows simple examples with batch sizes of 1 and 4, respectively. When using a batch size of 1 (i.e., without batching), the GPU processes one input sequence at a time. Thus, the processing is sequential: the next sequence must wait for the current computation to finish.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 233,
+            "score": 0.015873015873015872,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 224,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[254b14947831c425b22345c261257a2002738d31174e5cc06fa43c7c1104a645 | 2501.09223v4.pdf | page 71]\nFirst, at a higher level, we decompose a matrix multiplication into sub-matrix multiplications that can directly fit into the memory of GPUs. Then, at a lower level, we execute these sub-matrix multiplications on GPUs using tile-based parallel algorithms that are specifically optimized for GPUs. •Pipeline Parallelism. Above, in model parallelism, we have described a simple approach to distributing groups of model components across multiple devices. But this method is inefficient because only one device is activated at a time during processing. Pipeline parallelism addresses this issue by introducing overlaps between computations on different devices [Harlap et al., 2018; Huang et al., 2019].\n\n[e20e37c61066af382f36984921e1a4c75d45a554886976655effdafee4addf27 | 2501.09223v4.pdf | page 67]\nIn Transformers, layer normalization is typically employed alongside residual connections. As described in Section 2.1.1, a sub-layer can be based on either the post-norm architecture, in which layer normalization is performed right after a residual block, or the pre-norm architecture, in which layer normalization is performed inside a residual block. While both architectures are widely used in Transformer-based systems [Wang et al., 2019], the pre-norm architecture has proven to be especially useful in training deep Transformers. Given this, most LLMs are based on the prenorm architecture, expressed asoutput =F(LNorm(input)) + input.\n\n[76913469965f82d67cbe9dd45bea86bdefcf86c53d47626e10c2dad12ff8802d | 2501.09223v4.pdf | page 71]\n(2.25)). We can slice the matrixWh∈R d×dh vertically intoMsub-matrices Wh = [ W1h W2h ···W Mh ] ,(2.34) where each sub-matrixW kh is of shaped× dhM . The multiplication ofhwithW h can be expressed as h Wh =h [ W1h W2h ···W Mh ] = [ h W1h h W2h ···h W Mh ] .(2.35) We can perform matrix multiplications{h W 1h,h W2h,···,h W Mh}onMdevices separately. As a result, we distribute a large matrix multiplication across multiple devices, each of which may have relatively small memory. From the perspective of modern GPU design, tensor parallelism over GPUs provides a two-level, tile-based approach to parallel computing. First, at a higher level, we decompose a matrix multiplication into sub-matrix multiplications that can directly fit into the memory of GPUs.",
+        "context_ids": [
+          "254b14947831c425b22345c261257a2002738d31174e5cc06fa43c7c1104a645",
+          "e20e37c61066af382f36984921e1a4c75d45a554886976655effdafee4addf27",
+          "76913469965f82d67cbe9dd45bea86bdefcf86c53d47626e10c2dad12ff8802d"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "unans_dev_02",
+    "question": "According to the textbook, how is Apple Neural Engine (ANE) configured specifically for running quantized Mistral-7B models?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "Apple Neural Engine ANE configuration quantized Mistral-7B models",
+        "filter": null,
+        "results": [
+          {
+            "id": "5d1370cb7550288794b80482f6faeaebb3019c5f1b5f5725fdcdefe8650afa51",
+            "text": "At that time, models were relatively weak, and much of the research focused on developing powerful search algorithms to reduce search errors. These foundational ideas continue to influence modern approaches. As we enter the era dominated by deep learning methods, models based on deep neural networks have become extremely powerful. Even with very simple search algorithms, these models can achieve excellent results. In this context, inference no longer seems as “important” as it once",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 254,
+            "score": 0.030798389007344232,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 245,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "a43e3fbc6d9be2646387c2281d3c0a75439d28553c0262c2ceabc2d9d5595d01",
+            "text": "Another approach to compressing BERT models is quantization [Shen et al., 2020]. By representing model parameters as low-precision numbers, we can compress the models greatly. While this method is not specific to BERT models, it proves effective for large Transformer-based architectures. Third, considering that BERT models are relatively deep and large networks, another thread of research uses dynamic networks to adapt these models for efficient inference. An idea in this paradigm is to dynamically choose the layers for processing a token, for example, in depthadaptive models we exit at some optimal depth and thus skip the rest of the layers in the layer",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 36,
+            "score": 0.028169014084507043,
+            "metadata": {
+              "chapter": 1,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 27,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "7322fbc8be1dbad7a3f4d76933e78695a4ab3cbab3767d7289f8d12e81863ccd",
+            "text": "was, and research attention has gradually shifted toward model architectures, training methods, and scaling up models. However, this trend has recently shifted. With the rise of LLMs, inference has once again attracted significant attention. This renewed focus is primarily reflected in two aspects: • The inference cost for LLMs is very high. For example, efficiently deploying LLMs in highconcurrency, low-latency scenarios remains a challenging problem, making inference efficiency critically important. In this context, efficient architecture designs, optimized search algorithms, and various inference optimization strategies hold substantial practical significance. • Input and output sequence lengths have significantly increased in complex tasks.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 255,
+            "score": 0.01639344262295082,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 246,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "ad348ea33b55fcdfb30fd0e9f90c2aa8f528e2eed912257bfc73b62340028e10",
+            "text": "4.5:Illustrations of using small models to improve large models in LLMs. One approach involves using smaller models for the fine-tuning or pre-training of larger models. This includes generating synthetic data (a), incorporating auxiliary loss (b), and selecting appropriate data (c). Another approach involves combining small models and large models. This includes learning a strong model by aggregating multiple small models (d), and cascading small models with large models (e). which encourages the strong model distribution to align with the weak model distribution.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 180,
+            "metadata": {
+              "chapter": 4,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 171,
+              "document_type": "book"
+            },
+            "score": 0.01639344262295082
+          },
+          {
+            "id": "20e2c8f9052bda9573384407152b1ffaa7198a225e7c2bd9ac7e86ca4ed38262",
+            "text": "2.3.1 Hardware and Parallel Computing Optimizations We begin our discussion by considering improvements to standard Transformer models from the perspective of high-performance computing. Most of these improvements, though not specifically designed for LLMs, have been widely applied across various deep learning models [Kim et al., 2023]. A commonly used approach is to adopt reduced-precision data formats. For example, rather than using standard 32-bit floating-point (FP32) arithmetic, models can employ 16-bit floatingpoint (FP16/BF16) or even 8-bit integer (INT8) quantization. Using these low-precision data types can improve computational efficiency and memory throughput, so that longer sequences can be processed more easily.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 76,
+            "score": 0.016129032258064516,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 67,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[5d1370cb7550288794b80482f6faeaebb3019c5f1b5f5725fdcdefe8650afa51 | 2501.09223v4.pdf | page 254]\nAt that time, models were relatively weak, and much of the research focused on developing powerful search algorithms to reduce search errors. These foundational ideas continue to influence modern approaches. As we enter the era dominated by deep learning methods, models based on deep neural networks have become extremely powerful. Even with very simple search algorithms, these models can achieve excellent results. In this context, inference no longer seems as “important” as it once\n\n[a43e3fbc6d9be2646387c2281d3c0a75439d28553c0262c2ceabc2d9d5595d01 | 2501.09223v4.pdf | page 36]\nAnother approach to compressing BERT models is quantization [Shen et al., 2020]. By representing model parameters as low-precision numbers, we can compress the models greatly. While this method is not specific to BERT models, it proves effective for large Transformer-based architectures. Third, considering that BERT models are relatively deep and large networks, another thread of research uses dynamic networks to adapt these models for efficient inference. An idea in this paradigm is to dynamically choose the layers for processing a token, for example, in depthadaptive models we exit at some optimal depth and thus skip the rest of the layers in the layer\n\n[7322fbc8be1dbad7a3f4d76933e78695a4ab3cbab3767d7289f8d12e81863ccd | 2501.09223v4.pdf | page 255]\nwas, and research attention has gradually shifted toward model architectures, training methods, and scaling up models. However, this trend has recently shifted. With the rise of LLMs, inference has once again attracted significant attention. This renewed focus is primarily reflected in two aspects: • The inference cost for LLMs is very high. For example, efficiently deploying LLMs in highconcurrency, low-latency scenarios remains a challenging problem, making inference efficiency critically important. In this context, efficient architecture designs, optimized search algorithms, and various inference optimization strategies hold substantial practical significance. • Input and output sequence lengths have significantly increased in complex tasks.",
+        "context_ids": [
+          "5d1370cb7550288794b80482f6faeaebb3019c5f1b5f5725fdcdefe8650afa51",
+          "a43e3fbc6d9be2646387c2281d3c0a75439d28553c0262c2ceabc2d9d5595d01",
+          "7322fbc8be1dbad7a3f4d76933e78695a4ab3cbab3767d7289f8d12e81863ccd"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  }
+]

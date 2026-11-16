@@ -1,0 +1,276 @@
+[
+  {
+    "id": "q_01",
+    "split": "dev",
+    "question": "What are the two types of tasks typically involved in pre-training in NLP?",
+    "expected_answer": "Sequence modeling (or sequence encoding) and sequence generation.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 10,
+        "evidence": "Pre-training in NLP typically involves two types of tasks: sequence modeling (or sequence encoding) and sequence generation."
+      }
+    ]
+  },
+  {
+    "id": "q_02",
+    "split": "dev",
+    "question": "What is the core idea of masked language modeling as used in BERT?",
+    "expected_answer": "To create prediction challenges by masking out some tokens in the input sequence and training a model to predict the masked tokens based on surrounding context.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 18,
+        "evidence": "The idea of masked language modeling is to create prediction challenges by masking out some of the tokens in the input sequence and training a model to predict the masked tokens."
+      }
+    ]
+  },
+  {
+    "id": "q_03",
+    "split": "dev",
+    "question": "What was the purpose of the Next Sentence Prediction (NSP) task in the original BERT model?",
+    "expected_answer": "To capture the relationship between two consecutive sentences by determining whether Sent_B is the actual next sentence following Sent_A.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 22,
+        "evidence": "NSP is based on the assumption that a good text encoder should capture the relationship between two sentences. To model this relationship, NSP uses the encoder output of two consecutive sentencesSent A andSent B to determine whetherSent B is the next sentence followingSent A"
+      }
+    ]
+  },
+  {
+    "id": "q_04",
+    "split": "dev",
+    "question": "How are individual training samples formatted in the T5 text-to-text framework?",
+    "expected_answer": "They follow a 'Source Text -> Target Text' format.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 24,
+        "evidence": "Each sample in T5 follows the format Source Text→Target Text Here→separates the source text, which consists of a task description or instruction and the input given to the system, from the target text, which is the response to the input task"
+      }
+    ],
+    "filter": {
+      "chapter": 1
+    }
+  },
+  {
+    "id": "q_05",
+    "split": "dev",
+    "question": "What text corruption methods are proposed in the BART model for encoder-decoder pre-training?",
+    "expected_answer": "Token Masking, Token Deletion, Span Masking, Sentence Reordering, and Document Rotation.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 28,
+        "evidence": "Lewis et al. [2020], in theirBARTmodel, propose several ways to corrupt the input sequence. •Token Masking. This is the same masking method that we used in masked language modeling"
+      }
+    ]
+  },
+  {
+    "id": "q_06",
+    "split": "dev",
+    "question": "How is the probability of a token sequence factorized in a standard language model using the chain rule?",
+    "expected_answer": "As the product of conditional probabilities of each token given its preceding context: Prod_{i=0}^{m} Pr(x_i | x_0, ..., x_{i-1}).",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 46,
+        "evidence": "The probability of this sequence can be factorized using the chain rule Pr(x0,···,x m) = Pr(x 0)·Pr(x 1|x0)·Pr(x 2|x0,x 1)···Pr(x m|x0,···,x m−1"
+      }
+    ]
+  },
+  {
+    "id": "q_07",
+    "split": "dev",
+    "question": "According to Table 2.2, how many parameters does the GPT-3 model have?",
+    "expected_answer": "175 billion parameters (175B).",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 50,
+        "evidence": "GPT-3 [Brown et al., 2020] 175B 96 12,288"
+      }
+    ]
+  },
+  {
+    "id": "q_08",
+    "split": "dev",
+    "question": "What does RLHF stand for when aligning LLMs with human expectations?",
+    "expected_answer": "Reinforcement learning from human feedback.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 56,
+        "evidence": "known asreinforcement learning from human feedback(RLHF"
+      }
+    ],
+    "filter": {
+      "chapter": 2
+    }
+  },
+  {
+    "id": "q_09",
+    "split": "dev",
+    "question": "Which family of challenging tasks often causes standard LLMs to fail unless intermediate reasoning steps are provided?",
+    "expected_answer": "Arithmetic reasoning and commonsense reasoning tasks.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 62,
+        "evidence": "A family of challenging tasks for LLMs involves arithmetic reasoning and commonsense reasoning."
+      }
+    ]
+  },
+  {
+    "id": "q_10",
+    "split": "dev",
+    "question": "How does Root Mean Square (RMS) layer normalization differ from standard layer normalization?",
+    "expected_answer": "RMS layer normalization only rescales the input vector based on its root mean square without re-centering it.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 67,
+        "evidence": "A variant of layer normalization, called root mean square (RMS) layer normalization, only rescales the input vector but does not re-center it"
+      }
+    ]
+  },
+  {
+    "id": "q_11",
+    "split": "dev",
+    "question": "Which activation function is used in the FFN layers of the PaLM and Llama model series?",
+    "expected_answer": "SwiGLU activation function.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 69,
+        "evidence": "Both the PaLM and Llama model series rely on the SwiGLU function for their FFN layers."
+      }
+    ]
+  },
+  {
+    "id": "q_12",
+    "split": "dev",
+    "question": "What are the primary forms of parallelism utilized in distributed training of LLMs?",
+    "expected_answer": "Data parallelism, model parallelism, tensor parallelism, and pipeline parallelism.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 69,
+        "evidence": "There are several forms of parallelism: data parallelism, model parallelism, tensor parallelism, and pipeline parallelism."
+      }
+    ]
+  },
+  {
+    "id": "q_13",
+    "split": "dev",
+    "question": "What does the Chinchilla scaling law state regarding test loss?",
+    "expected_answer": "The test loss per token is expressed as the sum of inverse power-law functions of model size N and dataset size D, plus an irreducible error term.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 74,
+        "evidence": "the Chinchilla scaling law. It states that the test loss per token is the sum of the inverse power-law functions ofNandD"
+      }
+    ]
+  },
+  {
+    "id": "q_14",
+    "split": "dev",
+    "question": "What is the primary advantage of linear attention over standard self-attention regarding memory?",
+    "expected_answer": "Linear attention does not need to explicitly store all past keys and values; only the latest recurrent summary representations are kept, so the cost of each step is constant.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 79,
+        "evidence": "A benefit of this model is that we do not need to explicitly store all past keys and values. Instead only the latest representations"
+      }
+    ]
+  },
+  {
+    "id": "q_15",
+    "split": "dev",
+    "question": "What is Grouped Query Attention (GQA)?",
+    "expected_answer": "An attention variant where query heads are divided into groups, and each group shares a single set of keys and values.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 90,
+        "evidence": "Grouped query attention(GQA) is a natural extension to multi-head attention and MQA [Ainslie et al., 2023]. In GQA, heads are divided inton g groups, each corresponding to a shared set of keys and values"
+      }
+    ]
+  },
+  {
+    "id": "q_16",
+    "split": "test",
+    "question": "How do rotary positional embeddings (RoPE) incorporate positional information into token embeddings?",
+    "expected_answer": "By applying geometrically meaningful rotation matrices to pairs of dimensions in the embedding space based on the token's absolute position.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 96,
+        "evidence": "Rotary positional embeddings, instead, model positional context by applying geometrically meaningful rotations to token embeddings in the complex domain."
+      },
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 96,
+        "evidence": "Rotary positional embeddings, instead, model positional context by applying geometrically meaningful rotations to token embeddings in the complex domain."
+      }
+    ]
+  },
+  {
+    "id": "q_17",
+    "split": "test",
+    "question": "What is the main purpose of linear position interpolation when extending context length?",
+    "expected_answer": "To uniformly compress extended position indices so they fit back into the original training domain range.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 100,
+        "evidence": "The key intuition behind linear position interpolation is to adjust these periods so that the new extended positions can be encoded within the pre-trained boundaries"
+      }
+    ]
+  },
+  {
+    "id": "q_18",
+    "split": "test",
+    "question": "What is zero-shot learning in the context of in-context learning with LLMs?",
+    "expected_answer": "Zero-shot learning does not involve a traditional learning process: the LLM is used directly on new problems not observed in training, without demonstrating problem-solving steps or providing examples.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 108,
+        "evidence": "Zero-shot learning, as its name implies, does not involve a traditional “learning” process. Instead, it directly uses LLMs to address new problems that were not observed during training."
+      }
+    ],
+    "filter": {
+      "chapter": 3
+    }
+  },
+  {
+    "id": "q_19",
+    "split": "test",
+    "question": "What simple trigger phrase introduced by Kojima et al. (2022) is used to encourage zero-shot Chain-of-Thought reasoning?",
+    "expected_answer": "\"Let's think step by step.\"",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 111,
+        "evidence": "found that simply appending “Let’s think step by step” to the end of each prompt"
+      }
+    ]
+  },
+  {
+    "id": "q_20",
+    "split": "test",
+    "question": "What is the core strategy of the least-to-most prompting method?",
+    "expected_answer": "Decompose a hard problem into a progressive sequence of simpler sub-problems (generated by prompting an LLM with instructions/demonstrations) that systematically lead to the conclusion.",
+    "gold": [
+      {
+        "source_id": "llm_foundations_book_2026",
+        "page": 129,
+        "evidence": "in the least-to-most prompting method, sub-problem generation is performed by prompting an LLM with instructions and/or demonstrations"
+      }
+    ]
+  }
+]

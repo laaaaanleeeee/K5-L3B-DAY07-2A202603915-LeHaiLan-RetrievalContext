@@ -1,0 +1,501 @@
+[
+  {
+    "id": "q_01",
+    "question": "What are the two types of tasks typically involved in pre-training in NLP?",
+    "filter": null,
+    "latency_ms": 4.19,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "context_chars": 796,
+    "results": [
+      {
+        "id": "ba1f19a3ead0a91fe5e6e66bbedf54e4f31d4abe6200d06d6219cf4786b1cfb4",
+        "source_id": "llm_foundations_book_2026",
+        "page": 10,
+        "score": 0.7708,
+        "hit": true
+      },
+      {
+        "id": "ce6d6e4e499772dde9deee75eff6a85f168f9ffa1bef41e9c5f38a3b4a26cbd0",
+        "source_id": "llm_foundations_book_2026",
+        "page": 12,
+        "score": 0.6285,
+        "hit": false
+      },
+      {
+        "id": "1072f54396f33b27707d6ede9f43b10a5085742cf1cae8a2d249dce81353237d",
+        "source_id": "llm_foundations_book_2026",
+        "page": 44,
+        "score": 0.5105,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_02",
+    "question": "What is the core idea of masked language modeling as used in BERT?",
+    "filter": null,
+    "latency_ms": 3.51,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "context_chars": 796,
+    "results": [
+      {
+        "id": "0a20960f39fcb8e4d0734e9e65e2f251db33cbb78e74c88ded076de639af3855",
+        "source_id": "llm_foundations_book_2026",
+        "page": 18,
+        "score": 0.735,
+        "hit": true
+      },
+      {
+        "id": "a0acec9dd0a2ddeee039d3b1b2c626d22db1c9c71b029e48704d13eaacb71681",
+        "source_id": "llm_foundations_book_2026",
+        "page": 26,
+        "score": 0.6327,
+        "hit": false
+      },
+      {
+        "id": "64cb8910439872ea80582c68bb8ecf6d0558e7f141c0d724b6fc303912f81979",
+        "source_id": "llm_foundations_book_2026",
+        "page": 29,
+        "score": 0.6138,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_03",
+    "question": "What was the purpose of the Next Sentence Prediction (NSP) task in the original BERT model?",
+    "filter": null,
+    "latency_ms": 3.01,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "context_chars": 792,
+    "results": [
+      {
+        "id": "ca2d14f47c473dad4478498992a11ebcaccb00746007ec12c900f3f0ab6678c8",
+        "source_id": "llm_foundations_book_2026",
+        "page": 108,
+        "score": 0.8245,
+        "hit": false
+      },
+      {
+        "id": "3da8454e3b0d2f332b4074c7d6efce39c1aabd778cca8584f22bb0d5d363fdf8",
+        "source_id": "llm_foundations_book_2026",
+        "page": 195,
+        "score": 0.7965,
+        "hit": false
+      },
+      {
+        "id": "6447e76b382fc30728907323500375b0d7685cd2f1ff438970557217b2d2c691",
+        "source_id": "llm_foundations_book_2026",
+        "page": 39,
+        "score": 0.7433,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_04",
+    "question": "How are individual training samples formatted in the T5 text-to-text framework?",
+    "filter": {
+      "chapter": 1
+    },
+    "latency_ms": 0.68,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true,
+    "context_chars": 784,
+    "results": [
+      {
+        "id": "b6422b73e06166fc1bbefe0de2ac2b6c474e9bddb9a08a1fb689d56ae0ad5422",
+        "source_id": "llm_foundations_book_2026",
+        "page": 23,
+        "score": 0.6421,
+        "hit": false
+      },
+      {
+        "id": "cf334f9adacb859ff9f650e3ad064b5f8fbb975174df8cb1de012adb32a96327",
+        "source_id": "llm_foundations_book_2026",
+        "page": 24,
+        "score": 0.4837,
+        "hit": true
+      },
+      {
+        "id": "b7e4c712fa935bf5500688a78219a991d3822add108f8f04b709af09167229ed",
+        "source_id": "llm_foundations_book_2026",
+        "page": 24,
+        "score": 0.3947,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_05",
+    "question": "What text corruption methods are proposed in the BART model for encoder-decoder pre-training?",
+    "filter": null,
+    "latency_ms": 3.14,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "context_chars": 795,
+    "results": [
+      {
+        "id": "96b41fbdc48c7482ea6c614964e93514dc2c1504a814a585d4be94d1cc9b6da4",
+        "source_id": "llm_foundations_book_2026",
+        "page": 27,
+        "score": 0.7633,
+        "hit": false
+      },
+      {
+        "id": "bcba39163424e8929abd118fd818cc084e50f7c43c0f9ccacfda502773a651d2",
+        "source_id": "llm_foundations_book_2026",
+        "page": 29,
+        "score": 0.7117,
+        "hit": false
+      },
+      {
+        "id": "9a98d9871a0f4456a0f4e9c06ca836ee28a5390d3b6a02d53c514b6221e1d3a0",
+        "source_id": "llm_foundations_book_2026",
+        "page": 18,
+        "score": 0.582,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_06",
+    "question": "How is the probability of a token sequence factorized in a standard language model using the chain rule?",
+    "filter": null,
+    "latency_ms": 3.28,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "context_chars": 796,
+    "results": [
+      {
+        "id": "25d5008b2201b2d0f2c7db728ffb50bbaa6333e88c990af10f2585eaf47aa0aa",
+        "source_id": "llm_foundations_book_2026",
+        "page": 25,
+        "score": 0.7732,
+        "hit": false
+      },
+      {
+        "id": "21a09d9987cb3bcd50907f74793336395c9219767a027a203bf053bfe2b010b1",
+        "source_id": "llm_foundations_book_2026",
+        "page": 12,
+        "score": 0.7154,
+        "hit": false
+      },
+      {
+        "id": "c727052781d6d81a6349f2a3f904e04fd14140a0ca05538fe034578aae3d6bcc",
+        "source_id": "llm_foundations_book_2026",
+        "page": 46,
+        "score": 0.6649,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_07",
+    "question": "According to Table 2.2, how many parameters does the GPT-3 model have?",
+    "filter": null,
+    "latency_ms": 2.59,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "context_chars": 797,
+    "results": [
+      {
+        "id": "df0c4decaa962bc34b63bd711594b1c098226bfe406922e9f7e3475dd98cef5e",
+        "source_id": "llm_foundations_book_2026",
+        "page": 236,
+        "score": 1.1217,
+        "hit": false
+      },
+      {
+        "id": "d4e0cab6572a627f4a436cfa98e414d084d037bb90a741933389d3ad98b00451",
+        "source_id": "llm_foundations_book_2026",
+        "page": 237,
+        "score": 0.8246,
+        "hit": false
+      },
+      {
+        "id": "d3d015fbe3b0ca626adc0b4b3cdb9f18c41283d87a32acddf6ad755f95e412f2",
+        "source_id": "llm_foundations_book_2026",
+        "page": 237,
+        "score": 0.7515,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_08",
+    "question": "What does RLHF stand for when aligning LLMs with human expectations?",
+    "filter": {
+      "chapter": 2
+    },
+    "latency_ms": 0.78,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": false,
+    "context_chars": 796,
+    "results": [
+      {
+        "id": "1832deb4068ae4c54590c6b80aebc22b5765905fa8647c181e598102e452feba",
+        "source_id": "llm_foundations_book_2026",
+        "page": 55,
+        "score": 0.4091,
+        "hit": false
+      },
+      {
+        "id": "45a71500ba4721532ff3403822b712f4d8c626bd97ce60db7795c984c5a37362",
+        "source_id": "llm_foundations_book_2026",
+        "page": 56,
+        "score": 0.2898,
+        "hit": false
+      },
+      {
+        "id": "95a2a3499c70bc06e4f26f358269e29d3462dc7d42d03467341ff060c1f93059",
+        "source_id": "llm_foundations_book_2026",
+        "page": 56,
+        "score": 0.277,
+        "hit": true
+      }
+    ]
+  },
+  {
+    "id": "q_09",
+    "question": "Which family of challenging tasks often causes standard LLMs to fail unless intermediate reasoning steps are provided?",
+    "filter": null,
+    "latency_ms": 3.34,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "context_chars": 793,
+    "results": [
+      {
+        "id": "91ffe862f0c315fcff64b831209a51ace0b8b8c8bd9d2b01b988b73d8159b949",
+        "source_id": "llm_foundations_book_2026",
+        "page": 257,
+        "score": 0.4851,
+        "hit": false
+      },
+      {
+        "id": "f704ec25d63b82aabfafd9a7d2888150df656b8aee9f5c14073c4d1255878ba4",
+        "source_id": "llm_foundations_book_2026",
+        "page": 124,
+        "score": 0.4457,
+        "hit": false
+      },
+      {
+        "id": "e1f9e22e082c78d2613dd87ff806af233a482be9c75ee31263223c7207729aa3",
+        "source_id": "llm_foundations_book_2026",
+        "page": 261,
+        "score": 0.4394,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_10",
+    "question": "How does Root Mean Square (RMS) layer normalization differ from standard layer normalization?",
+    "filter": null,
+    "latency_ms": 2.05,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true,
+    "context_chars": 799,
+    "results": [
+      {
+        "id": "3c086a1427ad16ff2d9901fc0b3aae620d57d67963fa20b24753ef37a93ec5d4",
+        "source_id": "llm_foundations_book_2026",
+        "page": 67,
+        "score": 1.7871,
+        "hit": false
+      },
+      {
+        "id": "ea80e3e966f0522a2a79a4dbabd2a2de01487980af7d6ca962b993f888a72b2b",
+        "source_id": "llm_foundations_book_2026",
+        "page": 67,
+        "score": 1.1285,
+        "hit": true
+      },
+      {
+        "id": "68ed2e81af746536b06bd25046c1f263b816c7293a1af3a94b8878e415eea5b1",
+        "source_id": "llm_foundations_book_2026",
+        "page": 67,
+        "score": 0.9125,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_11",
+    "question": "Which activation function is used in the FFN layers of the PaLM and Llama model series?",
+    "filter": null,
+    "latency_ms": 3.22,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": false,
+    "context_chars": 735,
+    "results": [
+      {
+        "id": "3c086a1427ad16ff2d9901fc0b3aae620d57d67963fa20b24753ef37a93ec5d4",
+        "source_id": "llm_foundations_book_2026",
+        "page": 67,
+        "score": 0.7565,
+        "hit": false
+      },
+      {
+        "id": "3da8454e3b0d2f332b4074c7d6efce39c1aabd778cca8584f22bb0d5d363fdf8",
+        "source_id": "llm_foundations_book_2026",
+        "page": 195,
+        "score": 0.7257,
+        "hit": false
+      },
+      {
+        "id": "02ae2cb5c49585c0bc5891c9b4444d161ee76442c37d9b50b04014d62792236d",
+        "source_id": "llm_foundations_book_2026",
+        "page": 69,
+        "score": 0.6023,
+        "hit": true
+      }
+    ]
+  },
+  {
+    "id": "q_12",
+    "question": "What are the primary forms of parallelism utilized in distributed training of LLMs?",
+    "filter": null,
+    "latency_ms": 2.58,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "context_chars": 799,
+    "results": [
+      {
+        "id": "c916bbc6f40c64918d3cec3f4529ced9a911a53f4e1c2b49d19d75a503becc0e",
+        "source_id": "llm_foundations_book_2026",
+        "page": 69,
+        "score": 0.7109,
+        "hit": true
+      },
+      {
+        "id": "49f5cdd822e42da89b659208d1e59871a1c065278257943b11461abbdbd384a1",
+        "source_id": "llm_foundations_book_2026",
+        "page": 70,
+        "score": 0.5667,
+        "hit": false
+      },
+      {
+        "id": "c22dceea81a4423c9b95f83fdba4e5c28c6e4d13b4b62b3a511e013056d19794",
+        "source_id": "llm_foundations_book_2026",
+        "page": 72,
+        "score": 0.5007,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_13",
+    "question": "What does the Chinchilla scaling law state regarding test loss?",
+    "filter": null,
+    "latency_ms": 1.87,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "context_chars": 795,
+    "results": [
+      {
+        "id": "607dea1026da462370bab184575b163e6eee878faa94272289edb4098d804037",
+        "source_id": "llm_foundations_book_2026",
+        "page": 74,
+        "score": 0.5981,
+        "hit": true
+      },
+      {
+        "id": "3f16b9b8d3b221e852c7127390e94aeb72e7f382446ee1bc4b05c8e51d47ca35",
+        "source_id": "llm_foundations_book_2026",
+        "page": 73,
+        "score": 0.4694,
+        "hit": false
+      },
+      {
+        "id": "91a11c8d464189f1a3a9116dbf2413e5ff7a18275acfb22e97873170312a2a21",
+        "source_id": "llm_foundations_book_2026",
+        "page": 244,
+        "score": 0.4233,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_14",
+    "question": "What is the primary advantage of linear attention over standard self-attention regarding memory?",
+    "filter": null,
+    "latency_ms": 2.77,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "context_chars": 796,
+    "results": [
+      {
+        "id": "aeb38e21ab81a02580ac28f4d707b0e0219bfe68437b4076f7992bb12e641f96",
+        "source_id": "llm_foundations_book_2026",
+        "page": 238,
+        "score": 0.706,
+        "hit": false
+      },
+      {
+        "id": "8cf797c6c00930c953c4d3d29dfcd7b082007d976a129c55241b7a8f08aae9ef",
+        "source_id": "llm_foundations_book_2026",
+        "page": 20,
+        "score": 0.6041,
+        "hit": false
+      },
+      {
+        "id": "55abc5127a089ab4402b202ecfc681d7df661209f672589551f99195cb2e5018",
+        "source_id": "llm_foundations_book_2026",
+        "page": 90,
+        "score": 0.5983,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_15",
+    "question": "What is Grouped Query Attention (GQA)?",
+    "filter": null,
+    "latency_ms": 1.81,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": false,
+    "context_chars": 797,
+    "results": [
+      {
+        "id": "55abc5127a089ab4402b202ecfc681d7df661209f672589551f99195cb2e5018",
+        "source_id": "llm_foundations_book_2026",
+        "page": 90,
+        "score": 0.5412,
+        "hit": false
+      },
+      {
+        "id": "0554b75681b98972b4b2ab2810703f6ace3a3434cb6255d5c53aa3e2d211d93b",
+        "source_id": "llm_foundations_book_2026",
+        "page": 90,
+        "score": 0.4087,
+        "hit": true
+      },
+      {
+        "id": "cd066806b0d0a3392a684fc5b431f42ce014eafbfcd708a6e70a27177f8d3582",
+        "source_id": "llm_foundations_book_2026",
+        "page": 94,
+        "score": 0.2183,
+        "hit": false
+      }
+    ]
+  }
+]

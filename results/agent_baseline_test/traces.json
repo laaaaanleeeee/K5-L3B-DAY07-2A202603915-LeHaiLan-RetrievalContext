@@ -1,0 +1,648 @@
+[
+  {
+    "query_id": "q_16",
+    "question": "How do rotary positional embeddings (RoPE) incorporate positional information into token embeddings?",
+    "status": "answered",
+    "answer": "Rotary positional embeddings (RoPE) incorporate positional information by applying geometrically meaningful rotations to token embeddings within the complex domain [28a09e6a04612d78649cb124bbba54978d11f5bd50d961673c98dc3be2cc063e]. This process is formulated through multiplicative interactions, where a rotation matrix R(i) is applied to the token embedding x_i [28a09e6a04612d78649cb124bbba54978d11f5bd50d961673c98dc3be2cc063e].",
+    "citations": [
+      "28a09e6a04612d78649cb124bbba54978d11f5bd50d961673c98dc3be2cc063e"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "how do rotary positional embeddings (RoPE) work mechanism",
+        "filter": null,
+        "results": [
+          {
+            "id": "1cb6c95d3598b520c3bf4a3a60806edb4d2c6f5e5a7973b3ff019f90956ce192",
+            "text": "2.11:Query-key products with biases (above = the T5 bias and below = the ALiBi bias). The color scale of the biases ranges from light blue denoting small absolute values to deep blue denoting large absolute values. 2.3.5.3 Rotary Positional Embedding Similar to sinusoidal embeddings, rotary positional embeddings use predefined frequency scales [Su et al., 2024]. Recall that in the sinusoidal embedding model, absolute positions are represented as fixed vectors composed of sine and cosine functions with varying frequencies, which are then additively combined with token embeddings. Rotary positional embeddings, instead, model positional context by applying geometrically meaningful rotations to token embeddings in the complex domain.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 96,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 87,
+              "document_type": "book"
+            },
+            "score": 0.5449584571872093
+          },
+          {
+            "id": "28a09e6a04612d78649cb124bbba54978d11f5bd50d961673c98dc3be2cc063e",
+            "text": "Rotary positional embeddings, instead, model positional context by applying geometrically meaningful rotations to token embeddings in the complex domain. This yields a formulation based on multiplicative interactions: ei =x iR(i),(2.85) whereR(i)∈R d×d is the rotation matrix representing the rotations performed on the token",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 96,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 87,
+              "document_type": "book"
+            },
+            "score": 0.4967528296271899
+          },
+          {
+            "id": "cb67c6374ef47375d1f12943936984f401ee3a0ce55afbd8db56e8f7be69deaf",
+            "text": "In such scenarios, using learned positional embeddings has obvious drawbacks, as there are no trained embeddings for positions that are not observed in the training phase. An alternative approach to modeling positional information is to develop positional embeddings that can generalize: once trained, the embedding model can be used to handle longer sequences. Suppose that we train a positional embedding model on sequences with a maximum length ofml, and we wish to apply the trained model to a sequence of lengthm(m≫m l). If the model is only trained on a limited range of positions, then this model will simply fail to deal with new data outside that range.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 91,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 82,
+              "document_type": "book"
+            },
+            "score": 0.2894609759709572
+          }
+        ],
+        "context": "[28a09e6a04612d78649cb124bbba54978d11f5bd50d961673c98dc3be2cc063e | 2501.09223v4.pdf | page 96]\nRotary positional embeddings, instead, model positional context by applying geometrically meaningful rotations to token embeddings in the complex domain. This yields a formulation based on multiplicative interactions: ei =x iR(i),(2.85) whereR(i)∈R d×d is the rotation matrix representing the rotations performed on the token",
+        "context_ids": [
+          "28a09e6a04612d78649cb124bbba54978d11f5bd50d961673c98dc3be2cc063e"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q_17",
+    "question": "What is the main purpose of linear position interpolation when extending context length?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "main purpose of linear position interpolation context length extension",
+        "filter": null,
+        "results": [
+          {
+            "id": "e50c22379818163fd018513f5b0a3eef06990b859c71ac01791342192b2d29fe",
+            "text": "When studying long-context LLMs, it is natural to wonder what mechanisms may explain the use of long context in language modeling. Can we compress the representation of infinite context into a relatively small model? Are all context tokens useful for predicting the next token? Can we",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 101,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 92,
+              "document_type": "book"
+            },
+            "score": 0.29611750555465177
+          },
+          {
+            "id": "cd254d65fed7212b9e64f176e3a1c752f923770e4aa3ebf8b845b17efc821555",
+            "text": "The most straightforward way to achieve this is to linearly scale upTk by the extrapolation ratio mml , yielding: T′k = mml·2π·b 2(k−1)d .(2.99) By doing so, all position indices in[0,m]are uniformly compressed into[0,m l]. This linear scaling can be implemented by dividing the position index in the embedding model by the scaling factor [Chen et al., 2023c]. The modified model with linear positional interpolation becomes Ro′(xi,iθ) = Ro ( xi,mlmiθ).(2.100) Another method of positional interpolation is to scale the baseb, a technique known asNTKaware scaled RoPE16. Suppose the basebis scaled by a factorλ.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 100,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 91,
+              "document_type": "book"
+            },
+            "score": 0.2878717789073665
+          },
+          {
+            "id": "8bc8abd39e52456151cc054903a404094786d22100c1f8b0d482201329b31dd2",
+            "text": "0 1,024 2,048 −1 0 1 Sequence Length (a) Encoding with No Generalization Value 0 1,024 2,048 −1 0 1 Sequence Length (b) Extrapolation Value 0 1,024 2,048 −1 0 1 Sequence Length (c) Interpolation Value Fig. 2.9:Illustrations of different positional embedding behaviors across a sequence length continuum. Blue points denote positions explicitly observed during training, while red points denote unseen positions encountered at inference time. In sub-figure (a), the embedding model memorizes the training domain and cannot generalize. In sub-figures (b) and (c), the model successfully generalizes to unseen lengths via extrapolation and interpolation, respectively. employed to assign meaningful values to data points beyond the original range.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 92,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 83,
+              "document_type": "book"
+            },
+            "score": 0.2507327812623882
+          }
+        ],
+        "context": "[e50c22379818163fd018513f5b0a3eef06990b859c71ac01791342192b2d29fe | 2501.09223v4.pdf | page 101]\nWhen studying long-context LLMs, it is natural to wonder what mechanisms may explain the use of long context in language modeling. Can we compress the representation of infinite context into a relatively small model? Are all context tokens useful for predicting the next token? Can we",
+        "context_ids": [
+          "e50c22379818163fd018513f5b0a3eef06990b859c71ac01791342192b2d29fe"
+        ]
+      },
+      {
+        "event": "search",
+        "query": "linear position interpolation mechanism context length extension purpose",
+        "filter": null,
+        "results": [
+          {
+            "id": "cd254d65fed7212b9e64f176e3a1c752f923770e4aa3ebf8b845b17efc821555",
+            "text": "The most straightforward way to achieve this is to linearly scale upTk by the extrapolation ratio mml , yielding: T′k = mml·2π·b 2(k−1)d .(2.99) By doing so, all position indices in[0,m]are uniformly compressed into[0,m l]. This linear scaling can be implemented by dividing the position index in the embedding model by the scaling factor [Chen et al., 2023c]. The modified model with linear positional interpolation becomes Ro′(xi,iθ) = Ro ( xi,mlmiθ).(2.100) Another method of positional interpolation is to scale the baseb, a technique known asNTKaware scaled RoPE16. Suppose the basebis scaled by a factorλ.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 100,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 91,
+              "document_type": "book"
+            },
+            "score": 0.2775107149727609
+          },
+          {
+            "id": "e50c22379818163fd018513f5b0a3eef06990b859c71ac01791342192b2d29fe",
+            "text": "When studying long-context LLMs, it is natural to wonder what mechanisms may explain the use of long context in language modeling. Can we compress the representation of infinite context into a relatively small model? Are all context tokens useful for predicting the next token? Can we",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 101,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 92,
+              "document_type": "book"
+            },
+            "score": 0.24894159742687327
+          },
+          {
+            "id": "8bc8abd39e52456151cc054903a404094786d22100c1f8b0d482201329b31dd2",
+            "text": "0 1,024 2,048 −1 0 1 Sequence Length (a) Encoding with No Generalization Value 0 1,024 2,048 −1 0 1 Sequence Length (b) Extrapolation Value 0 1,024 2,048 −1 0 1 Sequence Length (c) Interpolation Value Fig. 2.9:Illustrations of different positional embedding behaviors across a sequence length continuum. Blue points denote positions explicitly observed during training, while red points denote unseen positions encountered at inference time. In sub-figure (a), the embedding model memorizes the training domain and cannot generalize. In sub-figures (b) and (c), the model successfully generalizes to unseen lengths via extrapolation and interpolation, respectively. employed to assign meaningful values to data points beyond the original range.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 92,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 83,
+              "document_type": "book"
+            },
+            "score": 0.24133757921999163
+          }
+        ],
+        "context": "[e50c22379818163fd018513f5b0a3eef06990b859c71ac01791342192b2d29fe | 2501.09223v4.pdf | page 101]\nWhen studying long-context LLMs, it is natural to wonder what mechanisms may explain the use of long context in language modeling. Can we compress the representation of infinite context into a relatively small model? Are all context tokens useful for predicting the next token? Can we",
+        "context_ids": [
+          "e50c22379818163fd018513f5b0a3eef06990b859c71ac01791342192b2d29fe"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "q_18",
+    "question": "What is zero-shot learning in the context of in-context learning with LLMs?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "zero-shot learning definition in-context learning LLMs",
+        "filter": {
+          "chapter": 3
+        },
+        "results": [
+          {
+            "id": "e2dcfc9e21bcc9d853fea58fd6df2bf263a1696b659d481bec60595d62e256c4",
+            "text": "3.1.2 In-context Learning Learning can occur during inference in large language models. In-context learning is one such method, where prompts involve demonstrations of problem-solving, and LLMs can learn how to solve new problems from these demonstrations. Since we do not update model parameters in this process, in-context learning can be viewed as a way to efficiently activate the knowledge learned in pre-training without additional training or fine-tuning. This enables LLMs to quickly adapt to new problems and extends the capabilities of pre-trained models without task-specific adjustments. In-context learning can be illustrated by comparing three methods: zero-shot learning, oneshot learning, and few-shot learning.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 108,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 99,
+              "document_type": "book"
+            },
+            "score": 0.7131922661279206
+          },
+          {
+            "id": "d72b80e3cbec57753f8493af246f64bf794e708b6b37dbe8aa92350d5e6efb6f",
+            "text": "In-context learning can be illustrated by comparing three methods: zero-shot learning, oneshot learning, and few-shot learning. Zero-shot learning, as its name implies, does not involve a traditional “learning” process. Instead, it directly uses LLMs to address new problems that were not observed during training. In practice, we can iteratively adjust prompts to guide the LLMs in generating better responses, without demonstrating problem-solving steps or providing examples. Consider the following example. Suppose we want to use an LLM as an assistant that can help correct English sentences. A zero-shot learning prompt is given by SYSTEMYou are a helpful assistant, and are great at grammar correction. USERYou will be provided with a sentence in English.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 108,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 99,
+              "document_type": "book"
+            },
+            "score": 0.702297106931726
+          },
+          {
+            "id": "65fbf4495ab79fc7b856c248f82f72b60cc5d5ccd4f4b621b07df6b4a557450c",
+            "text": "Of course, the concept of prompt optimization can also be extended to learning other parts of prompts. For example, there has been substantial research interest in learning to select or generate demonstrations in CoT [Liu et al., 2022; Rubin et al., 2022; Zhang et al., 2023b]. One of the differences between learning instructions and learning demonstrations is that generating high-quality demonstrations using LLMs is relatively easy and the focus of learning demonstrations is typically on how to sample appropriate demonstrations from a pool of candidates. In contrast, the difficulty in learning instructions is partly because pre-trained LLMs are not suited to predict the quality of instructions, and testing these instructions on downstream tasks is computationally expensive.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 150,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 141,
+              "document_type": "book"
+            },
+            "score": 0.3511485268885922
+          }
+        ],
+        "context": "",
+        "context_ids": []
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "q_19",
+    "question": "What simple trigger phrase introduced by Kojima et al. (2022) is used to encourage zero-shot Chain-of-Thought reasoning?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "Kojima et al. 2022 zero-shot Chain-of-Thought trigger phrase",
+        "filter": null,
+        "results": [
+          {
+            "id": "f1c12e48acbfc02acb998a33bb689aca41dcb8d3c2e8e9a42c5cef244d3cc770",
+            "text": "Zero-shot, one-shot, and few-shot learning are common concepts in the area of in-context learning for LLMs and are not restricted to COT prompting. Broadly speaking, any prompting that involves only simple instructions without any demonstrations can be considered a form of zero-shot learning. This zero-shot learning ability emerges as LLMs are pre-trained and/or finetuned. Also, one-shot and few-shot learning methods are more often considered when LLMs do not acquire the corresponding zero-shot learning ability. These methods are therefore important for in-context learning when addressing new tasks. Examples include those for performing various NLP tasks by demonstrating task-formatted samples.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 64,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 55,
+              "document_type": "book"
+            },
+            "score": 0.5404936428122639
+          },
+          {
+            "id": "40e43b8f1118861864743f930ac39386c2a1d63251853c156b06dc1a785d2e92",
+            "text": "For more advanced techniques of prompting, the reader can refer to recent surveys. Topics include in-context learning [Li, 2023; Dong et al., 2022], CoT [Chu et al., 2023; Yu et al., 2023; Zhang et al., 2023a], efficient prompting [Chang et al., 2024a], and general prompt engineering [Liu et al., 2023c; Chen et al., 2023a]. Note that although we would ideally like to develop general prompting methods without adjusting model architectures and parameters, the results of prompting generally depend heavily",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 161,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 152,
+              "document_type": "book"
+            },
+            "score": 0.5275682056377393
+          },
+          {
+            "id": "61417c4b324262f15fcad477f138d686e6acbe7f3c0aa2a7bba4f51fc17fbb4d",
+            "text": "As discussed in Kojima et al. [2022]’s work, prompting with such instructions may result in LLMs generating only the reasoning steps without a clear conclusion. In this case, a second round of prompting can be used to extract the answer from these reasoning steps. For example, Kojima et al. [2022] create a second prompt which combines both the input and output from the first round of prompting. Using this combined input, the LLM can continue its reasoning",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 124,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 115,
+              "document_type": "book"
+            },
+            "score": 0.4351621235680214
+          }
+        ],
+        "context": "[f1c12e48acbfc02acb998a33bb689aca41dcb8d3c2e8e9a42c5cef244d3cc770 | 2501.09223v4.pdf | page 64]\nZero-shot, one-shot, and few-shot learning are common concepts in the area of in-context learning for LLMs and are not restricted to COT prompting. Broadly speaking, any prompting that involves only simple instructions without any demonstrations can be considered a form of zero-shot learning. This zero-shot learning ability emerges as LLMs are pre-trained and/or finetuned. Also, one-shot and few-shot learning methods are more often considered when LLMs do not acquire the corresponding zero-shot learning ability. These methods are therefore important for in-context learning when addressing new tasks. Examples include those for performing various NLP tasks by demonstrating task-formatted samples.",
+        "context_ids": [
+          "f1c12e48acbfc02acb998a33bb689aca41dcb8d3c2e8e9a42c5cef244d3cc770"
+        ]
+      },
+      {
+        "event": "search",
+        "query": "Kojima et al. 2022 zero-shot Chain-of-Thought trigger phrase",
+        "filter": null,
+        "results": [
+          {
+            "id": "f1c12e48acbfc02acb998a33bb689aca41dcb8d3c2e8e9a42c5cef244d3cc770",
+            "text": "Zero-shot, one-shot, and few-shot learning are common concepts in the area of in-context learning for LLMs and are not restricted to COT prompting. Broadly speaking, any prompting that involves only simple instructions without any demonstrations can be considered a form of zero-shot learning. This zero-shot learning ability emerges as LLMs are pre-trained and/or finetuned. Also, one-shot and few-shot learning methods are more often considered when LLMs do not acquire the corresponding zero-shot learning ability. These methods are therefore important for in-context learning when addressing new tasks. Examples include those for performing various NLP tasks by demonstrating task-formatted samples.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 64,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 55,
+              "document_type": "book"
+            },
+            "score": 0.5404936428122639
+          },
+          {
+            "id": "40e43b8f1118861864743f930ac39386c2a1d63251853c156b06dc1a785d2e92",
+            "text": "For more advanced techniques of prompting, the reader can refer to recent surveys. Topics include in-context learning [Li, 2023; Dong et al., 2022], CoT [Chu et al., 2023; Yu et al., 2023; Zhang et al., 2023a], efficient prompting [Chang et al., 2024a], and general prompt engineering [Liu et al., 2023c; Chen et al., 2023a]. Note that although we would ideally like to develop general prompting methods without adjusting model architectures and parameters, the results of prompting generally depend heavily",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 161,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 152,
+              "document_type": "book"
+            },
+            "score": 0.5275682056377393
+          },
+          {
+            "id": "61417c4b324262f15fcad477f138d686e6acbe7f3c0aa2a7bba4f51fc17fbb4d",
+            "text": "As discussed in Kojima et al. [2022]’s work, prompting with such instructions may result in LLMs generating only the reasoning steps without a clear conclusion. In this case, a second round of prompting can be used to extract the answer from these reasoning steps. For example, Kojima et al. [2022] create a second prompt which combines both the input and output from the first round of prompting. Using this combined input, the LLM can continue its reasoning",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 124,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 115,
+              "document_type": "book"
+            },
+            "score": 0.4351621235680214
+          }
+        ],
+        "context": "[f1c12e48acbfc02acb998a33bb689aca41dcb8d3c2e8e9a42c5cef244d3cc770 | 2501.09223v4.pdf | page 64]\nZero-shot, one-shot, and few-shot learning are common concepts in the area of in-context learning for LLMs and are not restricted to COT prompting. Broadly speaking, any prompting that involves only simple instructions without any demonstrations can be considered a form of zero-shot learning. This zero-shot learning ability emerges as LLMs are pre-trained and/or finetuned. Also, one-shot and few-shot learning methods are more often considered when LLMs do not acquire the corresponding zero-shot learning ability. These methods are therefore important for in-context learning when addressing new tasks. Examples include those for performing various NLP tasks by demonstrating task-formatted samples.",
+        "context_ids": [
+          "f1c12e48acbfc02acb998a33bb689aca41dcb8d3c2e8e9a42c5cef244d3cc770"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "q_20",
+    "question": "What is the core strategy of the least-to-most prompting method?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "least-to-most prompting core strategy",
+        "filter": null,
+        "results": [
+          {
+            "id": "733fc061c56f765da6638c255bc36f8ef00da0579ddc83f7a6a44bbc3256e0be",
+            "text": "6.2 Reasoning via Prompting Prompting is the simplest method to elicit reasoning from LLMs. Because it does not require any modifications to model architectures or parameters, we can simply use well-crafted input texts to stimulate the LLM into outputting the reasoning process. One of the most widely used prompting methods is chain-of-thought (CoT) prompting. The core idea is to encourage the model to generate",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 259,
+            "metadata": {
+              "chapter": 6,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 250,
+              "document_type": "book"
+            },
+            "score": 0.4114094594224545
+          },
+          {
+            "id": "81787a18304f1f98ca0b5713695110365c0bcd4ff66cb51c4f2dcadc5fba8152",
+            "text": "The motivation for this method arises from the challenges of solving difficult reasoning problems — those that cannot be addressed by simply generalizing from a few examples. For these problems, a more effective problem-solving strategy is to follow a progressive sequence of sub-problems that systematically lead to the conclusion. More specifically, in the least-to-most prompting method, sub-problem generation is performed by prompting an LLM with instructions and/or demonstrations. For example, below is a 2-shot prompt for sub-problem generation in least-to-most prompting. TASKYour task is to decompose a problem into several sub-problems. You will be given a few examples to illustrate how to achieve this.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 129,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 120,
+              "document_type": "book"
+            },
+            "score": 0.3614086959971427
+          },
+          {
+            "id": "df124966d422faca314e0c35e0ee28e174bae85c3c931041e3aecc42d5050e28",
+            "text": "Specify the regions most affected. • Given the feedback the LLM produces, we prompt it to refine the response.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 135,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 126,
+              "document_type": "book"
+            },
+            "score": 0.2501546074230865
+          }
+        ],
+        "context": "[733fc061c56f765da6638c255bc36f8ef00da0579ddc83f7a6a44bbc3256e0be | 2501.09223v4.pdf | page 259]\n6.2 Reasoning via Prompting Prompting is the simplest method to elicit reasoning from LLMs. Because it does not require any modifications to model architectures or parameters, we can simply use well-crafted input texts to stimulate the LLM into outputting the reasoning process. One of the most widely used prompting methods is chain-of-thought (CoT) prompting. The core idea is to encourage the model to generate\n\n[df124966d422faca314e0c35e0ee28e174bae85c3c931041e3aecc42d5050e28 | 2501.09223v4.pdf | page 135]\nSpecify the regions most affected. • Given the feedback the LLM produces, we prompt it to refine the response.",
+        "context_ids": [
+          "733fc061c56f765da6638c255bc36f8ef00da0579ddc83f7a6a44bbc3256e0be",
+          "df124966d422faca314e0c35e0ee28e174bae85c3c931041e3aecc42d5050e28"
+        ]
+      },
+      {
+        "event": "search",
+        "query": "least-to-most prompting definition strategy",
+        "filter": null,
+        "results": [
+          {
+            "id": "81787a18304f1f98ca0b5713695110365c0bcd4ff66cb51c4f2dcadc5fba8152",
+            "text": "The motivation for this method arises from the challenges of solving difficult reasoning problems — those that cannot be addressed by simply generalizing from a few examples. For these problems, a more effective problem-solving strategy is to follow a progressive sequence of sub-problems that systematically lead to the conclusion. More specifically, in the least-to-most prompting method, sub-problem generation is performed by prompting an LLM with instructions and/or demonstrations. For example, below is a 2-shot prompt for sub-problem generation in least-to-most prompting. TASKYour task is to decompose a problem into several sub-problems. You will be given a few examples to illustrate how to achieve this.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 129,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 120,
+              "document_type": "book"
+            },
+            "score": 0.3614086959971427
+          },
+          {
+            "id": "733fc061c56f765da6638c255bc36f8ef00da0579ddc83f7a6a44bbc3256e0be",
+            "text": "6.2 Reasoning via Prompting Prompting is the simplest method to elicit reasoning from LLMs. Because it does not require any modifications to model architectures or parameters, we can simply use well-crafted input texts to stimulate the LLM into outputting the reasoning process. One of the most widely used prompting methods is chain-of-thought (CoT) prompting. The core idea is to encourage the model to generate",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 259,
+            "metadata": {
+              "chapter": 6,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 250,
+              "document_type": "book"
+            },
+            "score": 0.3354261657211209
+          },
+          {
+            "id": "df124966d422faca314e0c35e0ee28e174bae85c3c931041e3aecc42d5050e28",
+            "text": "Specify the regions most affected. • Given the feedback the LLM produces, we prompt it to refine the response.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 135,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 126,
+              "document_type": "book"
+            },
+            "score": 0.2501546074230865
+          }
+        ],
+        "context": "[733fc061c56f765da6638c255bc36f8ef00da0579ddc83f7a6a44bbc3256e0be | 2501.09223v4.pdf | page 259]\n6.2 Reasoning via Prompting Prompting is the simplest method to elicit reasoning from LLMs. Because it does not require any modifications to model architectures or parameters, we can simply use well-crafted input texts to stimulate the LLM into outputting the reasoning process. One of the most widely used prompting methods is chain-of-thought (CoT) prompting. The core idea is to encourage the model to generate\n\n[df124966d422faca314e0c35e0ee28e174bae85c3c931041e3aecc42d5050e28 | 2501.09223v4.pdf | page 135]\nSpecify the regions most affected. • Given the feedback the LLM produces, we prompt it to refine the response.",
+        "context_ids": [
+          "733fc061c56f765da6638c255bc36f8ef00da0579ddc83f7a6a44bbc3256e0be",
+          "df124966d422faca314e0c35e0ee28e174bae85c3c931041e3aecc42d5050e28"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "unans_test_01",
+    "question": "What was the exact financial training cost in USD for the Llama-3-405B model according to chapter 3?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "Llama-3-405B training cost USD chapter 3",
+        "filter": null,
+        "results": [
+          {
+            "id": "df0c4decaa962bc34b63bd711594b1c098226bfe406922e9f7e3475dd98cef5e",
+            "text": "1 1 2 3 3 3 1 1 2 3 3 3 3 2 1 1 1 2 3 3 3 3 3 2 2 1 1 1 2 3 3 3 3 3 3 2 2 1 Begin End Requests x1,x 2,x 3 arrived Request x4 arrived x4 is added to the next batch Iteration 1 (prefilling) Iteration 2 Iteration 3 Iteration 4 (a) Request-level Scheduling 1 1 2 3 3 3 1 1 2 3 3 3 3 2 1 1 1 2 3 3 3 4 4 4 3 3 2 2 1 1 1 2 3 3 3 4 4 4 3 3 3 2 2 1 4 Begin End Requests x1,x 2,x 3 arrived Request x4 arrived prefilling forx 4 one decoding step forx 1,x 2,x 3 Iteration 1 (prefilling) Iteration 2 Iteration 3 Iteration 4 More iterations (b) Iteration-level Scheduling Fig. 5.10:Illustrations of request-level scheduling and iteration-level scheduling. In request-level scheduling, once a batch is created and sent to the inference engine, we cannot adjust the batch.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 236,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 227,
+              "document_type": "book"
+            },
+            "score": 1.082488523846039
+          },
+          {
+            "id": "d4e0cab6572a627f4a436cfa98e414d084d037bb90a741933389d3ad98b00451",
+            "text": "prefilling forx 1 andx 2. one decoding step for x1 andx 2. one decoding step for x1 andx 2. one decoding step for x1 andx 2, and prefilling forx 3. one decoding step for x1,x 2 andx 3. x2’s prediction completes. one decoding step for x1 andx 3, and prefilling forx 4. 1 1 1 2 2Scheduler x1,x 2 arrived (a) Iteration 1 input output batch 1 1 1 2 2 2 1 Scheduler (b) Iteration 2 input output batch 1 1 1 2 2 2 2 1 1 Scheduler (c) Iteration 3 input output batch 1 1 1 2 2 3 3 2 2 2 1 1 1 Scheduler x3 arrived (d) Iteration 4 input output batch 1 1 1 2 2 3 3 3 2 2 2 2 1 1 1 1 complete Scheduler y2 (e) Iteration 5 input output batch 1 1 1 4 4 4 3 3 3 3 1 1 1 1 1 continue the second sequence in the batch withx 4 Scheduler x4,x 5 arrived (f) Iteration 6 input output batch Fig.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 237,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 228,
+              "document_type": "book"
+            },
+            "score": 0.3507715425703193
+          },
+          {
+            "id": "8b9b8ced9181ebd877c06c91b32c12c835236239f38e3f0172126400113d5b63",
+            "text": "prefilling decoding (a) batch size= 1 11111pad 1 1 1 1 2222padpad 2 2 2 333padpadpad 3 3 444444 4 4 4 4 4 4 prefilling decoding (b) batch size= 4 11111pad 1 1 1 1 1 1 22222pad 2 2 2 2 2 333333 3 3 3 3 3 444444 4 4 4 4 4 4 prefilling decoding (c) batch size= 4(similar sequence lengths) 11111pad 1 1 1 1 222333 2 2 2 555544 3 3 3 3 666666 4 4 4 5 5 5 5 5 6 6 6 6 6 6 prefilling decoding engine 1 engine 2 transfer the KV cache (d) disaggregation of prefilling and decoding Fig. 5.8:Illustrations of basic batching methods. We use a 2D layout to illustrate the batch, where each square represents a token. Red squares indicate tokens in the prefilling stage, blue squares represent tokens in the decoding stage, green squares denote padding tokens, and gray squares correspond to meaningless tokens.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 233,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 224,
+              "document_type": "book"
+            },
+            "score": 0.3334494910853652
+          }
+        ],
+        "context": "",
+        "context_ids": []
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "unans_test_02",
+    "question": "How does the document describe integrating blockchain smart contracts with LLM agentic memory stores?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "integrating blockchain smart contracts with LLM agentic memory stores",
+        "filter": null,
+        "results": [
+          {
+            "id": "cde110b4341fc0d1ae33c3a6165746b4b282cd5c60f886abb685f277b1dfecf0",
+            "text": "Inspired by operating system paging, it optimizes memory usage during LLM inference — particularly for the KV cache — by addressing fragmented memory allocation in dynamic batching scenarios with variable-length sequences. The idea behind PagedAttention is to divide the KV cache into smaller memory pages. In this way, we do not need to store the KV cache of the full sequence in contiguous memory. Instead, the KV cache is divided into fixed-size blocks (analogous to memory pages in an operating system), which can be non-contiguously allocated in physical memory. One advantage of PagedAttention is that it enables flexible memory management, supporting dynamic sequence growth without requiring expensive reallocation or copying of large contiguous memory regions.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 238,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 229,
+              "document_type": "book"
+            },
+            "score": 0.294530051305174
+          },
+          {
+            "id": "f72a00c08cf0ce46cf399ed3bf3bfc20a727a2b304240ad17f344c42ffed49e5",
+            "text": "Using lower-precision formats such as FP16 or INT8 can reduce both memory usage and memory bandwidth requirements, effectively alleviating pressure on the memory subsystem. However, lower precision may lead to numerical instability or slight 4https://github.com/vllm-project/vllm 5https://github.com/NVIDIA/TensorRT-LLM 6https://github.com/huggingface/text-generation-inference",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 242,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 233,
+              "document_type": "book"
+            },
+            "score": 0.24859532568892714
+          },
+          {
+            "id": "db2e1a5fd3a2a60534e04fb6193917ed105c7823151d49fe98cb94dae44fceb8",
+            "text": "There are two sequences in the batch, as illustrated in sub-figure (a). Since the memory is fragmented, the KV cache is stored in a large unused block of memory in standard self-attention (see sub-figure (b)), but the fragmented memory is not used. By contrast, in PagedAttention (see subfigure (c)), the KV cache is divided into smaller blocks and thus fits into fragmented memory. system, the KV cache is divided into smaller, fixed-size memory blocks which are not necessarily contiguous. These smaller KV cache blocks can be more effectively allocated to fragmented memory regions, thereby improving memory utilization. Another benefit of distributing chunks of the KV cache across different memory blocks is that it enables parallelization of the caching process.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 239,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 230,
+              "document_type": "book"
+            },
+            "score": 0.2446517993886244
+          }
+        ],
+        "context": "[f72a00c08cf0ce46cf399ed3bf3bfc20a727a2b304240ad17f344c42ffed49e5 | 2501.09223v4.pdf | page 242]\nUsing lower-precision formats such as FP16 or INT8 can reduce both memory usage and memory bandwidth requirements, effectively alleviating pressure on the memory subsystem. However, lower precision may lead to numerical instability or slight 4https://github.com/vllm-project/vllm 5https://github.com/NVIDIA/TensorRT-LLM 6https://github.com/huggingface/text-generation-inference",
+        "context_ids": [
+          "f72a00c08cf0ce46cf399ed3bf3bfc20a727a2b304240ad17f344c42ffed49e5"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1138 @@
+[
+  {
+    "query_id": "q_16",
+    "question": "How do rotary positional embeddings (RoPE) incorporate positional information into token embeddings?",
+    "status": "answered",
+    "answer": "By applying geometrically meaningful rotation matrices to pairs of dimensions in the embedding space based on the token's absolute position. [28a09e6a04612d78649cb124bbba54978d11f5bd50d961673c98dc3be2cc063e]",
+    "citations": [
+      "28a09e6a04612d78649cb124bbba54978d11f5bd50d961673c98dc3be2cc063e"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "How do rotary positional embeddings (RoPE) incorporate positional information into token embeddings?",
+        "filter": null,
+        "results": [
+          {
+            "id": "28a09e6a04612d78649cb124bbba54978d11f5bd50d961673c98dc3be2cc063e",
+            "text": "Rotary positional embeddings, instead, model positional context by applying geometrically meaningful rotations to token embeddings in the complex domain. This yields a formulation based on multiplicative interactions: ei =x iR(i),(2.85) whereR(i)∈R d×d is the rotation matrix representing the rotations performed on the token",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 96,
+            "score": 0.03278688524590164,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 87,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "1cb6c95d3598b520c3bf4a3a60806edb4d2c6f5e5a7973b3ff019f90956ce192",
+            "text": "2.11:Query-key products with biases (above = the T5 bias and below = the ALiBi bias). The color scale of the biases ranges from light blue denoting small absolute values to deep blue denoting large absolute values. 2.3.5.3 Rotary Positional Embedding Similar to sinusoidal embeddings, rotary positional embeddings use predefined frequency scales [Su et al., 2024]. Recall that in the sinusoidal embedding model, absolute positions are represented as fixed vectors composed of sine and cosine functions with varying frequencies, which are then additively combined with token embeddings. Rotary positional embeddings, instead, model positional context by applying geometrically meaningful rotations to token embeddings in the complex domain.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 96,
+            "score": 0.03225806451612903,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 87,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "28ff0c768a91ab0e0b28b260b29e69a8c432636753ac02579548376894c8059b",
+            "text": "As shown in Figure 2.12 (b), we start moving the token from position 0. Each time we move one step forward, the vector is rotated by the angleθ. Upon arriving at the positiont, the representation of the token with positional context is given byRo(x,tθ). As the rotations do not change the magnitude of the embedding, the original “meaning” of the token is retained. The positional information is injected into the embedding when it gets rotated. A common way to understand vector rotation is via complex numbers. It is easy to transform each vectorx= [ x1 x2 ] in the 2D Euclidean spaceR2 to a complex numberx′ =x 1+ix2 in the",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 97,
+            "score": 0.03057889822595705,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 88,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "a9dd2bca633aaa120e96c6f7f45d127af8a8f4957db4ad7eb530dc4fca809292",
+            "text": "To do this, it is common to add positional embeddings to token embeddings, and then feed these combined embeddings into the Transformer layer stack. In this case, the embedding at positionican be expressed as ei =x i + PE(i),(2.74) wherex i∈R d denotes the token embedding, andPE(i)∈R d denotes the positional embedding at positioni. Because the token embeddingx i is position-agnostic, the positional embedding PE(i)encodes the absolute or relative context of the token. A straightforward implementation is to treatPE(i)as a set of learnable variables, trained jointly with the rest of the model parameters. This allows the model to learn a unique vector representation for every discrete position, and thus distinguish tokens based on where they appear in a sequence.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 91,
+            "score": 0.03055037313432836,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 82,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "cb67c6374ef47375d1f12943936984f401ee3a0ce55afbd8db56e8f7be69deaf",
+            "text": "In such scenarios, using learned positional embeddings has obvious drawbacks, as there are no trained embeddings for positions that are not observed in the training phase. An alternative approach to modeling positional information is to develop positional embeddings that can generalize: once trained, the embedding model can be used to handle longer sequences. Suppose that we train a positional embedding model on sequences with a maximum length ofml, and we wish to apply the trained model to a sequence of lengthm(m≫m l). If the model is only trained on a limited range of positions, then this model will simply fail to deal with new data outside that range.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 91,
+            "score": 0.029571646010002173,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 82,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[28a09e6a04612d78649cb124bbba54978d11f5bd50d961673c98dc3be2cc063e | 2501.09223v4.pdf | page 96]\nRotary positional embeddings, instead, model positional context by applying geometrically meaningful rotations to token embeddings in the complex domain. This yields a formulation based on multiplicative interactions: ei =x iR(i),(2.85) whereR(i)∈R d×d is the rotation matrix representing the rotations performed on the token\n\n[1cb6c95d3598b520c3bf4a3a60806edb4d2c6f5e5a7973b3ff019f90956ce192 | 2501.09223v4.pdf | page 96]\n2.11:Query-key products with biases (above = the T5 bias and below = the ALiBi bias). The color scale of the biases ranges from light blue denoting small absolute values to deep blue denoting large absolute values. 2.3.5.3 Rotary Positional Embedding Similar to sinusoidal embeddings, rotary positional embeddings use predefined frequency scales [Su et al., 2024]. Recall that in the sinusoidal embedding model, absolute positions are represented as fixed vectors composed of sine and cosine functions with varying frequencies, which are then additively combined with token embeddings. Rotary positional embeddings, instead, model positional context by applying geometrically meaningful rotations to token embeddings in the complex domain.",
+        "context_ids": [
+          "28a09e6a04612d78649cb124bbba54978d11f5bd50d961673c98dc3be2cc063e",
+          "1cb6c95d3598b520c3bf4a3a60806edb4d2c6f5e5a7973b3ff019f90956ce192"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q_17",
+    "question": "What is the main purpose of linear position interpolation when extending context length?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "What is the main purpose of linear position interpolation when extending context length?",
+        "filter": null,
+        "results": [
+          {
+            "id": "3e0cc1cc66331071b283126015e6130479acf49d3f25861997975847cdc1de48",
+            "text": "Finally, we rewrite Eq. (2.85) to obtain the form of the embedding at positioni ei = Ro(x i,iθ).(2.94) 2.3.5.4 Position Interpolation In position interpolation, our goal is to map the positions in the new sequence to match the observed range in training. Suppose the model is trained on position indices in[0,m l]. When inference requires processing a lengthm > m l, we compress the positions in the range[0,m] such that their representations fit into the original domain[0,m l]. To illustrate, consider the rotary positional embedding model described above. The embedding of each token is given by the transformationRo(x i,iθ), where the parameter vector is θ= [ θ1,···,θ d/2 ] . As shown in Eq.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 100,
+            "score": 0.03200204813108039,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 91,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "cd254d65fed7212b9e64f176e3a1c752f923770e4aa3ebf8b845b17efc821555",
+            "text": "The most straightforward way to achieve this is to linearly scale upTk by the extrapolation ratio mml , yielding: T′k = mml·2π·b 2(k−1)d .(2.99) By doing so, all position indices in[0,m]are uniformly compressed into[0,m l]. This linear scaling can be implemented by dividing the position index in the embedding model by the scaling factor [Chen et al., 2023c]. The modified model with linear positional interpolation becomes Ro′(xi,iθ) = Ro ( xi,mlmiθ).(2.100) Another method of positional interpolation is to scale the baseb, a technique known asNTKaware scaled RoPE16. Suppose the basebis scaled by a factorλ.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 100,
+            "score": 0.03128054740957967,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 91,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "e50c22379818163fd018513f5b0a3eef06990b859c71ac01791342192b2d29fe",
+            "text": "When studying long-context LLMs, it is natural to wonder what mechanisms may explain the use of long context in language modeling. Can we compress the representation of infinite context into a relatively small model? Are all context tokens useful for predicting the next token? Can we",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 101,
+            "score": 0.031099324975891997,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 92,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "4a1eb93523eb04291244b8ba414bcd4dc45c47c37ea76d4286a68a68cf91f481",
+            "text": "This motivates the development of LLMs that can handle very long context or streaming data. As discussed in Section 2.3.3, it is common to use fixed-size memory models to process continuously expanding context. Many such systems are based on recurrent architectures or their variants, because they are inherently suited to model sequential data where the effects of past inputs continue indefinitely. Another way to achieve infinite memory is to develop alternatives to self-attention models, for example, one can use continuous-space attention models to encode context, which removes the dependency on context length [Martins et al., 2022]. When studying long-context LLMs, it is natural to wonder what mechanisms may explain the use of long context in language modeling.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 101,
+            "score": 0.02964426877470356,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 92,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "8bc8abd39e52456151cc054903a404094786d22100c1f8b0d482201329b31dd2",
+            "text": "0 1,024 2,048 −1 0 1 Sequence Length (a) Encoding with No Generalization Value 0 1,024 2,048 −1 0 1 Sequence Length (b) Extrapolation Value 0 1,024 2,048 −1 0 1 Sequence Length (c) Interpolation Value Fig. 2.9:Illustrations of different positional embedding behaviors across a sequence length continuum. Blue points denote positions explicitly observed during training, while red points denote unseen positions encountered at inference time. In sub-figure (a), the embedding model memorizes the training domain and cannot generalize. In sub-figures (b) and (c), the model successfully generalizes to unseen lengths via extrapolation and interpolation, respectively. employed to assign meaningful values to data points beyond the original range.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 92,
+            "score": 0.02946912242686891,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 83,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[3e0cc1cc66331071b283126015e6130479acf49d3f25861997975847cdc1de48 | 2501.09223v4.pdf | page 100]\nFinally, we rewrite Eq. (2.85) to obtain the form of the embedding at positioni ei = Ro(x i,iθ).(2.94) 2.3.5.4 Position Interpolation In position interpolation, our goal is to map the positions in the new sequence to match the observed range in training. Suppose the model is trained on position indices in[0,m l]. When inference requires processing a lengthm > m l, we compress the positions in the range[0,m] such that their representations fit into the original domain[0,m l]. To illustrate, consider the rotary positional embedding model described above. The embedding of each token is given by the transformationRo(x i,iθ), where the parameter vector is θ= [ θ1,···,θ d/2 ] . As shown in Eq.\n\n[cd254d65fed7212b9e64f176e3a1c752f923770e4aa3ebf8b845b17efc821555 | 2501.09223v4.pdf | page 100]\nThe most straightforward way to achieve this is to linearly scale upTk by the extrapolation ratio mml , yielding: T′k = mml·2π·b 2(k−1)d .(2.99) By doing so, all position indices in[0,m]are uniformly compressed into[0,m l]. This linear scaling can be implemented by dividing the position index in the embedding model by the scaling factor [Chen et al., 2023c]. The modified model with linear positional interpolation becomes Ro′(xi,iθ) = Ro ( xi,mlmiθ).(2.100) Another method of positional interpolation is to scale the baseb, a technique known asNTKaware scaled RoPE16. Suppose the basebis scaled by a factorλ.",
+        "context_ids": [
+          "3e0cc1cc66331071b283126015e6130479acf49d3f25861997975847cdc1de48",
+          "cd254d65fed7212b9e64f176e3a1c752f923770e4aa3ebf8b845b17efc821555"
+        ]
+      },
+      {
+        "event": "search",
+        "query": "What is the main purpose of linear position interpolation when extending context length? To uniformly compress extended position ",
+        "filter": null,
+        "results": [
+          {
+            "id": "3e0cc1cc66331071b283126015e6130479acf49d3f25861997975847cdc1de48",
+            "text": "Finally, we rewrite Eq. (2.85) to obtain the form of the embedding at positioni ei = Ro(x i,iθ).(2.94) 2.3.5.4 Position Interpolation In position interpolation, our goal is to map the positions in the new sequence to match the observed range in training. Suppose the model is trained on position indices in[0,m l]. When inference requires processing a lengthm > m l, we compress the positions in the range[0,m] such that their representations fit into the original domain[0,m l]. To illustrate, consider the rotary positional embedding model described above. The embedding of each token is given by the transformationRo(x i,iθ), where the parameter vector is θ= [ θ1,···,θ d/2 ] . As shown in Eq.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 100,
+            "score": 0.03225806451612903,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 91,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "cd254d65fed7212b9e64f176e3a1c752f923770e4aa3ebf8b845b17efc821555",
+            "text": "The most straightforward way to achieve this is to linearly scale upTk by the extrapolation ratio mml , yielding: T′k = mml·2π·b 2(k−1)d .(2.99) By doing so, all position indices in[0,m]are uniformly compressed into[0,m l]. This linear scaling can be implemented by dividing the position index in the embedding model by the scaling factor [Chen et al., 2023c]. The modified model with linear positional interpolation becomes Ro′(xi,iθ) = Ro ( xi,mlmiθ).(2.100) Another method of positional interpolation is to scale the baseb, a technique known asNTKaware scaled RoPE16. Suppose the basebis scaled by a factorλ.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 100,
+            "score": 0.03149801587301587,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 91,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "cc5b5c9e28915200708e8a7bded38ee9c9584990d6c8d5d27f79348044ce1adb",
+            "text": "As shown in Eq. (2.93),Ro(x i,iθ)relies on a combination of periodic functions across different feature dimensions cosiθ= [ cosiθ 1 ···cosiθ d/2 ] (2.95) siniθ= [ siniθ 1 ···siniθ d/2 ] ,(2.96) θk follows an exponential form θk =b − 2(k−1)d ,(2.97) wherebis the base. The period ofcosiθ k andsiniθ k is Tk = 2π·b 2(k−1) d .(2.98) The key intuition behind linear position interpolation is to adjust these periods so that the new extended positions can be encoded within the pre-trained boundaries[0,m l]. The most straightforward way to achieve this is to linearly scale upTk by the extrapolation ratio mml , yielding: T′k = mml·2π·b 2(k−1)d .(2.99) By doing so, all position indices in[0,m]are uniformly compressed into[0,m l].",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 100,
+            "score": 0.031099324975891997,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 91,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "e50c22379818163fd018513f5b0a3eef06990b859c71ac01791342192b2d29fe",
+            "text": "When studying long-context LLMs, it is natural to wonder what mechanisms may explain the use of long context in language modeling. Can we compress the representation of infinite context into a relatively small model? Are all context tokens useful for predicting the next token? Can we",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 101,
+            "score": 0.031099324975891997,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 92,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "4a1eb93523eb04291244b8ba414bcd4dc45c47c37ea76d4286a68a68cf91f481",
+            "text": "This motivates the development of LLMs that can handle very long context or streaming data. As discussed in Section 2.3.3, it is common to use fixed-size memory models to process continuously expanding context. Many such systems are based on recurrent architectures or their variants, because they are inherently suited to model sequential data where the effects of past inputs continue indefinitely. Another way to achieve infinite memory is to develop alternatives to self-attention models, for example, one can use continuous-space attention models to encode context, which removes the dependency on context length [Martins et al., 2022]. When studying long-context LLMs, it is natural to wonder what mechanisms may explain the use of long context in language modeling.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 101,
+            "score": 0.029437229437229435,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 92,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[3e0cc1cc66331071b283126015e6130479acf49d3f25861997975847cdc1de48 | 2501.09223v4.pdf | page 100]\nFinally, we rewrite Eq. (2.85) to obtain the form of the embedding at positioni ei = Ro(x i,iθ).(2.94) 2.3.5.4 Position Interpolation In position interpolation, our goal is to map the positions in the new sequence to match the observed range in training. Suppose the model is trained on position indices in[0,m l]. When inference requires processing a lengthm > m l, we compress the positions in the range[0,m] such that their representations fit into the original domain[0,m l]. To illustrate, consider the rotary positional embedding model described above. The embedding of each token is given by the transformationRo(x i,iθ), where the parameter vector is θ= [ θ1,···,θ d/2 ] . As shown in Eq.\n\n[cd254d65fed7212b9e64f176e3a1c752f923770e4aa3ebf8b845b17efc821555 | 2501.09223v4.pdf | page 100]\nThe most straightforward way to achieve this is to linearly scale upTk by the extrapolation ratio mml , yielding: T′k = mml·2π·b 2(k−1)d .(2.99) By doing so, all position indices in[0,m]are uniformly compressed into[0,m l]. This linear scaling can be implemented by dividing the position index in the embedding model by the scaling factor [Chen et al., 2023c]. The modified model with linear positional interpolation becomes Ro′(xi,iθ) = Ro ( xi,mlmiθ).(2.100) Another method of positional interpolation is to scale the baseb, a technique known asNTKaware scaled RoPE16. Suppose the basebis scaled by a factorλ.",
+        "context_ids": [
+          "3e0cc1cc66331071b283126015e6130479acf49d3f25861997975847cdc1de48",
+          "cd254d65fed7212b9e64f176e3a1c752f923770e4aa3ebf8b845b17efc821555"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "q_18",
+    "question": "What is zero-shot learning in the context of in-context learning with LLMs?",
+    "status": "answered",
+    "answer": "Zero-shot learning does not involve a traditional learning process: the LLM is used directly on new problems not observed in training, without demonstrating problem-solving steps or providing examples. [d72b80e3cbec57753f8493af246f64bf794e708b6b37dbe8aa92350d5e6efb6f]",
+    "citations": [
+      "d72b80e3cbec57753f8493af246f64bf794e708b6b37dbe8aa92350d5e6efb6f"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "What is zero-shot learning in the context of in-context learning with LLMs?",
+        "filter": {
+          "chapter": 3
+        },
+        "results": [
+          {
+            "id": "d72b80e3cbec57753f8493af246f64bf794e708b6b37dbe8aa92350d5e6efb6f",
+            "text": "In-context learning can be illustrated by comparing three methods: zero-shot learning, oneshot learning, and few-shot learning. Zero-shot learning, as its name implies, does not involve a traditional “learning” process. Instead, it directly uses LLMs to address new problems that were not observed during training. In practice, we can iteratively adjust prompts to guide the LLMs in generating better responses, without demonstrating problem-solving steps or providing examples. Consider the following example. Suppose we want to use an LLM as an assistant that can help correct English sentences. A zero-shot learning prompt is given by SYSTEMYou are a helpful assistant, and are great at grammar correction. USERYou will be provided with a sentence in English.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 108,
+            "score": 0.03252247488101534,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 99,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "e2dcfc9e21bcc9d853fea58fd6df2bf263a1696b659d481bec60595d62e256c4",
+            "text": "3.1.2 In-context Learning Learning can occur during inference in large language models. In-context learning is one such method, where prompts involve demonstrations of problem-solving, and LLMs can learn how to solve new problems from these demonstrations. Since we do not update model parameters in this process, in-context learning can be viewed as a way to efficiently activate the knowledge learned in pre-training without additional training or fine-tuning. This enables LLMs to quickly adapt to new problems and extends the capabilities of pre-trained models without task-specific adjustments. In-context learning can be illustrated by comparing three methods: zero-shot learning, oneshot learning, and few-shot learning.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 108,
+            "score": 0.03252247488101534,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 99,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "25d4b09591492704beaffd2a8a5222d0a421559790703544b18bed831633b62e",
+            "text": "example is to assign a role to the LLM and provide sufficient context. The following is a template that instructs an LLM to act as an expert and answer questions from children. You are a computer scientist with extensive knowledge in the field of deep learning. Please explain the following computer-related concept to a child around 10 years old, using simple examples whenever possible. {∗concept∗} The text “You are a computer scientist ... deep learning. ” is sometimes referred to as a system prompt (or system information), and is provided to help the LLM understand the context or constraints of the task it is being asked to perform. 3.1.2 In-context Learning Learning can occur during inference in large language models.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 108,
+            "score": 0.030330882352941176,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 99,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "635be540382edbc0610eb5d5fd8b3d264d17b2b08aacd6101a593bec514cf655",
+            "text": "Output: In few-shot learning, we essentially provide a pattern that maps some inputs to the corresponding outputs. The LLM attempts to follow this pattern in making predictions, provided that the prompt includes a sufficient (though typically small) number of demonstrations. It is also possible to use simpler patterns to achieve this. For example, one can use the following few-shot learning prompt for translating words from Chinese to English.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 109,
+            "score": 0.030117753623188408,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 100,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "d82ec1b7dc116a0efb8767747881e5a798ccb6042c04845485b0787417f2232f",
+            "text": "Third, if users can follow the logic behind the reasoning process, they will be more likely to trust the predictions of an LLM. This is particularly important when applying LLMs in fields like medicine, education, and finance. Fourth, CoT is an in-context learning approach, and thus, it is applicable to most well-trained, off-the-shelf LLMs. Moreover, CoT provides efficient ways to adapt LLMs to different types of problems. It can even inspire more creative solutions by exploring various alternative reasoning paths, which might not be obvious when arriving at a conclusion directly. The method described above requires providing one or more examples of CoT reasoning, typically called the few-shot CoT method. By contrast, the zero-shot CoT method does not require such examples.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 124,
+            "score": 0.02976190476190476,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 115,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[d72b80e3cbec57753f8493af246f64bf794e708b6b37dbe8aa92350d5e6efb6f | 2501.09223v4.pdf | page 108]\nIn-context learning can be illustrated by comparing three methods: zero-shot learning, oneshot learning, and few-shot learning. Zero-shot learning, as its name implies, does not involve a traditional “learning” process. Instead, it directly uses LLMs to address new problems that were not observed during training. In practice, we can iteratively adjust prompts to guide the LLMs in generating better responses, without demonstrating problem-solving steps or providing examples. Consider the following example. Suppose we want to use an LLM as an assistant that can help correct English sentences. A zero-shot learning prompt is given by SYSTEMYou are a helpful assistant, and are great at grammar correction. USERYou will be provided with a sentence in English.\n\n[635be540382edbc0610eb5d5fd8b3d264d17b2b08aacd6101a593bec514cf655 | 2501.09223v4.pdf | page 109]\nOutput: In few-shot learning, we essentially provide a pattern that maps some inputs to the corresponding outputs. The LLM attempts to follow this pattern in making predictions, provided that the prompt includes a sufficient (though typically small) number of demonstrations. It is also possible to use simpler patterns to achieve this. For example, one can use the following few-shot learning prompt for translating words from Chinese to English.",
+        "context_ids": [
+          "d72b80e3cbec57753f8493af246f64bf794e708b6b37dbe8aa92350d5e6efb6f",
+          "635be540382edbc0610eb5d5fd8b3d264d17b2b08aacd6101a593bec514cf655"
+        ]
+      },
+      {
+        "event": "answer"
+      }
+    ]
+  },
+  {
+    "query_id": "q_19",
+    "question": "What simple trigger phrase introduced by Kojima et al. (2022) is used to encourage zero-shot Chain-of-Thought reasoning?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "What simple trigger phrase introduced by Kojima et al. (2022) is used to encourage zero-shot Chain-of-Thought reasoning?",
+        "filter": null,
+        "results": [
+          {
+            "id": "8be5379f5b25234a12e5c914b0d38e05a14948ee3b886a213c173df7242a064e",
+            "text": "It augments the context with multiple input-output examples, and so the model can learn task behavior implicitly from these examples without parameter updates. On top of few-shot prompting, we can use chain-of-thought prompting to encourage the model to produce intermediate reasoning steps before producing the final answer. Note that chain-of-thought prompting is one of the most important methods for improving reasoning performance. By explicitly providing intermediate steps in",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 244,
+            "score": 0.03252247488101534,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 235,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "ad4e88599334bdcf95a59b13e73a7405e21b0e9587e9f8a5b3b6e4f29d89b61a",
+            "text": "Subtracting 3 from 10, Jack is left with 7 apples. Therefore, Jack has 7 apples left. So the answer is 7. This approach is also calledone-shot CoT prompting. Likewise, we can add more demonstrations to have afew-shot CoT promptingapproach. Furthermore, a specialized variant calledzero-shot CoTintroduces trigger phrases that encourage LLMs to think step-by-step, without explicitly providing any intermediate reasoning examples in the prompt [Kojima et al., 2022]. Interestingly, simply appending the sentence “Let’s think step by step.” to the end of a prompt is often sufficient to induce the LLM to generate internal reasoning steps and arrive at the correct final answer.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 63,
+            "score": 0.031746031746031744,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 54,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "f1c12e48acbfc02acb998a33bb689aca41dcb8d3c2e8e9a42c5cef244d3cc770",
+            "text": "Zero-shot, one-shot, and few-shot learning are common concepts in the area of in-context learning for LLMs and are not restricted to COT prompting. Broadly speaking, any prompting that involves only simple instructions without any demonstrations can be considered a form of zero-shot learning. This zero-shot learning ability emerges as LLMs are pre-trained and/or finetuned. Also, one-shot and few-shot learning methods are more often considered when LLMs do not acquire the corresponding zero-shot learning ability. These methods are therefore important for in-context learning when addressing new tasks. Examples include those for performing various NLP tasks by demonstrating task-formatted samples.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 64,
+            "score": 0.0315136476426799,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 55,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "61417c4b324262f15fcad477f138d686e6acbe7f3c0aa2a7bba4f51fc17fbb4d",
+            "text": "As discussed in Kojima et al. [2022]’s work, prompting with such instructions may result in LLMs generating only the reasoning steps without a clear conclusion. In this case, a second round of prompting can be used to extract the answer from these reasoning steps. For example, Kojima et al. [2022] create a second prompt which combines both the input and output from the first round of prompting. Using this combined input, the LLM can continue its reasoning",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 124,
+            "score": 0.030776515151515152,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 115,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "733fc061c56f765da6638c255bc36f8ef00da0579ddc83f7a6a44bbc3256e0be",
+            "text": "6.2 Reasoning via Prompting Prompting is the simplest method to elicit reasoning from LLMs. Because it does not require any modifications to model architectures or parameters, we can simply use well-crafted input texts to stimulate the LLM into outputting the reasoning process. One of the most widely used prompting methods is chain-of-thought (CoT) prompting. The core idea is to encourage the model to generate",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 259,
+            "score": 0.030309988518943745,
+            "metadata": {
+              "chapter": 6,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 250,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[8be5379f5b25234a12e5c914b0d38e05a14948ee3b886a213c173df7242a064e | 2501.09223v4.pdf | page 244]\nIt augments the context with multiple input-output examples, and so the model can learn task behavior implicitly from these examples without parameter updates. On top of few-shot prompting, we can use chain-of-thought prompting to encourage the model to produce intermediate reasoning steps before producing the final answer. Note that chain-of-thought prompting is one of the most important methods for improving reasoning performance. By explicitly providing intermediate steps in\n\n[ad4e88599334bdcf95a59b13e73a7405e21b0e9587e9f8a5b3b6e4f29d89b61a | 2501.09223v4.pdf | page 63]\nSubtracting 3 from 10, Jack is left with 7 apples. Therefore, Jack has 7 apples left. So the answer is 7. This approach is also calledone-shot CoT prompting. Likewise, we can add more demonstrations to have afew-shot CoT promptingapproach. Furthermore, a specialized variant calledzero-shot CoTintroduces trigger phrases that encourage LLMs to think step-by-step, without explicitly providing any intermediate reasoning examples in the prompt [Kojima et al., 2022]. Interestingly, simply appending the sentence “Let’s think step by step.” to the end of a prompt is often sufficient to induce the LLM to generate internal reasoning steps and arrive at the correct final answer.",
+        "context_ids": [
+          "8be5379f5b25234a12e5c914b0d38e05a14948ee3b886a213c173df7242a064e",
+          "ad4e88599334bdcf95a59b13e73a7405e21b0e9587e9f8a5b3b6e4f29d89b61a"
+        ]
+      },
+      {
+        "event": "search",
+        "query": "What simple trigger phrase introduced by Kojima et al. (2022) is used to encourage zero-shot Chain-of-Thought reasoning? \"Let's think step by step.\"",
+        "filter": null,
+        "results": [
+          {
+            "id": "ad4e88599334bdcf95a59b13e73a7405e21b0e9587e9f8a5b3b6e4f29d89b61a",
+            "text": "Subtracting 3 from 10, Jack is left with 7 apples. Therefore, Jack has 7 apples left. So the answer is 7. This approach is also calledone-shot CoT prompting. Likewise, we can add more demonstrations to have afew-shot CoT promptingapproach. Furthermore, a specialized variant calledzero-shot CoTintroduces trigger phrases that encourage LLMs to think step-by-step, without explicitly providing any intermediate reasoning examples in the prompt [Kojima et al., 2022]. Interestingly, simply appending the sentence “Let’s think step by step.” to the end of a prompt is often sufficient to induce the LLM to generate internal reasoning steps and arrive at the correct final answer.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 63,
+            "score": 0.03278688524590164,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 54,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "9573fd7624c767fc69f7dd06c168339a10251633da7f07211756d857ab1bdf49",
+            "text": "By contrast, the zero-shot CoT method does not require such examples. It instead prompts LLMs to reason step-by-step by incorporating specific instructions into prompts. For example, below is a zero-shot CoT prompt. Q: Please calculate the average of the numbers2,4, and9. A: Let’s think step-by-step. We have three numbers: 2, 4, and 9. Add these numbers together, 2 + 4 + 9 = 15. Determine how many numbers there are, which in this case is three. The average is calculated by dividing the total sum by the number of elements. Completing the division gives 15/3 = 5. So the answer is 5. Following the instruction “Let’s think step by step”, the LLM is prompted to generate detailed reasoning steps. As discussed in Kojima et al.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 124,
+            "score": 0.03200204813108039,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 115,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "8be5379f5b25234a12e5c914b0d38e05a14948ee3b886a213c173df7242a064e",
+            "text": "It augments the context with multiple input-output examples, and so the model can learn task behavior implicitly from these examples without parameter updates. On top of few-shot prompting, we can use chain-of-thought prompting to encourage the model to produce intermediate reasoning steps before producing the final answer. Note that chain-of-thought prompting is one of the most important methods for improving reasoning performance. By explicitly providing intermediate steps in",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 244,
+            "score": 0.0315136476426799,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 235,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "61417c4b324262f15fcad477f138d686e6acbe7f3c0aa2a7bba4f51fc17fbb4d",
+            "text": "As discussed in Kojima et al. [2022]’s work, prompting with such instructions may result in LLMs generating only the reasoning steps without a clear conclusion. In this case, a second round of prompting can be used to extract the answer from these reasoning steps. For example, Kojima et al. [2022] create a second prompt which combines both the input and output from the first round of prompting. Using this combined input, the LLM can continue its reasoning",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 124,
+            "score": 0.029857397504456328,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 115,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "3759062898eece9963f72d2ddf4e0f30a6e50f172ead221213b341760d63cde8",
+            "text": "A common example is that well-developed LLMs have achieved impressive performance in mathematical reasoning tasks, which are considered challenging. In prompt engineering, the thinking ability of LLMs needs to be activated through appropriate prompting, especially for problems that require significant reasoning efforts. In many cases, an LLM that is instructed to “think” can produce completely different results compared with instructing the same model to perform the task directly. For example, Kojima et al. [2022] found that simply appending “Let’s think step by step” to the end of each prompt can improve the performance of LLMs on several reasoning tasks. LLMs can be prompted to “think” in a number of ways.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 111,
+            "score": 0.029709507042253523,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 102,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[8be5379f5b25234a12e5c914b0d38e05a14948ee3b886a213c173df7242a064e | 2501.09223v4.pdf | page 244]\nIt augments the context with multiple input-output examples, and so the model can learn task behavior implicitly from these examples without parameter updates. On top of few-shot prompting, we can use chain-of-thought prompting to encourage the model to produce intermediate reasoning steps before producing the final answer. Note that chain-of-thought prompting is one of the most important methods for improving reasoning performance. By explicitly providing intermediate steps in\n\n[ad4e88599334bdcf95a59b13e73a7405e21b0e9587e9f8a5b3b6e4f29d89b61a | 2501.09223v4.pdf | page 63]\nSubtracting 3 from 10, Jack is left with 7 apples. Therefore, Jack has 7 apples left. So the answer is 7. This approach is also calledone-shot CoT prompting. Likewise, we can add more demonstrations to have afew-shot CoT promptingapproach. Furthermore, a specialized variant calledzero-shot CoTintroduces trigger phrases that encourage LLMs to think step-by-step, without explicitly providing any intermediate reasoning examples in the prompt [Kojima et al., 2022]. Interestingly, simply appending the sentence “Let’s think step by step.” to the end of a prompt is often sufficient to induce the LLM to generate internal reasoning steps and arrive at the correct final answer.",
+        "context_ids": [
+          "8be5379f5b25234a12e5c914b0d38e05a14948ee3b886a213c173df7242a064e",
+          "ad4e88599334bdcf95a59b13e73a7405e21b0e9587e9f8a5b3b6e4f29d89b61a"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "q_20",
+    "question": "What is the core strategy of the least-to-most prompting method?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "What is the core strategy of the least-to-most prompting method?",
+        "filter": null,
+        "results": [
+          {
+            "id": "733fc061c56f765da6638c255bc36f8ef00da0579ddc83f7a6a44bbc3256e0be",
+            "text": "6.2 Reasoning via Prompting Prompting is the simplest method to elicit reasoning from LLMs. Because it does not require any modifications to model architectures or parameters, we can simply use well-crafted input texts to stimulate the LLM into outputting the reasoning process. One of the most widely used prompting methods is chain-of-thought (CoT) prompting. The core idea is to encourage the model to generate",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 259,
+            "score": 0.031544957774465976,
+            "metadata": {
+              "chapter": 6,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 250,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "40e43b8f1118861864743f930ac39386c2a1d63251853c156b06dc1a785d2e92",
+            "text": "For more advanced techniques of prompting, the reader can refer to recent surveys. Topics include in-context learning [Li, 2023; Dong et al., 2022], CoT [Chu et al., 2023; Yu et al., 2023; Zhang et al., 2023a], efficient prompting [Chang et al., 2024a], and general prompt engineering [Liu et al., 2023c; Chen et al., 2023a]. Note that although we would ideally like to develop general prompting methods without adjusting model architectures and parameters, the results of prompting generally depend heavily",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 161,
+            "score": 0.01639344262295082,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 152,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "1393a692c95991ce05a037b9e1931701c4936fd0d932b4d1d48eb00c20fd370b",
+            "text": "limit the diversity of approaches and overlook potentially effective prompts that are not immediately obvious to humans. Third, prompts created by humans can be complex and verbose, leading to longer inputs for LLMs and higher computational costs. In this section, we discuss techniques for automated prompting. These methods aim to automatically create, optimize, and represent prompts so that the downstream tasks can be addressed more effectively and efficiently. In particular, we consider three issues here. • How can we automate the process of designing and optimizing prompts for LLMs? • Are there representations of prompts beyond plain text strings, and how can we learn such representations? • How can we make prompts more concise and compact, thereby reducing their complexity and length?",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 147,
+            "score": 0.016129032258064516,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 138,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "df124966d422faca314e0c35e0ee28e174bae85c3c931041e3aecc42d5050e28",
+            "text": "Specify the regions most affected. • Given the feedback the LLM produces, we prompt it to refine the response.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 135,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 126,
+              "document_type": "book"
+            },
+            "score": 0.016129032258064516
+          },
+          {
+            "id": "2cc42ef8239a87d90b901a2c7f5745e50a881f4c5abc5abb20be902a6d6fa337",
+            "text": "As prompting technology evolved, prompt engineering emerged as a critical area of research. As discussed in this chapter, it broadly involves designing effective prompts to maximize model performance, encompassing both hand-crafted and automatically generated prompts. More recent research has explored how to enhance the effectiveness of prompting through techniques like few-shot learning, zero-shot learning, and CoT reasoning, enabling LLMs to work effectively across a wide range of scenarios. A general discussion of prompting can be very broad, and we cannot cover all details in this chapter. For more advanced techniques of prompting, the reader can refer to recent surveys.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 161,
+            "score": 0.015873015873015872,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 152,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[733fc061c56f765da6638c255bc36f8ef00da0579ddc83f7a6a44bbc3256e0be | 2501.09223v4.pdf | page 259]\n6.2 Reasoning via Prompting Prompting is the simplest method to elicit reasoning from LLMs. Because it does not require any modifications to model architectures or parameters, we can simply use well-crafted input texts to stimulate the LLM into outputting the reasoning process. One of the most widely used prompting methods is chain-of-thought (CoT) prompting. The core idea is to encourage the model to generate\n\n[40e43b8f1118861864743f930ac39386c2a1d63251853c156b06dc1a785d2e92 | 2501.09223v4.pdf | page 161]\nFor more advanced techniques of prompting, the reader can refer to recent surveys. Topics include in-context learning [Li, 2023; Dong et al., 2022], CoT [Chu et al., 2023; Yu et al., 2023; Zhang et al., 2023a], efficient prompting [Chang et al., 2024a], and general prompt engineering [Liu et al., 2023c; Chen et al., 2023a]. Note that although we would ideally like to develop general prompting methods without adjusting model architectures and parameters, the results of prompting generally depend heavily\n\n[df124966d422faca314e0c35e0ee28e174bae85c3c931041e3aecc42d5050e28 | 2501.09223v4.pdf | page 135]\nSpecify the regions most affected. • Given the feedback the LLM produces, we prompt it to refine the response.",
+        "context_ids": [
+          "733fc061c56f765da6638c255bc36f8ef00da0579ddc83f7a6a44bbc3256e0be",
+          "40e43b8f1118861864743f930ac39386c2a1d63251853c156b06dc1a785d2e92",
+          "df124966d422faca314e0c35e0ee28e174bae85c3c931041e3aecc42d5050e28"
+        ]
+      },
+      {
+        "event": "search",
+        "query": "What is the core strategy of the least-to-most prompting method? Decompose a hard problem into a progress",
+        "filter": null,
+        "results": [
+          {
+            "id": "81787a18304f1f98ca0b5713695110365c0bcd4ff66cb51c4f2dcadc5fba8152",
+            "text": "The motivation for this method arises from the challenges of solving difficult reasoning problems — those that cannot be addressed by simply generalizing from a few examples. For these problems, a more effective problem-solving strategy is to follow a progressive sequence of sub-problems that systematically lead to the conclusion. More specifically, in the least-to-most prompting method, sub-problem generation is performed by prompting an LLM with instructions and/or demonstrations. For example, below is a 2-shot prompt for sub-problem generation in least-to-most prompting. TASKYour task is to decompose a problem into several sub-problems. You will be given a few examples to illustrate how to achieve this.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 129,
+            "score": 0.03278688524590164,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 120,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "92b7dbe1208f7bcabd047f58cdf9aa11316f4cebda3cb98907171f2f24b66cd5",
+            "text": "We can improve it in several ways. One simple improvement is to apply various advanced prompting techniques, which do not require changes to the problem decomposition framework. For example, we can incorporate CoT into the prompting to enhance the reasoning performance of sub-problem generation and solving. Another improvement is to explore methods for better decomposing problems and organizing problem-solving paths. To describe these approaches, we will use the symbolp 0 to denote the input problem, and use the symbols{p 1,···,p n}to denote the sub-problems corresponding to",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 130,
+            "score": 0.029206349206349208,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 121,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "e38c38c018758204932632374a27bca6c4d996f586b2dde4eea1f58f2244c599",
+            "text": "3.1.3 Prompt Engineering Strategies Designing prompts is highly empirical. In general, there are many ways to prompt an LLM to perform the same task, and we often need to conduct several trial-and-error iterations to find a satisfactory prompt. To write good prompts more efficiently, one can follow certain strategies. Examples of common prompting principles include: •Describing the task as clearly as possible. When we apply an LLM to solve a problem, we need to provide a precise, specific, and clear description of the problem and instruct",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 110,
+            "score": 0.016129032258064516,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 101,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "733fc061c56f765da6638c255bc36f8ef00da0579ddc83f7a6a44bbc3256e0be",
+            "text": "6.2 Reasoning via Prompting Prompting is the simplest method to elicit reasoning from LLMs. Because it does not require any modifications to model architectures or parameters, we can simply use well-crafted input texts to stimulate the LLM into outputting the reasoning process. One of the most widely used prompting methods is chain-of-thought (CoT) prompting. The core idea is to encourage the model to generate",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 259,
+            "metadata": {
+              "chapter": 6,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 250,
+              "document_type": "book"
+            },
+            "score": 0.016129032258064516
+          },
+          {
+            "id": "df124966d422faca314e0c35e0ee28e174bae85c3c931041e3aecc42d5050e28",
+            "text": "Specify the regions most affected. • Given the feedback the LLM produces, we prompt it to refine the response.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 135,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 126,
+              "document_type": "book"
+            },
+            "score": 0.015873015873015872
+          }
+        ],
+        "context": "[733fc061c56f765da6638c255bc36f8ef00da0579ddc83f7a6a44bbc3256e0be | 2501.09223v4.pdf | page 259]\n6.2 Reasoning via Prompting Prompting is the simplest method to elicit reasoning from LLMs. Because it does not require any modifications to model architectures or parameters, we can simply use well-crafted input texts to stimulate the LLM into outputting the reasoning process. One of the most widely used prompting methods is chain-of-thought (CoT) prompting. The core idea is to encourage the model to generate\n\n[40e43b8f1118861864743f930ac39386c2a1d63251853c156b06dc1a785d2e92 | 2501.09223v4.pdf | page 161]\nFor more advanced techniques of prompting, the reader can refer to recent surveys. Topics include in-context learning [Li, 2023; Dong et al., 2022], CoT [Chu et al., 2023; Yu et al., 2023; Zhang et al., 2023a], efficient prompting [Chang et al., 2024a], and general prompt engineering [Liu et al., 2023c; Chen et al., 2023a]. Note that although we would ideally like to develop general prompting methods without adjusting model architectures and parameters, the results of prompting generally depend heavily\n\n[df124966d422faca314e0c35e0ee28e174bae85c3c931041e3aecc42d5050e28 | 2501.09223v4.pdf | page 135]\nSpecify the regions most affected. • Given the feedback the LLM produces, we prompt it to refine the response.",
+        "context_ids": [
+          "733fc061c56f765da6638c255bc36f8ef00da0579ddc83f7a6a44bbc3256e0be",
+          "40e43b8f1118861864743f930ac39386c2a1d63251853c156b06dc1a785d2e92",
+          "df124966d422faca314e0c35e0ee28e174bae85c3c931041e3aecc42d5050e28"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "unans_test_01",
+    "question": "What was the exact financial training cost in USD for the Llama-3-405B model according to chapter 3?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "What was the exact financial training cost in USD for the Llama-3-405B model according to chapter 3?",
+        "filter": null,
+        "results": [
+          {
+            "id": "fc720816b5de3262214b6582fa7e93f7f029c093213565552a7c5de888f8721f",
+            "text": "The discount is 10% of $160, which is $16. Finally, subtract the discount from the total cost: $160−$16 = $144. So the answer is $144. In this example, the LLM produces a reasoning path (underlined text) which contains both the reasoning process and the final answer. More formally, given a CoT promptx 1, the LLM generates the most likely output by maximizing the language modeling score, like this ˆy= arg max y Pr(y|x).(6.1) HerePr(y|x)is the text generation probability as in standard language models. Each output is a token sequencey=y 0...yn. It represents a reasoning path consisting of a sequence of reasoning steps: y={ ¯y1,..., ¯ynp}.(6.2) Herenp is the number of reasoning steps. Each step ¯yi is a sub-sequence ofy, which represents a single logical deduction or intermediate calculation.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 260,
+            "score": 0.01639344262295082,
+            "metadata": {
+              "chapter": 6,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 251,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "df0c4decaa962bc34b63bd711594b1c098226bfe406922e9f7e3475dd98cef5e",
+            "text": "1 1 2 3 3 3 1 1 2 3 3 3 3 2 1 1 1 2 3 3 3 3 3 2 2 1 1 1 2 3 3 3 3 3 3 2 2 1 Begin End Requests x1,x 2,x 3 arrived Request x4 arrived x4 is added to the next batch Iteration 1 (prefilling) Iteration 2 Iteration 3 Iteration 4 (a) Request-level Scheduling 1 1 2 3 3 3 1 1 2 3 3 3 3 2 1 1 1 2 3 3 3 4 4 4 3 3 2 2 1 1 1 2 3 3 3 4 4 4 3 3 3 2 2 1 4 Begin End Requests x1,x 2,x 3 arrived Request x4 arrived prefilling forx 4 one decoding step forx 1,x 2,x 3 Iteration 1 (prefilling) Iteration 2 Iteration 3 Iteration 4 More iterations (b) Iteration-level Scheduling Fig. 5.10:Illustrations of request-level scheduling and iteration-level scheduling. In request-level scheduling, once a batch is created and sent to the inference engine, we cannot adjust the batch.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 236,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 227,
+              "document_type": "book"
+            },
+            "score": 0.01639344262295082
+          },
+          {
+            "id": "eaebf90c82fc46a5eae4bae4020b6b4035027e164c8e00413b187fd1aef7b2b3",
+            "text": "In addition to these metrics, energy efficiency and cost efficiency are practical considerations for deploying LLMs at scale. Energy efficiency measures the amount of electrical power consumed by the model during inference. Cost efficiency, on the other hand, evaluates the total expenses related to deploying and maintaining the model. In general, choosing the right evaluation metrics depends on the specific task and application. While quality-focused metrics are essential for assessing LLMs, efficiency metrics are equally crucial for their effective deployment in real-world applications. A comprehensive evaluation framework should include both sets of metrics to accurately measure an LLM’s performance and practicality.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 231,
+            "score": 0.016129032258064516,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 222,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "9a79c8b028af66b0896ffde671592c448afaf465e4135114e057f3accf244436",
+            "text": "IfR t is positive, the loss function pushes the model to increase the probabilitylog Prθ(·)of generating this step. IfR t is negative, it serves as a penalty, which pushes the model to avoid generating this step in the future. 6.4.2.3 Incorporating Verification into the Advantage Function Many reinforcement learning algorithms (such as PPO) optimize the model using the advantage functionA t, which measures how much better an action was compared to what was expected.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 274,
+            "metadata": {
+              "chapter": 6,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 265,
+              "document_type": "book"
+            },
+            "score": 0.016129032258064516
+          },
+          {
+            "id": "f3e330a9b9f0f97236c81d1248340595530e397fca54a8ca6128ec9241eee229",
+            "text": "Suppose the basebis scaled by a factorλ. The goal is to enforce the period of this new model in the highest frequency dimension (i.e., the last dimension wherek= d2) to 16This method was first proposed in an online forum:https://www.reddit.com/r/LocalLLaMA/comments/ 14lz7j5/ntkaware_scaled_rope_allows_llama_models_to_have/",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 100,
+            "score": 0.015873015873015872,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 91,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[fc720816b5de3262214b6582fa7e93f7f029c093213565552a7c5de888f8721f | 2501.09223v4.pdf | page 260]\nThe discount is 10% of $160, which is $16. Finally, subtract the discount from the total cost: $160−$16 = $144. So the answer is $144. In this example, the LLM produces a reasoning path (underlined text) which contains both the reasoning process and the final answer. More formally, given a CoT promptx 1, the LLM generates the most likely output by maximizing the language modeling score, like this ˆy= arg max y Pr(y|x).(6.1) HerePr(y|x)is the text generation probability as in standard language models. Each output is a token sequencey=y 0...yn. It represents a reasoning path consisting of a sequence of reasoning steps: y={ ¯y1,..., ¯ynp}.(6.2) Herenp is the number of reasoning steps. Each step ¯yi is a sub-sequence ofy, which represents a single logical deduction or intermediate calculation.\n\n[9a79c8b028af66b0896ffde671592c448afaf465e4135114e057f3accf244436 | 2501.09223v4.pdf | page 274]\nIfR t is positive, the loss function pushes the model to increase the probabilitylog Prθ(·)of generating this step. IfR t is negative, it serves as a penalty, which pushes the model to avoid generating this step in the future. 6.4.2.3 Incorporating Verification into the Advantage Function Many reinforcement learning algorithms (such as PPO) optimize the model using the advantage functionA t, which measures how much better an action was compared to what was expected.",
+        "context_ids": [
+          "fc720816b5de3262214b6582fa7e93f7f029c093213565552a7c5de888f8721f",
+          "9a79c8b028af66b0896ffde671592c448afaf465e4135114e057f3accf244436"
+        ]
+      },
+      {
+        "event": "search",
+        "query": "What was the exact financial training cost in USD for the Llama-3-405B model according to chapter 3? details facts",
+        "filter": null,
+        "results": [
+          {
+            "id": "fc720816b5de3262214b6582fa7e93f7f029c093213565552a7c5de888f8721f",
+            "text": "The discount is 10% of $160, which is $16. Finally, subtract the discount from the total cost: $160−$16 = $144. So the answer is $144. In this example, the LLM produces a reasoning path (underlined text) which contains both the reasoning process and the final answer. More formally, given a CoT promptx 1, the LLM generates the most likely output by maximizing the language modeling score, like this ˆy= arg max y Pr(y|x).(6.1) HerePr(y|x)is the text generation probability as in standard language models. Each output is a token sequencey=y 0...yn. It represents a reasoning path consisting of a sequence of reasoning steps: y={ ¯y1,..., ¯ynp}.(6.2) Herenp is the number of reasoning steps. Each step ¯yi is a sub-sequence ofy, which represents a single logical deduction or intermediate calculation.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 260,
+            "score": 0.01639344262295082,
+            "metadata": {
+              "chapter": 6,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 251,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "df0c4decaa962bc34b63bd711594b1c098226bfe406922e9f7e3475dd98cef5e",
+            "text": "1 1 2 3 3 3 1 1 2 3 3 3 3 2 1 1 1 2 3 3 3 3 3 2 2 1 1 1 2 3 3 3 3 3 3 2 2 1 Begin End Requests x1,x 2,x 3 arrived Request x4 arrived x4 is added to the next batch Iteration 1 (prefilling) Iteration 2 Iteration 3 Iteration 4 (a) Request-level Scheduling 1 1 2 3 3 3 1 1 2 3 3 3 3 2 1 1 1 2 3 3 3 4 4 4 3 3 2 2 1 1 1 2 3 3 3 4 4 4 3 3 3 2 2 1 4 Begin End Requests x1,x 2,x 3 arrived Request x4 arrived prefilling forx 4 one decoding step forx 1,x 2,x 3 Iteration 1 (prefilling) Iteration 2 Iteration 3 Iteration 4 More iterations (b) Iteration-level Scheduling Fig. 5.10:Illustrations of request-level scheduling and iteration-level scheduling. In request-level scheduling, once a batch is created and sent to the inference engine, we cannot adjust the batch.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 236,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 227,
+              "document_type": "book"
+            },
+            "score": 0.01639344262295082
+          },
+          {
+            "id": "f3e330a9b9f0f97236c81d1248340595530e397fca54a8ca6128ec9241eee229",
+            "text": "Suppose the basebis scaled by a factorλ. The goal is to enforce the period of this new model in the highest frequency dimension (i.e., the last dimension wherek= d2) to 16This method was first proposed in an online forum:https://www.reddit.com/r/LocalLLaMA/comments/ 14lz7j5/ntkaware_scaled_rope_allows_llama_models_to_have/",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 100,
+            "score": 0.016129032258064516,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 91,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "9a79c8b028af66b0896ffde671592c448afaf465e4135114e057f3accf244436",
+            "text": "IfR t is positive, the loss function pushes the model to increase the probabilitylog Prθ(·)of generating this step. IfR t is negative, it serves as a penalty, which pushes the model to avoid generating this step in the future. 6.4.2.3 Incorporating Verification into the Advantage Function Many reinforcement learning algorithms (such as PPO) optimize the model using the advantage functionA t, which measures how much better an action was compared to what was expected.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 274,
+            "metadata": {
+              "chapter": 6,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 265,
+              "document_type": "book"
+            },
+            "score": 0.016129032258064516
+          },
+          {
+            "id": "eaebf90c82fc46a5eae4bae4020b6b4035027e164c8e00413b187fd1aef7b2b3",
+            "text": "In addition to these metrics, energy efficiency and cost efficiency are practical considerations for deploying LLMs at scale. Energy efficiency measures the amount of electrical power consumed by the model during inference. Cost efficiency, on the other hand, evaluates the total expenses related to deploying and maintaining the model. In general, choosing the right evaluation metrics depends on the specific task and application. While quality-focused metrics are essential for assessing LLMs, efficiency metrics are equally crucial for their effective deployment in real-world applications. A comprehensive evaluation framework should include both sets of metrics to accurately measure an LLM’s performance and practicality.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 231,
+            "score": 0.015873015873015872,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 222,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[fc720816b5de3262214b6582fa7e93f7f029c093213565552a7c5de888f8721f | 2501.09223v4.pdf | page 260]\nThe discount is 10% of $160, which is $16. Finally, subtract the discount from the total cost: $160−$16 = $144. So the answer is $144. In this example, the LLM produces a reasoning path (underlined text) which contains both the reasoning process and the final answer. More formally, given a CoT promptx 1, the LLM generates the most likely output by maximizing the language modeling score, like this ˆy= arg max y Pr(y|x).(6.1) HerePr(y|x)is the text generation probability as in standard language models. Each output is a token sequencey=y 0...yn. It represents a reasoning path consisting of a sequence of reasoning steps: y={ ¯y1,..., ¯ynp}.(6.2) Herenp is the number of reasoning steps. Each step ¯yi is a sub-sequence ofy, which represents a single logical deduction or intermediate calculation.\n\n[9a79c8b028af66b0896ffde671592c448afaf465e4135114e057f3accf244436 | 2501.09223v4.pdf | page 274]\nIfR t is positive, the loss function pushes the model to increase the probabilitylog Prθ(·)of generating this step. IfR t is negative, it serves as a penalty, which pushes the model to avoid generating this step in the future. 6.4.2.3 Incorporating Verification into the Advantage Function Many reinforcement learning algorithms (such as PPO) optimize the model using the advantage functionA t, which measures how much better an action was compared to what was expected.",
+        "context_ids": [
+          "fc720816b5de3262214b6582fa7e93f7f029c093213565552a7c5de888f8721f",
+          "9a79c8b028af66b0896ffde671592c448afaf465e4135114e057f3accf244436"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  },
+  {
+    "query_id": "unans_test_02",
+    "question": "How does the document describe integrating blockchain smart contracts with LLM agentic memory stores?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "How does the document describe integrating blockchain smart contracts with LLM agentic memory stores?",
+        "filter": null,
+        "results": [
+          {
+            "id": "cde110b4341fc0d1ae33c3a6165746b4b282cd5c60f886abb685f277b1dfecf0",
+            "text": "Inspired by operating system paging, it optimizes memory usage during LLM inference — particularly for the KV cache — by addressing fragmented memory allocation in dynamic batching scenarios with variable-length sequences. The idea behind PagedAttention is to divide the KV cache into smaller memory pages. In this way, we do not need to store the KV cache of the full sequence in contiguous memory. Instead, the KV cache is divided into fixed-size blocks (analogous to memory pages in an operating system), which can be non-contiguously allocated in physical memory. One advantage of PagedAttention is that it enables flexible memory management, supporting dynamic sequence growth without requiring expensive reallocation or copying of large contiguous memory regions.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 238,
+            "score": 0.03125763125763126,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 229,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "227abb2a34aff5199aadde7293e3040d05a0d179f0af1f9c7daee509f81ef7bb",
+            "text": "When viewed from the perspective of KV-cache computation, LLM inference naturally divides into two phases: •Prefilling. The prefilling phase initializes the KV cache for the input sequencex. It is called prefilling because the model prepares and stores the key-value pairs for each token in the",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 216,
+            "score": 0.02946236559139785,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 207,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "e8e8a84602ce8eca4d96191ad171fd1483684afc4fc1a6bed7364f4fc54e3ea6",
+            "text": "Figure 2.7 shows a comparison of the use of different external memories in LLMs. 2.3.3.3 Memory Capacity A memory model in LLMs, whether in the form of a simple key-value cache or an external datastore, can broadly be viewed as an encoder of contextual information. Ideally, before we say that a memory model is representative of the entire context in token prediction, we must ensure that the model can accurately reconstruct any part of that context. The standard KV cache is one such model, as it retains the complete sequence history. In this case, the model is said to possess sufficient (or unbounded) capacity for memorizing the context. In many practical applications, however, complete memorization is unnecessary.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 87,
+            "score": 0.01639344262295082,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 78,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "bbdbe4f8d65e1138aae31166acffd06ff35a3d2e61cb6a5153439fe3433d2fe3",
+            "text": "For example, consider the problem of determining whether a document discusses the risks of AI. We can instruct the LLM with the following prompt. You are provided with a text. Please determine whether it discusses the risks of AI. {∗document∗} If the document is long, inference can become computationally expensive. Alternatively, we can divide the document into relatively short segments and perform the same task on each segment. These segments can be processed in parallel to further reduce the computational cost. Next, we determine the relevance of each segment to the topic of AI risks. The final output is then generated using another prompt.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 127,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 118,
+              "document_type": "book"
+            },
+            "score": 0.01639344262295082
+          },
+          {
+            "id": "0d0c7e4d1aa369f6fbc5527f85f4e6dd38957f2ac931858bea7728107d1774de",
+            "text": "The first focuses on the large-scale pre-training of LLMs, which is crucial for developing state-of-the-art models. The second focuses on methods for adapting LLMs to long inputs, including optimizing attention models, designing more efficient and compressed KV caches, incorporating memory models, and exploring better positional embeddings. 17https://github.com/gkamradt/LLMTest_NeedleInAHaystack",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 103,
+            "score": 0.016129032258064516,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 94,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[cde110b4341fc0d1ae33c3a6165746b4b282cd5c60f886abb685f277b1dfecf0 | 2501.09223v4.pdf | page 238]\nInspired by operating system paging, it optimizes memory usage during LLM inference — particularly for the KV cache — by addressing fragmented memory allocation in dynamic batching scenarios with variable-length sequences. The idea behind PagedAttention is to divide the KV cache into smaller memory pages. In this way, we do not need to store the KV cache of the full sequence in contiguous memory. Instead, the KV cache is divided into fixed-size blocks (analogous to memory pages in an operating system), which can be non-contiguously allocated in physical memory. One advantage of PagedAttention is that it enables flexible memory management, supporting dynamic sequence growth without requiring expensive reallocation or copying of large contiguous memory regions.\n\n[227abb2a34aff5199aadde7293e3040d05a0d179f0af1f9c7daee509f81ef7bb | 2501.09223v4.pdf | page 216]\nWhen viewed from the perspective of KV-cache computation, LLM inference naturally divides into two phases: •Prefilling. The prefilling phase initializes the KV cache for the input sequencex. It is called prefilling because the model prepares and stores the key-value pairs for each token in the",
+        "context_ids": [
+          "cde110b4341fc0d1ae33c3a6165746b4b282cd5c60f886abb685f277b1dfecf0",
+          "227abb2a34aff5199aadde7293e3040d05a0d179f0af1f9c7daee509f81ef7bb"
+        ]
+      },
+      {
+        "event": "search",
+        "query": "How does the document describe integrating blockchain smart contracts with LLM agentic memory stores? details facts",
+        "filter": null,
+        "results": [
+          {
+            "id": "cde110b4341fc0d1ae33c3a6165746b4b282cd5c60f886abb685f277b1dfecf0",
+            "text": "Inspired by operating system paging, it optimizes memory usage during LLM inference — particularly for the KV cache — by addressing fragmented memory allocation in dynamic batching scenarios with variable-length sequences. The idea behind PagedAttention is to divide the KV cache into smaller memory pages. In this way, we do not need to store the KV cache of the full sequence in contiguous memory. Instead, the KV cache is divided into fixed-size blocks (analogous to memory pages in an operating system), which can be non-contiguously allocated in physical memory. One advantage of PagedAttention is that it enables flexible memory management, supporting dynamic sequence growth without requiring expensive reallocation or copying of large contiguous memory regions.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 238,
+            "score": 0.030798389007344232,
+            "metadata": {
+              "chapter": 5,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 229,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "2d3e6e86519d92a7a01674eaf3877e295a3f3035276758a51a8f484bebd69649",
+            "text": "The essence of RAG is to offload the burden of memory to an external database, and thus we can free up the parameter space for reasoning. By separating knowledge retrieval from logical deduction, the LLM no longer needs to memorize ever-changing external facts. Instead, it knows how to look things up and process them. 6.6.3 Can LLMs Truly Reason? The question of whether LLMs can truly reason is one of the most debated topics in AI today. When we see an LLM perfectly solve a math problem or write a complex schedule, it is very tempting to believe that it understands the world just as a human does. However, to answer this question, we must look at how these models actually work. Essentially, LLMs work by predicting the next word.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 286,
+            "score": 0.02976190476190476,
+            "metadata": {
+              "chapter": 6,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 277,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "e8e8a84602ce8eca4d96191ad171fd1483684afc4fc1a6bed7364f4fc54e3ea6",
+            "text": "Figure 2.7 shows a comparison of the use of different external memories in LLMs. 2.3.3.3 Memory Capacity A memory model in LLMs, whether in the form of a simple key-value cache or an external datastore, can broadly be viewed as an encoder of contextual information. Ideally, before we say that a memory model is representative of the entire context in token prediction, we must ensure that the model can accurately reconstruct any part of that context. The standard KV cache is one such model, as it retains the complete sequence history. In this case, the model is said to possess sufficient (or unbounded) capacity for memorizing the context. In many practical applications, however, complete memorization is unnecessary.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 87,
+            "score": 0.01639344262295082,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 78,
+              "document_type": "book"
+            }
+          },
+          {
+            "id": "bbdbe4f8d65e1138aae31166acffd06ff35a3d2e61cb6a5153439fe3433d2fe3",
+            "text": "For example, consider the problem of determining whether a document discusses the risks of AI. We can instruct the LLM with the following prompt. You are provided with a text. Please determine whether it discusses the risks of AI. {∗document∗} If the document is long, inference can become computationally expensive. Alternatively, we can divide the document into relatively short segments and perform the same task on each segment. These segments can be processed in parallel to further reduce the computational cost. Next, we determine the relevance of each segment to the topic of AI risks. The final output is then generated using another prompt.",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 127,
+            "metadata": {
+              "chapter": 3,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 118,
+              "document_type": "book"
+            },
+            "score": 0.01639344262295082
+          },
+          {
+            "id": "0d0c7e4d1aa369f6fbc5527f85f4e6dd38957f2ac931858bea7728107d1774de",
+            "text": "The first focuses on the large-scale pre-training of LLMs, which is crucial for developing state-of-the-art models. The second focuses on methods for adapting LLMs to long inputs, including optimizing attention models, designing more efficient and compressed KV caches, incorporating memory models, and exploring better positional embeddings. 17https://github.com/gkamradt/LLMTest_NeedleInAHaystack",
+            "source_id": "llm_foundations_book_2026",
+            "source": "2501.09223v4.pdf",
+            "page": 103,
+            "score": 0.016129032258064516,
+            "metadata": {
+              "chapter": 2,
+              "language": "en",
+              "strategy": "B_paragraph",
+              "printed_page": 94,
+              "document_type": "book"
+            }
+          }
+        ],
+        "context": "[cde110b4341fc0d1ae33c3a6165746b4b282cd5c60f886abb685f277b1dfecf0 | 2501.09223v4.pdf | page 238]\nInspired by operating system paging, it optimizes memory usage during LLM inference — particularly for the KV cache — by addressing fragmented memory allocation in dynamic batching scenarios with variable-length sequences. The idea behind PagedAttention is to divide the KV cache into smaller memory pages. In this way, we do not need to store the KV cache of the full sequence in contiguous memory. Instead, the KV cache is divided into fixed-size blocks (analogous to memory pages in an operating system), which can be non-contiguously allocated in physical memory. One advantage of PagedAttention is that it enables flexible memory management, supporting dynamic sequence growth without requiring expensive reallocation or copying of large contiguous memory regions.\n\n[227abb2a34aff5199aadde7293e3040d05a0d179f0af1f9c7daee509f81ef7bb | 2501.09223v4.pdf | page 216]\nWhen viewed from the perspective of KV-cache computation, LLM inference naturally divides into two phases: •Prefilling. The prefilling phase initializes the KV cache for the input sequencex. It is called prefilling because the model prepares and stores the key-value pairs for each token in the",
+        "context_ids": [
+          "cde110b4341fc0d1ae33c3a6165746b4b282cd5c60f886abb685f277b1dfecf0",
+          "227abb2a34aff5199aadde7293e3040d05a0d179f0af1f9c7daee509f81ef7bb"
+        ]
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ]
+  }
+]

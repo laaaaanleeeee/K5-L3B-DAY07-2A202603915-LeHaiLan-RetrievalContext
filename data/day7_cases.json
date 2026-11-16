@@ -1,0 +1,154 @@
+[
+  {
+    "id": "q_01",
+    "split": "dev",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_02",
+    "split": "dev",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_03",
+    "split": "dev",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_04",
+    "split": "dev",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_05",
+    "split": "dev",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_06",
+    "split": "dev",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_07",
+    "split": "dev",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_08",
+    "split": "dev",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_09",
+    "split": "dev",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_10",
+    "split": "dev",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_11",
+    "split": "dev",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_12",
+    "split": "dev",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_13",
+    "split": "dev",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_14",
+    "split": "dev",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_15",
+    "split": "dev",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_16",
+    "split": "test",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_17",
+    "split": "test",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_18",
+    "split": "test",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_19",
+    "split": "test",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "q_20",
+    "split": "test",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "unans_dev_01",
+    "split": "dev",
+    "question": "What is the detailed hardware architecture and FLOPs requirement of the GPT-5 cluster mentioned in this textbook?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The textbook 2501.09223v4 was written prior to any GPT-5 release and does not discuss GPT-5 cluster architecture or hardware FLOPs."
+  },
+  {
+    "id": "unans_dev_02",
+    "split": "dev",
+    "question": "According to the textbook, how is Apple Neural Engine (ANE) configured specifically for running quantized Mistral-7B models?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The document does not cover proprietary Apple Neural Engine (ANE) hardware deployment configurations for Mistral-7B."
+  },
+  {
+    "id": "unans_test_01",
+    "split": "test",
+    "question": "What was the exact financial training cost in USD for the Llama-3-405B model according to chapter 3?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The book does not provide exact proprietary financial dollar training cost records for Llama-3-405B."
+  },
+  {
+    "id": "unans_test_02",
+    "split": "test",
+    "question": "How does the document describe integrating blockchain smart contracts with LLM agentic memory stores?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "The document focuses on foundational LLM architectures, pre-training, and alignment; it contains no discussion of blockchain or smart contracts."
+  }
+]

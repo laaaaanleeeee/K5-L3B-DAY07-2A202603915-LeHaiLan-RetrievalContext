@@ -1,0 +1,239 @@
+[
+  {
+    "id": "q_16",
+    "question": "How do rotary positional embeddings (RoPE) incorporate positional information into token embeddings?",
+    "filter": null,
+    "latency_ms": 13.8,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "context_chars": 1597,
+    "results": [
+      {
+        "id": "28a09e6a04612d78649cb124bbba54978d11f5bd50d961673c98dc3be2cc063e",
+        "source_id": "llm_foundations_book_2026",
+        "page": 96,
+        "score": 0.0328,
+        "hit": true
+      },
+      {
+        "id": "1cb6c95d3598b520c3bf4a3a60806edb4d2c6f5e5a7973b3ff019f90956ce192",
+        "source_id": "llm_foundations_book_2026",
+        "page": 96,
+        "score": 0.0323,
+        "hit": true
+      },
+      {
+        "id": "28ff0c768a91ab0e0b28b260b29e69a8c432636753ac02579548376894c8059b",
+        "source_id": "llm_foundations_book_2026",
+        "page": 97,
+        "score": 0.0306,
+        "hit": false
+      },
+      {
+        "id": "a9dd2bca633aaa120e96c6f7f45d127af8a8f4957db4ad7eb530dc4fca809292",
+        "source_id": "llm_foundations_book_2026",
+        "page": 91,
+        "score": 0.0306,
+        "hit": false
+      },
+      {
+        "id": "cb67c6374ef47375d1f12943936984f401ee3a0ce55afbd8db56e8f7be69deaf",
+        "source_id": "llm_foundations_book_2026",
+        "page": 91,
+        "score": 0.0296,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_17",
+    "question": "What is the main purpose of linear position interpolation when extending context length?",
+    "filter": null,
+    "latency_ms": 13.82,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "context_chars": 1534,
+    "results": [
+      {
+        "id": "3e0cc1cc66331071b283126015e6130479acf49d3f25861997975847cdc1de48",
+        "source_id": "llm_foundations_book_2026",
+        "page": 100,
+        "score": 0.032,
+        "hit": false
+      },
+      {
+        "id": "cd254d65fed7212b9e64f176e3a1c752f923770e4aa3ebf8b845b17efc821555",
+        "source_id": "llm_foundations_book_2026",
+        "page": 100,
+        "score": 0.0313,
+        "hit": false
+      },
+      {
+        "id": "e50c22379818163fd018513f5b0a3eef06990b859c71ac01791342192b2d29fe",
+        "source_id": "llm_foundations_book_2026",
+        "page": 101,
+        "score": 0.0311,
+        "hit": false
+      },
+      {
+        "id": "4a1eb93523eb04291244b8ba414bcd4dc45c47c37ea76d4286a68a68cf91f481",
+        "source_id": "llm_foundations_book_2026",
+        "page": 101,
+        "score": 0.0296,
+        "hit": false
+      },
+      {
+        "id": "8bc8abd39e52456151cc054903a404094786d22100c1f8b0d482201329b31dd2",
+        "source_id": "llm_foundations_book_2026",
+        "page": 92,
+        "score": 0.0295,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_18",
+    "question": "What is zero-shot learning in the context of in-context learning with LLMs?",
+    "filter": {
+      "chapter": 3
+    },
+    "latency_ms": 10.29,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true,
+    "context_chars": 1599,
+    "results": [
+      {
+        "id": "d72b80e3cbec57753f8493af246f64bf794e708b6b37dbe8aa92350d5e6efb6f",
+        "source_id": "llm_foundations_book_2026",
+        "page": 108,
+        "score": 0.0325,
+        "hit": true
+      },
+      {
+        "id": "e2dcfc9e21bcc9d853fea58fd6df2bf263a1696b659d481bec60595d62e256c4",
+        "source_id": "llm_foundations_book_2026",
+        "page": 108,
+        "score": 0.0325,
+        "hit": false
+      },
+      {
+        "id": "25d4b09591492704beaffd2a8a5222d0a421559790703544b18bed831633b62e",
+        "source_id": "llm_foundations_book_2026",
+        "page": 108,
+        "score": 0.0303,
+        "hit": false
+      },
+      {
+        "id": "635be540382edbc0610eb5d5fd8b3d264d17b2b08aacd6101a593bec514cf655",
+        "source_id": "llm_foundations_book_2026",
+        "page": 109,
+        "score": 0.0301,
+        "hit": false
+      },
+      {
+        "id": "d82ec1b7dc116a0efb8767747881e5a798ccb6042c04845485b0787417f2232f",
+        "source_id": "llm_foundations_book_2026",
+        "page": 124,
+        "score": 0.0298,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_19",
+    "question": "What simple trigger phrase introduced by Kojima et al. (2022) is used to encourage zero-shot Chain-of-Thought reasoning?",
+    "filter": null,
+    "latency_ms": 16.24,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "context_chars": 1598,
+    "results": [
+      {
+        "id": "8be5379f5b25234a12e5c914b0d38e05a14948ee3b886a213c173df7242a064e",
+        "source_id": "llm_foundations_book_2026",
+        "page": 244,
+        "score": 0.0325,
+        "hit": false
+      },
+      {
+        "id": "ad4e88599334bdcf95a59b13e73a7405e21b0e9587e9f8a5b3b6e4f29d89b61a",
+        "source_id": "llm_foundations_book_2026",
+        "page": 63,
+        "score": 0.0317,
+        "hit": false
+      },
+      {
+        "id": "f1c12e48acbfc02acb998a33bb689aca41dcb8d3c2e8e9a42c5cef244d3cc770",
+        "source_id": "llm_foundations_book_2026",
+        "page": 64,
+        "score": 0.0315,
+        "hit": false
+      },
+      {
+        "id": "61417c4b324262f15fcad477f138d686e6acbe7f3c0aa2a7bba4f51fc17fbb4d",
+        "source_id": "llm_foundations_book_2026",
+        "page": 124,
+        "score": 0.0308,
+        "hit": false
+      },
+      {
+        "id": "733fc061c56f765da6638c255bc36f8ef00da0579ddc83f7a6a44bbc3256e0be",
+        "source_id": "llm_foundations_book_2026",
+        "page": 259,
+        "score": 0.0303,
+        "hit": false
+      }
+    ]
+  },
+  {
+    "id": "q_20",
+    "question": "What is the core strategy of the least-to-most prompting method?",
+    "filter": null,
+    "latency_ms": 13.73,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false,
+    "context_chars": 1593,
+    "results": [
+      {
+        "id": "733fc061c56f765da6638c255bc36f8ef00da0579ddc83f7a6a44bbc3256e0be",
+        "source_id": "llm_foundations_book_2026",
+        "page": 259,
+        "score": 0.0315,
+        "hit": false
+      },
+      {
+        "id": "40e43b8f1118861864743f930ac39386c2a1d63251853c156b06dc1a785d2e92",
+        "source_id": "llm_foundations_book_2026",
+        "page": 161,
+        "score": 0.0164,
+        "hit": false
+      },
+      {
+        "id": "1393a692c95991ce05a037b9e1931701c4936fd0d932b4d1d48eb00c20fd370b",
+        "source_id": "llm_foundations_book_2026",
+        "page": 147,
+        "score": 0.0161,
+        "hit": false
+      },
+      {
+        "id": "df124966d422faca314e0c35e0ee28e174bae85c3c931041e3aecc42d5050e28",
+        "source_id": "llm_foundations_book_2026",
+        "page": 135,
+        "score": 0.0161,
+        "hit": false
+      },
+      {
+        "id": "2cc42ef8239a87d90b901a2c7f5745e50a881f4c5abc5abb20be902a6d6fa337",
+        "source_id": "llm_foundations_book_2026",
+        "page": 161,
+        "score": 0.0159,
+        "hit": false
+      }
+    ]
+  }
+]

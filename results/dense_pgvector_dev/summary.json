@@ -1,0 +1,14 @@
+{
+  "strategy": "Phương pháp 2: Dense (pgvector)",
+  "n": 15,
+  "hit1": 6,
+  "hit1_rate": 0.4,
+  "hit3": 9,
+  "hit3_rate": 0.6,
+  "context_hit": 6,
+  "context_evidence_rate": 0.4,
+  "avg_context_chars": 789.3,
+  "median_ms": 9.09,
+  "mean_ms": 9.43,
+  "service_cost_usd": 0.0
+}
